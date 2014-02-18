@@ -18,15 +18,29 @@ table.center-cells td, table.center-cells img {
 h1 {
   text-align: center;
   margin-top: 100px !important;
+  letter-spacing: -1px !important;
+}
+
+h2 {
+  letter-spacing: -1px !important;
 }
 
 /* https://gist.github.com/klmr/3135217 */
 .counter {
-	bottom: 1em;
-	font-size: 0.5em;
-	position: absolute;
-	right: 1em;
-	z-index: 999;
+  bottom: 1ex;
+  right: 1em;
+  font-size: 66%;
+  position: absolute;
+  z-index: 999;
 }
 .counter:before { content: '[ '; }
 .counter:after { content: ' ]'; }
+
+article ul {
+  font-size: 0.95em !important;
+  letter-spacing: normal;
+}
+
+article.smaller ul {
+  font-size: 0.90em !important;
+}
