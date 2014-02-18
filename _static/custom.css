@@ -19,3 +19,14 @@ h1 {
   text-align: center;
   margin-top: 100px !important;
 }
+
+/* https://gist.github.com/klmr/3135217 */
+.counter {
+	bottom: 1em;
+	font-size: 0.5em;
+	position: absolute;
+	right: 1em;
+	z-index: 999;
+}
+.counter:before { content: '[ '; }
+.counter:after { content: ' ]'; }
