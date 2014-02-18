@@ -1,0 +1,21 @@
+pre {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+table.docutils td, table.docutils th {
+  border-bottom: 0;
+}
+
+table.center-cells td, table.center-cells img {
+  vertical-align: middle;
+}
+
+.python-logo img {
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px !important;
+}
