@@ -9,7 +9,7 @@ var createSlideNumbering = function (skipFirstN) {
 
         jQuery('<div/>', {
             class: 'counter',
-            text: num
+            text: num - skipFirstN
         }).appendTo($(this));
     });
 }
