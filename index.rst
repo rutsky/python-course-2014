@@ -6,6 +6,7 @@
       :language: python
 
 .. TODO : в заголовке документа должен быть Python
+
 =====================
 Язык программирования
 =====================
@@ -15,6 +16,7 @@
    :align: center
 
 .. rst-class:: center-text
+
 Владимир Владимирович Руцкий rutsky.vladimir@gmail.com
 
 .. rst-class:: center-cells
