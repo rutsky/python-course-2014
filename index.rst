@@ -382,6 +382,8 @@ Hello, world!
 .. literalinclude:: examples/02_calc.pycon
 
 
+.. rst-class:: smaller
+
 Переменные
 ==========
 
@@ -453,7 +455,8 @@ Hello, world!
 
 .. literalinclude:: examples/12_lists4.pycon
 
-.. rst-class:: smaller2
+
+.. rst-class:: smaller
 
 Конструкция while
 =================
@@ -476,7 +479,7 @@ Hello, world!
 .. literalinclude:: examples/16_break_continue.pycon
 
 
-.. rst-class:: smaller2
+.. rst-class:: smaller
 
 Словари
 ===============================
@@ -489,7 +492,7 @@ Hello, world!
 .. literalinclude:: examples/18_def.pycon
 
 
-.. rst-class:: smaller2
+.. rst-class:: smaller
 
 Функции с аргументами по умолчанию (1/2)
 ========================================
