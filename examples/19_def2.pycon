@@ -1,6 +1,6 @@
 >>> def f(a, b, c=5, d=[1,3]):
 ...     print(a, b, c, d)
-... 
+...
 >>> f(1)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -15,7 +15,7 @@ TypeError: f() takes at least 2 arguments (1 given)
 ...     print(a, b, end=' ')
 ...     for x in args:
 ...         print(x)
-... 
+...
 >>> f(1, 2)
 1 2
 >>> f(1, 2, 3, 4, 5, 6)
