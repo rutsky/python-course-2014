@@ -48,7 +48,7 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'handout'
 
 # General information about the project.
 project = 'Язык программирования Python'
@@ -75,7 +75,7 @@ release = '2014.02.18'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'handout', 'common']
+exclude_patterns = ['_build', 'common']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -107,12 +107,15 @@ pygments_style = 'pastie'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'epub'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    "relbar1": False,
+    "footer": False
+    }
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -270,20 +273,20 @@ texinfo_documents = [
 # -- Hieroglyph Slide Configuration ------------
 
 extensions += [
-    'hieroglyph',
+#    'hieroglyph',
 ]
 
 #slide_theme = 'slides'
-slide_theme = 'single-level'
-slide_levels = 3
+#slide_theme = 'single-level'
+#slide_levels = 3
 
 # Place custom static assets in the _static directory and uncomment
 # the following lines to include them
 
-slide_theme_options = {
-    'custom_css': 'custom.css',
-    'custom_js': 'custom.js',
-}
+#slide_theme_options = {
+#    'custom_css': 'custom.css',
+#    'custom_js': 'custom.js',
+#}
 
 # slide_numbers = False
 

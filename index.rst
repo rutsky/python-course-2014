@@ -218,9 +218,9 @@ Python — мультипарадигменный
 
     * быстрее
     * больше библиотек
+    * лучше синтаксис
 
   * Третья: 3.2, 3.3, вот-вот выйдет 3.4
-    * лучше синтаксис
 
 * Каждая следующая версия расширяет и улучшает язык
 
@@ -290,7 +290,242 @@ Python — мультипарадигменный
     * Математические пакеты: Sage, IPython Notebook
 
 
-Примеры использования Python
+Примеры Python-интерфейсов к библиотекам
+========================================
+
+
+Установка Python
+================
+
+.. include:: common/install_python.rst
+
+Установка дополнительных библиотек будет рассмотрена на следующих лекциях
+
+Установка PyCharm
+=================
+
+В раздаточном материале
+
+Введение в Python
+=================
+
+* Официальная документация (англ.):
+  http://docs.python.org/
+
+* Перевод учебного пособия из офиц. документации для Python 3.1:
+
+  `https://ru.wikibooks.org/wiki/Учебник_Python_3.1 <https://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1>`_
+
+  (по нему построено введение в Python в этой лекции)
+
+* Книги на русском языке... мало, если будете смотреть обязательно обратите
+  внимание на используемую версию Python
+
+
+Выполнение программ на Python
+=============================
+
+Способы выполнения программ:
+
+* интерактивное выполнение::
+
+      C:\> C:\Python33\python.exe
+      Python 3.3.4 (v3.3.4:7ff62415e426, Feb 10 2014, 18:12:08) [MSC v.1600 32 bit (Intel)] on win32
+      Type "help", "copyright", "credits" or "license" for more information.
+      >>> print("Hello, world!")
+      Hello, world!
+      >>>
+
+* выполнение файла со скриптом
+
+  Файл ``hello.py``::
+
+      print("Hello, world!")
+
+  Запуск::
+
+      C:\>C:\Python33\python.exe hello.py
+      Hello, world!
+      C:\>
+
+Интерактивная консоль Python
 ============================
 
-На следующей лекции
+Запустите python.exe::
+
+    C:\> C:\Python33\python.exe
+    Python 3.3.4 (v3.3.4:7ff62415e426, Feb 10 2014, 18:12:08) [MSC v.1600 32 bit (Intel)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+
+.. TODO
+
+">>> " — приветствие, интерпретатор ожидает ввода команды
+
+Hello, world!
+=============
+
+.. literalinclude:: examples/01_hello.pycon
+
+
+.. rst-class:: smaller
+
+Вычисление выражений
+====================
+
+.. literalinclude:: examples/02_calc.pycon
+
+
+Переменные
+==========
+
+.. literalinclude:: examples/03_vars.pycon
+
+
+.. rst-class:: smaller2
+
+Числовые типы
+=============
+
+.. literalinclude:: examples/04_numbers.pycon
+
+
+.. rst-class:: smaller
+
+Строки
+======
+
+.. literalinclude:: examples/05_strings.pycon
+
+Конкатенация строк
+==================
+
+.. literalinclude:: examples/06_strings_concat.pycon
+
+
+.. rst-class:: smaller
+
+Индексация последовательностей (1/2)
+====================================
+
+.. literalinclude:: examples/07_strings_indexing.pycon
+
+
+.. rst-class:: smaller
+
+Индексация последовательностей (2/2)
+====================================
+
+.. literalinclude:: examples/08_strings_indexing2.pycon
+
+Списки
+======
+
+.. literalinclude:: examples/09_lists.pycon
+
+
+.. rst-class:: smaller
+
+Функция range()
+===============
+
+.. literalinclude:: examples/10_lists2.pycon
+
+
+.. rst-class:: smaller2
+
+Модификация списков (1/2)
+=========================
+
+.. literalinclude:: examples/11_lists3.pycon
+
+
+.. rst-class:: smaller2
+
+Модификация списков (2/2)
+=========================
+
+.. literalinclude:: examples/12_lists4.pycon
+
+.. rst-class:: smaller2
+
+Конструкция while
+=================
+
+.. literalinclude:: examples/13_while.pycon
+
+Конструкция if
+==============
+
+.. literalinclude:: examples/14_if.pycon
+
+Конструкция for
+===============
+
+.. literalinclude:: examples/15_for.pycon
+
+Команды break, continue
+=======================
+
+.. literalinclude:: examples/16_break_continue.pycon
+
+
+.. rst-class:: smaller2
+
+Словари
+===============================
+
+.. literalinclude:: examples/17_dict.pycon
+
+Функции
+=======
+
+.. literalinclude:: examples/18_def.pycon
+
+
+.. rst-class:: smaller2
+
+Функции с аргументами по умолчанию (1/2)
+========================================
+
+.. literalinclude:: examples/19_def2.pycon
+
+
+.. rst-class:: smaller
+
+Функции с аргументами по умолчанию (2/2)
+========================================
+
+.. literalinclude:: examples/20_def3.pycon
+
+
+.. rst-class:: smaller
+
+Неименованные аргументы
+=======================
+
+.. literalinclude:: examples/21_def3_tuples.pycon
+
+
+.. rst-class:: smaller
+
+Объекты Python (1/3)
+====================
+
+.. literalinclude:: examples/22_objects.pycon
+
+
+.. rst-class:: smaller
+
+Объекты Python (2/3)
+====================
+
+.. literalinclude:: examples/23_objects2.pycon
+
+
+.. rst-class:: smaller
+
+Объекты Python (3/3)
+====================
+
+.. literalinclude:: examples/24_object3.pycon

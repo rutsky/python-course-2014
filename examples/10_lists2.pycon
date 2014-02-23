@@ -1,0 +1,23 @@
+>>> # Функция range([start,] stop[, step]) создаёт "виртуальную" последовательность
+... # (iterable) из натуральных чисел
+... a = range(5)
+>>> a
+range(0, 5)
+>>> # Функции, классы и модули в Python имеют способы встроенного документирования
+... help(range)
+Help on class range in module builtins:
+
+class range(object)
+ |  range(stop) -> range object
+ |  range(start, stop[, step]) -> range object
+ |
+ |  Returns a virtual sequence of numbers from start to stop by step.
+ |
+ |  Methods defined here:
+ |
+...
+
+>>> # Функция list (конструктор класса) позволяет создать список по последовательности
+... list(range(3, 10, 2))
+[3, 5, 7, 9]
+>>>

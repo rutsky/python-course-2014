@@ -33,8 +33,8 @@ h2 {
   position: absolute;
   z-index: 999;
 }
-.counter:before { content: '[ '; }
-.counter:after { content: ' ]'; }
+/*.counter:before { content: '[ '; }
+.counter:after { content: ' ]'; }*/
 
 article ul {
   font-size: 0.95em !important;
@@ -43,4 +43,33 @@ article ul {
 
 article.smaller ul {
   font-size: 0.90em !important;
+}
+
+article.smaller2 ul {
+  font-size: 0.90em !important;
+}
+
+article.smaller2 p,
+article.smaller2 ul {
+	  font-size: 20px;
+	    line-height: 24px;
+	      letter-spacing: 0;
+}
+article.smaller2 table {
+	  font-size: 20px;
+	    line-height: 24px;
+	      letter-spacing: 0;
+}
+article.smaller2 pre {
+	  font-size: 14px;
+	    line-height: 17px;
+	      letter-spacing: 0;
+}
+article.smaller2 q {
+	  font-size: 40px;
+	    line-height: 48px;
+}
+article.smaller2 q::before,
+article.smaller2 q::after {
+	  font-size: 60px;
 }
