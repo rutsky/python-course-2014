@@ -11,8 +11,16 @@ table.center-cells td, table.center-cells img {
   vertical-align: middle;
 }
 
+#id1 h1 {
+  margin-top: 50px !important;
+}
+
 .python-logo img {
   padding-top: 20px;
+}
+
+p.center-text {
+  text-align: center;
 }
 
 h1 {

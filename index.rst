@@ -5,6 +5,7 @@
 .. role:: python(code)
       :language: python
 
+.. TODO : в заголовке документа должен быть Python
 =====================
 Язык программирования
 =====================
@@ -13,14 +14,17 @@
 .. figure:: /_static/images/python-logo-generic.svg
    :align: center
 
+.. rst-class:: center-text
+Владимир Владимирович Руцкий rutsky.vladimir@gmail.com
 
 .. rst-class:: center-cells
 .. list-table::
 
-   * - .. image:: /_static/images/cgsg.png
+
+   * - .. image:: _static/images/cgsg.png
           :width: 200 px
-     - Владимир Руцкий rutsky.vladimir@gmail.com
-     - .. image:: /_static/images/pml30.png
+     - .. image:: _static/images/logo_jetbrains.svg
+     - .. image:: _static/images/pml30.png
           :width: 200 px
 
 
