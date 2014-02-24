@@ -19,4 +19,5 @@
 
    `Презентация первой лекции.
    <http://rutsky.github.io/python-course-2014/lecture_01_introduction/>`_
+
    `Аудиозапись (2:32, OGG, 59 MB). <http://ubuntuone.com/4wAZODINiN4ogR5OMjPF5a>`_
