@@ -4,7 +4,7 @@
 >>> a
 range(0, 5)
 >>> # Функции, классы и модули в Python имеют способы встроенного документирования
-... help(range)
+... help(range)  # doctest: +SKIP
 Help on class range in module builtins:
 
 class range(object)

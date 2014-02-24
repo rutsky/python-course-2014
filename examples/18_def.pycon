@@ -7,9 +7,9 @@
 ...         a, b = b, a+b
 ...
 >>> # Теперь вызовем определенную нами функцию:
-... fib(2000)
+... fib(2000)  # doctest: +NORMALIZE_WHITESPACE
 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
->>> help(fib)
+>>> help(fib)  # doctest: +SKIP
 Help on function fib in module __main__:
 
 fib(n)

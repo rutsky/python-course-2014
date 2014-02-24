@@ -15,7 +15,7 @@
 ... #     команды
 ... # Блоки в Python определяются отступом!
 ... pass # оператор "ничего не делать"
->>> while True: # бесконечный цикл, можно прервать по Ctrl+C
+>>> while True: # бесконечный цикл, можно прервать по Ctrl+C # doctest: +SKIP
 ...     pass
 ...
 ^CTraceback (most recent call last):

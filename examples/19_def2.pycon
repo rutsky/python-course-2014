@@ -4,7 +4,7 @@
 >>> f(1)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: f() takes at least 2 arguments (1 given)
+TypeError: f() missing 1 required positional argument: 'b'
 >>> f(1, 2)
 1 2 5 [1, 3]
 >>> f(1, 2, 'c')
@@ -16,8 +16,8 @@ TypeError: f() takes at least 2 arguments (1 given)
 ...     for x in args:
 ...         print(x)
 ...
->>> f(1, 2)
+>>> f(1, 2)  # doctest: +NORMALIZE_WHITESPACE
 1 2
->>> f(1, 2, 3, 4, 5, 6)
+>>> f(1, 2, 3, 4, 5, 6)  # doctest: +NORMALIZE_WHITESPACE
 1 2 3 4 5 6
 >>> 

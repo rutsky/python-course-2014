@@ -14,9 +14,9 @@
 >>> "first word \
 ... second word"
 'first word second word'
->>> print("first line \nsecondline")
+>>> print("first line\n secondline")
 first line
-secondline
+ secondline
 >>> r"line with \n in middle"
 'line with \\n in middle'
 >>> """Multiline with ' or "
