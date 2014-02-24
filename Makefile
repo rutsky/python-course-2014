@@ -184,3 +184,6 @@ slides:
 handout:
 	$(SPHINXBUILD) -b html -c handout $(ALLSPHINXOPTS) $(BUILDDIR)/handout
 	@echo "Build finished. The HTML slides are in $(BUILDDIR)/handout."
+
+examples-doctest:
+	for f in examples/*.pycon; do python -m doctest $$f; done
