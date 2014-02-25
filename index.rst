@@ -48,6 +48,7 @@
   * Практика
 
 
+.. rst-class:: smaller
 
 Что такое Python?
 =================
@@ -62,8 +63,13 @@
 
   .. list-table::
 
-     * - .. literalinclude:: examples/factorial.py
-       - .. literalinclude:: examples/factorial.out
+     * - ``factorial.py``
+
+         .. literalinclude:: examples/factorial.py
+
+       - ``python.exe factorial.py``
+
+         .. literalinclude:: examples/factorial.out
 
 
 Python — высокоуровневый ЯП

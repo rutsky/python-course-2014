@@ -42,8 +42,8 @@ article ul {
   letter-spacing: normal;
 }
 
-article.smaller ul {
-  font-size: 0.90em !important;
+article.smaller ul, article.smaller p, article.smaller table {
+  font-size: 0.95em !important;
 }
 
 article.smaller2 ul {
