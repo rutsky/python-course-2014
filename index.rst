@@ -449,8 +449,8 @@ Hello, world!
 
 .. rst-class:: smaller
 
-Функция range()
-===============
+Функция ``range()``
+===================
 
 .. literalinclude:: examples/10_lists2.pycon
 
@@ -473,23 +473,23 @@ Hello, world!
 
 .. rst-class:: smaller
 
-Конструкция while
-=================
+Конструкция ``while``
+=====================
 
 .. literalinclude:: examples/13_while.pycon
 
-Конструкция if
-==============
+Конструкция ``if``
+==================
 
 .. literalinclude:: examples/14_if.pycon
 
-Конструкция for
-===============
+Конструкция ``for``
+===================
 
 .. literalinclude:: examples/15_for.pycon
 
-Команды break, continue
-=======================
+Команды ``break``, ``continue``
+===============================
 
 .. literalinclude:: examples/16_break_continue.pycon
 
@@ -497,7 +497,7 @@ Hello, world!
 .. rst-class:: smaller
 
 Словари
-===============================
+=======
 
 .. literalinclude:: examples/17_dict.pycon
 
