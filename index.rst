@@ -3,7 +3,7 @@
    hieroglyph-quickstart on Tue Feb 18 01:11:59 2014.
 
 .. role:: python(code)
-      :language: python
+   :language: python
 
 .. TODO : в заголовке документа должен быть Python
 
