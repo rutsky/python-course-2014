@@ -33,16 +33,9 @@ h2 {
   letter-spacing: -1px !important;
 }
 
-/* https://gist.github.com/klmr/3135217 */
-.counter {
-  bottom: 1ex;
-  right: 1em;
-  font-size: 66%;
-  position: absolute;
-  z-index: 999;
+#id1 .slide-no {
+  display: none;
 }
-/*.counter:before { content: '[ '; }
-.counter:after { content: ' ]'; }*/
 
 article ul {
   font-size: 0.95em !important;
