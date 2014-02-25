@@ -205,7 +205,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'Python.tex', 'Язык программирования Python Documentation',
+  ('index', 'Python.tex', 'Язык программирования Python',
    'Владимир Руцкий', 'manual'),
 ]
 
@@ -235,7 +235,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'python', 'Язык программирования Python Documentation',
+    ('index', 'python', 'Язык программирования Python',
      ['Владимир Руцкий'], 1)
 ]
 
@@ -249,7 +249,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Python', 'Язык программирования Python Documentation',
+  ('index', 'Python', 'Язык программирования Python',
    'Владимир Руцкий', 'Python', 'One line description of project.',
    'Miscellaneous'),
 ]
