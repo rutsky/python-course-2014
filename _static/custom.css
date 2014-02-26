@@ -1,6 +1,5 @@
-pre {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+pre, table {
+  margin: 0px !important;
 }
 
 table.docutils td, table.docutils th {
