@@ -287,6 +287,8 @@ slide_theme_options = {
 
 slide_numbers = True
 
+slide_footer = '<div class="left">22.02.2014</div><div class="center">Владимир Владимирович Руцкий</div>'
+
 # ----------------------------------------------
 
 
