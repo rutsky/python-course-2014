@@ -478,6 +478,9 @@ Hello, world!
 
 .. literalinclude:: examples/13_while.pycon
 
+
+.. rst-class:: smaller
+
 Конструкция ``if``
 ==================
 
@@ -539,7 +542,7 @@ Hello, world!
 .. literalinclude:: examples/22_objects.pycon
 
 
-.. rst-class:: smaller
+.. rst-class:: smaller2
 
 Объекты Python (2/3)
 ====================
