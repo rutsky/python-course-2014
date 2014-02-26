@@ -97,3 +97,13 @@ article.smaller2 q::after {
   width: 100%;
   text-align: center;
 }
+
+table.highlighttable td {
+  padding: 0 !important;
+}
+
+td.linenos pre {
+  border: 1px solid #E0E0E0 !important;
+  box-shadow: none !important;
+  background: none repeat scroll 0% 0% #F0F0F0 !important;
+}
