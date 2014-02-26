@@ -66,10 +66,13 @@
      * - ``factorial.py``
 
          .. literalinclude:: examples/factorial.py
+            :linenos:
 
        - ``python.exe factorial.py``
 
          .. literalinclude:: examples/factorial.out
+            :linenos:
+
 
 
 Python — высокоуровневый ЯП
@@ -387,6 +390,7 @@ Hello, world!
 =============
 
 .. literalinclude:: examples/01_hello.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -395,6 +399,7 @@ Hello, world!
 ====================
 
 .. literalinclude:: examples/02_calc.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -403,6 +408,7 @@ Hello, world!
 ==========
 
 .. literalinclude:: examples/03_vars.pycon
+   :linenos:
 
 
 .. rst-class:: smaller2
@@ -411,6 +417,7 @@ Hello, world!
 =============
 
 .. literalinclude:: examples/04_numbers.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -419,11 +426,13 @@ Hello, world!
 ======
 
 .. literalinclude:: examples/05_strings.pycon
+   :linenos:
 
 Конкатенация строк
 ==================
 
 .. literalinclude:: examples/06_strings_concat.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -432,6 +441,7 @@ Hello, world!
 ====================================
 
 .. literalinclude:: examples/07_strings_indexing.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -440,11 +450,13 @@ Hello, world!
 ====================================
 
 .. literalinclude:: examples/08_strings_indexing2.pycon
+   :linenos:
 
 Списки
 ======
 
 .. literalinclude:: examples/09_lists.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -453,6 +465,7 @@ Hello, world!
 ===================
 
 .. literalinclude:: examples/10_lists2.pycon
+   :linenos:
 
 
 .. rst-class:: smaller2
@@ -461,6 +474,7 @@ Hello, world!
 =========================
 
 .. literalinclude:: examples/11_lists3.pycon
+   :linenos:
 
 
 .. rst-class:: smaller2
@@ -469,6 +483,7 @@ Hello, world!
 =========================
 
 .. literalinclude:: examples/12_lists4.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -477,6 +492,7 @@ Hello, world!
 =====================
 
 .. literalinclude:: examples/13_while.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -485,16 +501,19 @@ Hello, world!
 ==================
 
 .. literalinclude:: examples/14_if.pycon
+   :linenos:
 
 Конструкция ``for``
 ===================
 
 .. literalinclude:: examples/15_for.pycon
+   :linenos:
 
 Команды ``break``, ``continue``
 ===============================
 
 .. literalinclude:: examples/16_break_continue.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -503,11 +522,13 @@ Hello, world!
 =======
 
 .. literalinclude:: examples/17_dict.pycon
+   :linenos:
 
 Функции
 =======
 
 .. literalinclude:: examples/18_def.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -516,6 +537,7 @@ Hello, world!
 ========================================
 
 .. literalinclude:: examples/19_def2.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -524,6 +546,7 @@ Hello, world!
 ========================================
 
 .. literalinclude:: examples/20_def3.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -532,6 +555,7 @@ Hello, world!
 =======================
 
 .. literalinclude:: examples/21_def3_tuples.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -540,6 +564,7 @@ Hello, world!
 ====================
 
 .. literalinclude:: examples/22_objects.pycon
+   :linenos:
 
 
 .. rst-class:: smaller2
@@ -548,6 +573,7 @@ Hello, world!
 ====================
 
 .. literalinclude:: examples/23_objects2.pycon
+   :linenos:
 
 
 .. rst-class:: smaller
@@ -556,3 +582,4 @@ Hello, world!
 ====================
 
 .. literalinclude:: examples/24_object3.pycon
+   :linenos:
