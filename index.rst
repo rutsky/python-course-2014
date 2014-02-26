@@ -224,7 +224,7 @@ Python — мультипарадигменный
 * CPython выступает в качестве стандарта
 
 
-.. rst-class:: smaller
+.. rst-class:: smaller2
 
 Версии Python
 =============
