@@ -114,3 +114,15 @@ pre {
   box-shadow: none !important;
   background: none repeat scroll 0% 0% #fff !important;
 }
+
+@media print {
+  .slides > article,
+  .slides > article.far-past,
+  .slides > article.past,
+  .slides > article.next,
+  .slides > article.far-next {
+
+  position: relative !important;
+  top: 0;
+  left: 0;
+}
