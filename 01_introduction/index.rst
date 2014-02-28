@@ -12,7 +12,7 @@
 =====================
 
 .. rst-class:: python-logo
-.. figure:: /_static/images/python-logo-generic.svg
+.. figure:: ../common/images/python-logo-generic.svg
    :align: center
 
 .. rst-class:: center-text
@@ -23,10 +23,10 @@
 .. list-table::
 
 
-   * - .. image:: _static/images/cgsg.png
+   * - .. image:: ../common/images/cgsg.png
           :width: 200 px
-     - .. image:: _static/images/logo_jetbrains.svg
-     - .. image:: _static/images/pml30.png
+     - .. image:: ../common/images/logo_jetbrains.svg
+     - .. image:: ../common/images/pml30.png
           :width: 200 px
 
 
