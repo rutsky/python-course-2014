@@ -17,6 +17,10 @@
 
 .. rst-class:: center-text
 
+Лекция №1. Введение в Python
+
+.. rst-class:: center-text
+
 Владимир Владимирович Руцкий rutsky.vladimir@gmail.com
 
 .. rst-class:: center-cells
