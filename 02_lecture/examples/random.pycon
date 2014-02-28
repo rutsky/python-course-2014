@@ -1,0 +1,18 @@
+>>> import random
+>>> random.random()  # Случайное float число в диапазоне [0, 1)  # doctest: +SKIP
+0.5827532718821743
+>>> random.randint(15, 30)  # Случайное int число в диапазоне [15, 30]  # doctest: +SKIP
+29
+>>> random.uniform(3.5, 10.0) # Случайное float число из диапазона [3.5, 10.0] # doctest: +SKIP
+7.332874018578613
+>>> # Есть некоторые популярные распределения: равномерное, Бета, экспоненциальное,
+... # Гамма, Гаусса, Нормальное, Парето
+... random.gauss(mu=0, sigma=1)  # doctest: +SKIP
+0.512533053672749
+>>> a = ['Alice', 'Bob', 'Valery']
+>>> random.choice(a)  # Вернёт произвольный элемент последовательности # doctest: +SKIP
+'Valery'
+>>> random.shuffle(a)  # Случайным образом перемешает последовательность
+>>> a # doctest: +SKIP
+['Alice', 'Valery', 'Bob']
+>>>

@@ -1,0 +1,7 @@
+>>> # Встроенные функции находятся в специальном модуле `builtins'
+... import builtins
+>>> builtins.print('Test!')
+Test!
+>>> builtins.print is print
+True
+>>>

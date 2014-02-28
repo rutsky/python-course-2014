@@ -1,0 +1,4 @@
+>>> import hello  # doctest: +SKIP
+>>> hello.my_hello()  # doctest: +SKIP
+'Hello, World!'
+>>>
