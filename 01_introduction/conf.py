@@ -40,13 +40,4 @@ today = '22.02.2014'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
-
-# Place custom static assets in the _static directory and uncomment
-# the following lines to include them
-
-slide_theme_options = {
-    'custom_css': 'custom.css',
-    'custom_js': 'custom.js',
-}
-
 slide_footer = '<div class="left">22.02.2014</div><div class="center">Владимир Владимирович Руцкий</div>'

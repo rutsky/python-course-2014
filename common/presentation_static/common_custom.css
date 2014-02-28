@@ -1,0 +1,130 @@
+@import "custom.css";
+
+pre, table {
+  margin: 0px !important;
+}
+
+table.docutils td, table.docutils th {
+  border-bottom: 0;
+}
+
+table.center-cells td, table.center-cells img {
+  vertical-align: middle;
+}
+
+#id1 h1 {
+  margin-top: 50px !important;
+}
+
+.python-logo img {
+  padding-top: 20px;
+}
+
+p.center-text {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px !important;
+  letter-spacing: -1px !important;
+}
+
+h2 {
+  letter-spacing: -1px !important;
+}
+
+#id1 .slide-no {
+  display: none;
+}
+
+article ul {
+  font-size: 0.95em !important;
+  letter-spacing: normal;
+}
+
+article.smaller ul, article.smaller p, article.smaller table {
+  font-size: 0.95em !important;
+}
+
+article.smaller2 ul {
+  font-size: 0.90em !important;
+}
+
+article.smaller2 p,
+article.smaller2 ul {
+	  font-size: 20px;
+	    line-height: 24px;
+	      letter-spacing: 0;
+}
+article.smaller2 table {
+	  font-size: 20px;
+	    line-height: 24px;
+	      letter-spacing: 0;
+}
+article.smaller2 pre {
+	  font-size: 14px;
+	    line-height: 17px;
+	      letter-spacing: 0;
+}
+article.smaller2 q {
+	  font-size: 40px;
+	    line-height: 48px;
+}
+article.smaller2 q::before,
+article.smaller2 q::after {
+	  font-size: 60px;
+}
+
+#id1 .slide-footer {
+  display: none;
+}
+
+.slide-footer {
+  width: 100%;
+  position: static !important;
+}
+
+.slide-footer .left {
+  position: absolute;
+  bottom: 1ex;
+  left: 1em;
+}
+
+.slide-footer .center {
+  position: absolute;
+  bottom: 1ex;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+table.highlighttable td {
+  padding: 0 !important;
+}
+
+td, th {
+  border: 0px none !important;
+}
+
+.linenodiv, .highlight {
+  border: 1px solid #E0E0E0;
+}
+
+pre {
+  border: 0px none !important;
+  box-shadow: none !important;
+  background: none repeat scroll 0% 0% #fff !important;
+}
+
+@media print {
+  .slides > article,
+  .slides > article.far-past,
+  .slides > article.past,
+  .slides > article.next,
+  .slides > article.far-next {
+
+  position: relative !important;
+  top: 0;
+  left: 0;
+}
