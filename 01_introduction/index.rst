@@ -473,10 +473,12 @@ Hello, world!
    :linenos:
 
 
+.. todo:: "range" не является ссылкой
+
 .. rst-class:: smaller
 
-Функция ``range()``
-===================
+Функция :py:func:`range()`
+==========================
 
 .. literalinclude:: examples/10_lists2.pycon
    :linenos:
