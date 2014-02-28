@@ -26,6 +26,10 @@ source_suffix = '.rst'
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
+# If true, the reST sources are included in the HTML build as _sources/name.
+# Breaks search.
+html_copy_source = False
+
 # The master toctree document.
 master_doc = 'index'
 
