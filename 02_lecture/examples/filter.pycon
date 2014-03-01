@@ -1,0 +1,9 @@
+>>> def long_enough(s):
+...     return len(s) > 3
+...
+>>> a = ["Alice", "Bob", "Valery", "Nicholas", "I"]
+>>> list(filter(long_enough, a))
+['Alice', 'Valery', 'Nicholas']
+>>> list(filter(None, ['', 'a', 0, 1, True, False]))
+['a', 1, True]
+>>>
