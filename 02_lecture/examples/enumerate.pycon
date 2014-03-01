@@ -1,0 +1,13 @@
+>>> a = ["A", "B", "C"]
+>>> list(enumerate(a))
+[(0, 'A'), (1, 'B'), (2, 'C')]
+>>> list(enumerate(a, 10))
+[(10, 'A'), (11, 'B'), (12, 'C')]
+>>> # Удобно использовать для получения индекса при итерации по последовательности
+... for idx, val in enumerate(a):
+...     print("idx =", idx, "val =", val)
+...
+idx = 0 val = A
+idx = 1 val = B
+idx = 2 val = C
+>>>

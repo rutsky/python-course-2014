@@ -1,4 +1,4 @@
->>> from rndcolors1 import *
+>>> from rndcolors1 import *  # doctest: +SKIP
 >>> dir()  # doctest: +SKIP
 [..., 'choice', 'colors', 'random_color']
 >>>
