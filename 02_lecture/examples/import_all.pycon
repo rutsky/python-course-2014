@@ -1,0 +1,9 @@
+>>> # Можно импортировать все имена из модуля в текущую область видимости:
+... from random import *
+>>> choice(['a', 'b', 'c', 'd'])  # doctest: +SKIP
+'b'
+>>> random()  # doctest: +SKIP
+0.5827532718821743
+>>> dir()  # doctest: +ELLIPSIS
+[..., 'betavariate', 'choice', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', ...]
+>>>

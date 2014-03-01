@@ -114,10 +114,50 @@
 
 .. rst-class:: smaller
 
-Способы импортирования
-======================
+Способы импортирования (1/2)
+============================
 
 .. literalinclude:: examples/import_as.pycon
+
+
+.. rst-class:: smaller2
+
+Способы импортирования (2/2)
+============================
+
+.. literalinclude:: examples/import_all.pycon
+
+
+.. rst-class:: smaller2
+
+Скрытие имён в модулях (1/2)
+============================
+
+``from ... import *`` не импортирует имена, начинающиеся с подчеркивания — в
+Python принято называть "скрытые" функции и имена с подчеркивания
+
+.. literalinclude:: examples/rndcolors1.py
+
+.. literalinclude:: examples/rndcolors1.pycon
+
+.. literalinclude:: examples/rndcolors2.py
+
+.. literalinclude:: examples/rndcolors2.pycon
+
+
+.. rst-class:: smaller2
+
+Скрытие имён в модулях (1/2)
+============================
+
+Если в модуле объявлена глобальная переменная ``__all__``, то с помощью
+``from ... import *`` из этого модуля будут импортироваться только имена, 
+перечисленные в списке или кортеже ``__all__``
+
+.. literalinclude:: examples/rndcolors3.py
+
+.. literalinclude:: examples/rndcolors3.pycon
+
 
 
 Модуль :py:mod:`builtins`
@@ -195,4 +235,94 @@
 
 .. literalinclude:: examples/dir.pycon
    :linenos:
+
+
+.. rst-class:: smaller2
+
+Способы выполнения кода на Python (1/2)
+=======================================
+
+Прямые способы:
+
+* Интерактивный режим::
+
+     >>> a = 10
+
+* Запуск модуля::
+  
+     C:\>C:\Python33\python.exe hello.py
+     Hello!
+     C:\>
+
+* Выполнение команд, непосредственно переданных интерпретатору::
+
+     C:\>C:\Python33\python.exe -c "a = 10; print(a)"
+     10
+     C:\>
+
+* Запуск модуля, доступного в текущем дистрибутиве Python::
+
+     C:\>C:\Python33\python.exe -m random
+     2000 times random
+     0.001 sec, avg 0.500839, stddev 0.287432, min 0.000557505, max 0.999779
+     2000 times normalvariate
+     0.003 sec, avg 0.0308376, stddev 1.02038, min -3.30629, max 3.85466
+     ...
+     C:\>
+
+
+.. rst-class:: smaller2
+
+Способы выполнения кода на Python (2/2)
+=======================================
+
+Косвенные способы — при импортировании модулей::
+
+     >>> import random  # В результате этой команды модуль будет интерпретирован
+     >>>
+
+``module.py``:
+
+.. literalinclude:: examples/module.py
+
+При прямом способе выполнения команды, вводимые в интерактивном режиме, или из 
+интерпретируемого модуля, или из аргументов к ``python.exe -c``, выполняются
+в виртуальном модуле с именем ``__main__``::
+
+  C:\>C:\Python33\python.exe module.py
+  This module '__name__' variable is: __main__
+  C:\>
+
+При интерпретировании модуля в результате импортирования (косвенный способ
+выполнения) ``__name__`` будет указывать на имя модуля::
+
+  >>> import module
+  This module '__name__' variable is: module
+
+
+.. rst-class:: smaller2
+
+Отладочный код в библиотеках
+============================
+
+* С помощью ``__name__`` можно определить импортирован ли модуль, либо он выполняется
+  напрямую
+
+* Типичное использование в библиотеках — при запуске библиотечного модуля
+  запускать тесты; ``even.py``:
+
+  .. literalinclude:: examples/even.py
+     :linenos:
+
+  .. code-block:: none
+
+     C:\>C:\Python33\python.exe -m even.py
+     Traceback (most recent call last):
+       File "module_test.py", line 17, in <module>
+         _test()
+       File "module_test.py", line 13, in _test
+         assert is_even(2)
+     AssertionError
+     C:\>
+
 
