@@ -1,0 +1,10 @@
+>>> john = {"name": "John", "age": 30, "graduate": ["30", "SPBSTU", "MIT"]}
+>>> kate = {"name": "Kate", "age": 28, "graduate": ["85", "SPBSTU"]}
+>>> people = [john, kate]
+>>> print(people)  # doctest: +SKIP
+[{'age': 30, 'graduate': ['30', 'SPBSTU', 'MIT'], 'name': 'John'}, {'age': ...
+>>> import pprint
+>>> pprint.pprint(people)
+[{'age': 30, 'graduate': ['30', 'SPBSTU', 'MIT'], 'name': 'John'},
+ {'age': 28, 'graduate': ['85', 'SPBSTU'], 'name': 'Kate'}]
+>>>

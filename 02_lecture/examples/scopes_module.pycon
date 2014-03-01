@@ -1,0 +1,33 @@
+>>> import pprint
+>>> # Содержимое текущей (локальной) области видимости можно получить
+... # с помощью locals() (только на чтение)
+... pprint.pprint(locals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>> # Создаём метку в текущей области видимости:
+... a = 10
+>>> pprint.pprint(locals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'a': 10,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>> def my_sum(a, b):
+...     return a + b
+...
+>>> pprint.pprint(locals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'a': 10,
+ 'my_sum': <function my_sum at 0x7f1ca3dd38c0>,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>>

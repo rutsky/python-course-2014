@@ -1,0 +1,15 @@
+>>> a = ["A", "B", "C"]
+>>> def prefix(s, prefix="prefix_"):
+...     return prefix + s
+...
+>>> # Результат: последовательность [prefix(a[0]), prefix(a[1]), prefix(a[2]), ...]
+... list(map(prefix, a))
+['prefix_A', 'prefix_B', 'prefix_C']
+>>> b = ["zero_", "one_", "two_"]
+>>> # Результат: последовательность [prefix(a[0], b[0]), prefix(a[1], b[1]), ...]
+... list(map(prefix, a, b))
+['zero_A', 'one_B', 'two_C']
+>>> list(map(len, b))
+[5, 4, 4]
+>>>
+

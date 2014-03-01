@@ -1,0 +1,33 @@
+>>> import pprint
+>>> def my_sum(a, b):
+...     # В функции своя локальная область видимости
+...     print("my_sum 1:\n", pprint.pformat(locals()), sep='')
+...     sum = a + b
+...     print("my_sum 2:\n", pprint.pformat(locals()), sep='')
+...     return sum
+...
+>>> pprint.pprint(locals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'my_sum': <function my_sum at 0x7f1ca3dd38c0>,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>> my_sum(10, 20)  # doctest: +SKIP
+my_sum 1:
+{'a': 10, 'b': 20}
+my_sum 2:
+{'a': 10, 'b': 20, 'sum': 30}
+30
+>>> # Изменение в локальной области my_sum не меняет содержимое области
+... # видимости модуля
+... pprint.pprint(locals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'my_sum': <function my_sum at 0x7f1ca3dd38c0>,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>>

@@ -1,0 +1,29 @@
+>>> import pprint
+>>> V1 = "global V1"  # определим глобальные переменные в модуле
+>>> V2 = "global V2"
+>>> V3 = "global V3"
+>>> def func():
+...     print("V1 =", V1)  # V1 находится из глобальной о.в.
+...     V2 = "func() V2"   # метка помещается в локальную о.в., перекрывая глоб. V2
+...     print("V2 =", V2)
+...     global V3          # указываем, что метка V3 — из глобальной о.в.
+...     V3 = "changed in func()"
+...     print("V3 =", V3)
+...
+>>> pprint.pprint(locals())  # doctest: +SKIP
+{'V1': 'global V1',
+ 'V2': 'global V2',
+ 'V3': 'global V3',
+ ...
+ 'func': <function func at 0x7f1198dc8680>,
+>>> func()
+V1 = global V1
+V2 = func() V2
+V3 = changed in func()
+>>> pprint.pprint(locals())  # doctest: +SKIP
+{'V1': 'global V1',
+ 'V2': 'global V2',
+ 'V3': 'changed in func()',
+ ...
+ 'func': <function func at 0x7f1198dc8680>,
+>>> 

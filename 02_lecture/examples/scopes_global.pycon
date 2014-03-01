@@ -1,0 +1,13 @@
+>>> import pprint
+>>> # Глобальную область видимости можно получить с помощью globals()
+>>> pprint.pprint(globals())  # doctest: +SKIP
+{'__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ 'pprint': <module 'pprint' from '/usr/lib/python3.3/pprint.py'>}
+>>> # В блоке кода модуля глобальная о.в. совпадает с локальной
+>>> globals() is locals()
+True
+>>> 
