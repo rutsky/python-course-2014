@@ -33,9 +33,9 @@
    ``map()``, ``filter()``. List comprehension.
 
    `Презентация второй лекции.
-   <http://rutsky.github.io/python-course-2014/02_introduction/index.html?print=true>`_
+   <http://rutsky.github.io/python-course-2014/02_modules_scopes/index.html?print=true>`_
    `Версия для демострации.
-   <http://rutsky.github.io/python-course-2014/02_introduction/>`_
+   <http://rutsky.github.io/python-course-2014/02_modules_scopes/>`_
 
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
