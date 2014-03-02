@@ -22,7 +22,7 @@
    `Презентация первой лекции.
    <http://rutsky.github.io/python-course-2014/01_introduction/index.html?print=true>`_
    `Версия для демострации.
-   <http://rutsky.github.io/python-course-2014/01_introduction/>`
+   <http://rutsky.github.io/python-course-2014/01_introduction/>`_
 
    Аудиозапись, 2:32:
    `OGG, 44 MB <http://ubuntuone.com/6PQL4VcNxY5khZwPWoKz8L>`_,
@@ -35,7 +35,7 @@
    `Презентация второй лекции.
    <http://rutsky.github.io/python-course-2014/02_introduction/index.html?print=true>`_
    `Версия для демострации.
-   <http://rutsky.github.io/python-course-2014/02_introduction/>`
+   <http://rutsky.github.io/python-course-2014/02_introduction/>`_
 
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
