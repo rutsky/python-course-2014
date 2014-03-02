@@ -23,6 +23,8 @@
    <http://rutsky.github.io/python-course-2014/01_introduction/index.html?print=true>`_
    `Версия для демострации.
    <http://rutsky.github.io/python-course-2014/01_introduction/>`_
+   `PDF.
+   <https://github.com/rutsky/python-course-2014/raw/master/01_introduction.pdf>`_
 
    Аудиозапись, 2:32:
    `OGG, 44 MB <http://ubuntuone.com/6PQL4VcNxY5khZwPWoKz8L>`_,
@@ -36,6 +38,8 @@
    <http://rutsky.github.io/python-course-2014/02_modules_scopes/index.html?print=true>`_
    `Версия для демострации.
    <http://rutsky.github.io/python-course-2014/02_modules_scopes/>`_
+   `PDF.
+   <https://github.com/rutsky/python-course-2014/raw/master/02_modules_scopes.pdf>`_
 
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
