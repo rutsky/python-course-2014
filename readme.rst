@@ -20,6 +20,23 @@
    Базовые конструкции языка: if, while, for. Функции. Объектная модель Python.
 
    `Презентация первой лекции.
-   <http://rutsky.github.io/python-course-2014/lecture_01_introduction/>`_
+   <http://rutsky.github.io/python-course-2014/01_introduction/index.html?print=true>`_
+   `Версия для демострации.
+   <http://rutsky.github.io/python-course-2014/01_introduction/>`
 
-   `Аудиозапись (2:32, OGG, 59 MB). <http://ubuntuone.com/4wAZODINiN4ogR5OMjPF5a>`_
+   Аудиозапись, 2:32:
+   `OGG, 44 MB <http://ubuntuone.com/6PQL4VcNxY5khZwPWoKz8L>`_,
+   `MP3, 69 MB <http://ubuntuone.com/6lzdnR8s3sTDUxH1y9kNUW>`_.
+
+2. Модули. Области видимости. Техники итерирования: ``enumerate()``, ``zip()``.
+   Форматирование строк. Неименованные функции. Обработка последовательностей:
+   ``map()``, ``filter()``. List comprehension.
+
+   `Презентация второй лекции.
+   <http://rutsky.github.io/python-course-2014/02_introduction/index.html?print=true>`_
+   `Версия для демострации.
+   <http://rutsky.github.io/python-course-2014/02_introduction/>`
+
+   Аудиозапись, 1:15:
+   `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
+   `MP3, 34 MB <http://ubuntuone.com/7NRJZJNf3NUHVVOi1McF02>`_.
