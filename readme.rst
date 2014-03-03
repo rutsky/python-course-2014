@@ -47,3 +47,13 @@
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
    `MP3, 34 MB <http://ubuntuone.com/7NRJZJNf3NUHVVOi1McF02>`_.
+
+Практика:
+
+1. Работа в интерактивном режиме.
+   `Задание.
+   <http://rutsky.github.io/python-course-2014/02_practice/practice01.html>`_
+   `Решение первой части.
+   <http://rutsky.github.io/python-course-2014/02_practice/practice01_1_answer.html>`_
+   `Решение второй части.
+   <http://rutsky.github.io/python-course-2014/02_practice/practice01_2_answer.html>`_
