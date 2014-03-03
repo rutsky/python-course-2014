@@ -14,7 +14,7 @@
 <https://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1>`_.
 
 Установка Python и Pycharm, а также пример программы находится
-`здесь <https://github.com/rutsky/python-course-2014/blob/master/python_setup.rst>`_
+`здесь <https://github.com/rutsky/python-course-2014/blob/master/python_setup.rst>`_.
 
 Лекции:
 
