@@ -9,7 +9,7 @@
    http://python.org/download/releases/3.3.4/.
 
    Ищите на странице ссылку
-   ``Windows X86 MSI Installer (3.3.4)`` (или "``X86-64``").
+   ``Windows X86 MSI Installer (3.3.4)`` (или ``X86-64``).
 
 2. Установите в директорию по умолчанию (``C:\Python33``).
 
