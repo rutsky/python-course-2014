@@ -24,7 +24,7 @@
 
    `Презентация первой лекции.
    <http://rutsky.github.io/python-course-2014/01_introduction/index.html?print=true>`_
-   `Версия для демострации.
+   `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/01_introduction/>`_
    `PDF.
    <https://github.com/rutsky/python-course-2014/raw/master/01_introduction.pdf>`_
@@ -39,7 +39,7 @@
 
    `Презентация второй лекции.
    <http://rutsky.github.io/python-course-2014/02_modules_scopes/index.html?print=true>`_
-   `Версия для демострации.
+   `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/02_modules_scopes/>`_
    `PDF.
    <https://github.com/rutsky/python-course-2014/raw/master/02_modules_scopes.pdf>`_
