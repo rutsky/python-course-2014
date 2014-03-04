@@ -57,3 +57,17 @@
    <http://rutsky.github.io/python-course-2014/02_practice/practice01_1_answer.html>`_
    `Решение второй части.
    <http://rutsky.github.io/python-course-2014/02_practice/practice01_2_answer.html>`_
+
+Домашние задания:
+
+1. Вычисление функций
+   (`Python
+   <http://rutsky.github.io/python-course-2014/02_homework/task_01_calculation.py>`_,
+   `HTML
+   <http://rutsky.github.io/python-course-2014/02_homework/task_01_calculation.html>`_).
+
+2. Работа со списками
+   (`Python
+   <http://rutsky.github.io/python-course-2014/02_homework/task_02_lists.py>`_,
+   `HTML
+   <http://rutsky.github.io/python-course-2014/02_homework/task_02_lists.html>`_).
