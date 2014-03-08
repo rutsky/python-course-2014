@@ -76,6 +76,30 @@ article.smaller2 q::after {
   font-size: 60px;
 }
 
+article.smaller3 {
+  font-size: 25px !important;
+  line-height: 1em !important;
+}
+
+article.smaller3 > p {
+  font-size: 0.90em !important;
+}
+article.smaller3 > ul {
+  font-size: 0.81em !important;
+}
+article.smaller3 ul {
+  margin-top: 0.25ex;
+}
+article.smaller3 li {
+  margin-top: 0.1ex;
+}
+article.smaller3 > ul > ul {
+  font-size: 0.90em !important;
+}
+article.smaller3 span {
+  font-size: 0.90em !important;
+}
+
 #id1 .slide-footer {
   display: none;
 }
