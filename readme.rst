@@ -48,6 +48,16 @@
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
    `MP3, 34 MB <http://ubuntuone.com/7NRJZJNf3NUHVVOi1McF02>`_.
 
+
+2. Unicode и байтовые строки. Ввод/вывод в файлы. Механизм исключений.
+
+   `Презентация третьей лекции.
+   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/>`_
+   `PDF.
+   <https://github.com/rutsky/python-course-2014/raw/master/03_unicode_io_exceptions.pdf>`_
+
 Практика:
 
 1. Работа в интерактивном режиме.
