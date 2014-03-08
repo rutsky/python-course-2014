@@ -53,27 +53,27 @@ article.smaller2 ul {
 
 article.smaller2 p,
 article.smaller2 ul {
-	  font-size: 20px;
-	    line-height: 24px;
-	      letter-spacing: 0;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 article.smaller2 table {
-	  font-size: 20px;
-	    line-height: 24px;
-	      letter-spacing: 0;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 article.smaller2 pre {
-	  font-size: 14px;
-	    line-height: 17px;
-	      letter-spacing: 0;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
 }
 article.smaller2 q {
-	  font-size: 40px;
-	    line-height: 48px;
+  font-size: 40px;
+  line-height: 48px;
 }
 article.smaller2 q::before,
 article.smaller2 q::after {
-	  font-size: 60px;
+  font-size: 60px;
 }
 
 #id1 .slide-footer {
