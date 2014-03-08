@@ -1,0 +1,7 @@
+>>> "test"[1] = "a"
+Traceback (most recent call last):
+  File "/usr/lib/python3.3/doctest.py", line 1287, in __run
+    compileflags, 1), test.globs)
+  File "<doctest str_immutable.pycon[1]>", line 1, in <module>
+    s[3] = 'a'
+TypeError: 'str' object does not support item assignment

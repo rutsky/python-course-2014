@@ -1,0 +1,13 @@
+>>> try:
+...    # Бросаем исключение стандартного типа (можно любого своего).
+...    raise Exception('spam', 'eggs')
+... except Exception as inst:
+...    print(type(inst))    # объект-исключение
+...    print(inst.args)     # Класс Exception для удобства сохраняет свои 
+...                         # аргументы в .args
+...    print(inst)
+...
+<class 'Exception'>
+('spam', 'eggs')
+('spam', 'eggs')
+>>>

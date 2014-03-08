@@ -1,0 +1,6 @@
+>>> while True print("test")  # doctest: +SKIP
+  File "<stdin>", line 1
+    while True print("test")
+                   ^
+SyntaxError: invalid syntax
+>>>

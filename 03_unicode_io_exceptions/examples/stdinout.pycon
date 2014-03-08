@@ -1,0 +1,13 @@
+>>> # В Python по умолчанию есть два файловых потока для ввода с консоли и
+... # для вывода в консоль
+... import sys
+>>> sys.stdout.write("Это вывод\n")
+Это вывод
+10
+>>> t = sys.stdin.read(4)  # doctest: +SKIP
+Это ввод
+>>> t  # doctest: +SKIP
+'Это '
+>>> sys.stdin.read(4)  # doctest: +SKIP
+'ввод'
+>>>

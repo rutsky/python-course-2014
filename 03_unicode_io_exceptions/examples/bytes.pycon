@@ -1,0 +1,28 @@
+>>> # Для хранения последовательностей байт используется тип bytes
+... b = b'some bytes \xff'
+>>> type(b)
+<class 'bytes'>
+>>> # Задаются также, как строки, но с префиксом 'b'.  Можно задать
+... # произвольные байты через '\x..', ASCII символы можно задавать как есть
+... b'''\x00\x01 ABC
+... def'''
+b'\x00\x01 ABC\ndef'
+>>> # Элементами bytes являются значения байтов (0--255)
+... # Индексация такая же, как в других последовательностях (строках, списках)
+... b[0]
+115
+>>> b[-1]
+255
+>>> # Строки можно кодировать в набор байт:
+... "abc абв".encode('utf-8')
+b'abc \xd0\xb0\xd0\xb1\xd0\xb2'
+>>> "abc абв".encode('cp1251')
+b'abc \xe0\xe1\xe2'
+>>> # и обратно
+... b'abc \xe0\xe1\xe2'.decode('cp1251')
+'abc абв'
+>>> b'abc \xe0\xe1\xe2'.decode('utf-8')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe0 in position 4: invalid continuation byte
+>>> # bytes неизменяемый
