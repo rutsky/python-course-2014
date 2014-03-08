@@ -36,6 +36,6 @@ $(function() {
   }
 
   // Include per-presentation JS.
-  $.getScript("custom.js", function(){
+  $.getScript("_static/custom.js", function(){
   });
 });
