@@ -49,7 +49,7 @@
    `MP3, 34 MB <http://ubuntuone.com/7NRJZJNf3NUHVVOi1McF02>`_.
 
 
-2. Unicode и байтовые строки. Ввод/вывод в файлы. Механизм исключений.
+3. Unicode и байтовые строки. Ввод/вывод в файлы. Механизм исключений.
 
    `Презентация третьей лекции.
    <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/index.html?print=true>`_
