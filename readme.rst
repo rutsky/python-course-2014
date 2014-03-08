@@ -68,6 +68,10 @@
    `Решение второй части.
    <http://rutsky.github.io/python-course-2014/02_practice/practice01_2_answer.html>`_
 
+2. Работа с файлами.
+   `Задание.
+   <http://rutsky.github.io/python-course-2014/03_practice/practice02.html>`_
+
 Домашние задания:
 
 1. Вычисление функций
