@@ -58,6 +58,10 @@
    `PDF.
    <https://github.com/rutsky/python-course-2014/raw/master/03_unicode_io_exceptions.pdf>`_
 
+   Аудиозапись, 1:47:
+   `OGG, 35 MB <http://ubuntuone.com/3nhRs7r8YnQfCxWrrwTgdj>`_,
+   `MP3, 49 MB <http://ubuntuone.com/3PQIo0ffs1caoJYqH513IR>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
