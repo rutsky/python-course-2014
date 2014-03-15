@@ -81,9 +81,13 @@
    `Решение второй части.
    <http://rutsky.github.io/python-course-2014/02_practice/practice01_2_answer.html>`_
 
-2. Работа с файлами.
+2. Ввод/вывод.
    `Задание.
    <http://rutsky.github.io/python-course-2014/03_practice/practice02.html>`_
+
+3. Pygame.
+   `Задание.
+   <http://rutsky.github.io/python-course-2014/04_practice/practice03.html>`_
 
 Домашние задания:
 
