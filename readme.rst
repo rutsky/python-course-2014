@@ -62,6 +62,15 @@
    `OGG, 35 MB <http://ubuntuone.com/3nhRs7r8YnQfCxWrrwTgdj>`_,
    `MP3, 49 MB <http://ubuntuone.com/3PQIo0ffs1caoJYqH513IR>`_.
 
+4. Python обёртки для библиотек. SDL. Pygame.
+
+   `Презентация четвёртой лекции.
+   <http://rutsky.github.io/python-course-2014/04_bindings_pygame/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/04_bindings_pygame/>`_
+   `PDF.
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame.pdf>`_
+
 Практика:
 
 1. Работа в интерактивном режиме.
