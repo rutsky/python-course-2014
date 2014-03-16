@@ -27,7 +27,7 @@
    `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/01_introduction/>`_
    `PDF.
-   <https://github.com/rutsky/python-course-2014/raw/master/01_introduction.pdf>`_
+   <http://rutsky.github.io/python-course-2014/01_introduction.pdf>`_
 
    Аудиозапись, 2:32:
    `OGG, 44 MB <http://ubuntuone.com/6PQL4VcNxY5khZwPWoKz8L>`_,
@@ -42,7 +42,7 @@
    `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/02_modules_scopes/>`_
    `PDF.
-   <https://github.com/rutsky/python-course-2014/raw/master/02_modules_scopes.pdf>`_
+   <http://rutsky.github.io/python-course-2014/02_modules_scopes.pdf>`_
 
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
@@ -56,7 +56,7 @@
    `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/>`_
    `PDF.
-   <https://github.com/rutsky/python-course-2014/raw/master/03_unicode_io_exceptions.pdf>`_
+   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions.pdf>`_
 
    Аудиозапись, 1:47:
    `OGG, 35 MB <http://ubuntuone.com/3nhRs7r8YnQfCxWrrwTgdj>`_,
@@ -69,7 +69,7 @@
    `Версия для демонстрации.
    <http://rutsky.github.io/python-course-2014/04_bindings_pygame/>`_
    `PDF.
-   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame.pdf>`_
+   <http://rutsky.github.io/python-course-2014/04_bindings_pygame.pdf>`_
 
    Аудиозапись, 0:43:
    `OGG, 15 MB <http://ubuntuone.com/65uN36SKdAs7lJhmojxmAI>`_,
