@@ -71,6 +71,10 @@
    `PDF.
    <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame.pdf>`_
 
+   Аудиозапись, 0:43:
+   `OGG, 15 MB <http://ubuntuone.com/65uN36SKdAs7lJhmojxmAI>`_,
+   `MP3, 19 MB <http://ubuntuone.com/64MUfRMA8CSQuLiZJxbI3g>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
