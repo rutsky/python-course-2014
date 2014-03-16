@@ -158,7 +158,9 @@ pre {
   .slides > article.next,
   .slides > article.far-next {
 
-  position: relative !important;
-  top: 0;
-  left: 0;
+    position: relative !important;
+    top: 0;
+    left: 0;
+    text-shadow: none;
+  }
 }
