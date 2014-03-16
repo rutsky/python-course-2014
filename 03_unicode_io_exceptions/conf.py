@@ -29,4 +29,4 @@ today = '08.03.2014'
 # Place custom static assets in the _static directory and uncomment
 # the following lines to include them
 
-slide_footer = '<div class="left">08.03.2014</div><div class="center">Владимир Владимирович Руцкий</div>'
+slide_footer = slide_footer_template.format(today)

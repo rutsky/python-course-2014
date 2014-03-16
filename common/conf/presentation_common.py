@@ -261,3 +261,6 @@ slide_theme_options = {
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'python': ('http://docs.python.org/3/', None)}
+
+slide_footer_template = '<div class="left">{0}</div>' \
+    '<div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div>'

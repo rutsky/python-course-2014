@@ -40,4 +40,4 @@ today = '22.02.2014'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
-slide_footer = '<div class="left">22.02.2014</div><div class="center">Владимир Владимирович Руцкий</div>'
+slide_footer = slide_footer_template.format(today)

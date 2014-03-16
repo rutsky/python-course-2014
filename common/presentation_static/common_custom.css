@@ -123,6 +123,16 @@ article.smaller3 span {
   text-align: center;
 }
 
+.slide-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.slide-footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 table.highlighttable td {
   padding: 0 !important;
 }
