@@ -1,0 +1,33 @@
+>>> import numbers # в numbers определены классы чисел
+>>> class Vector:
+...     def __init__(self, x, y):
+...         self._x = x
+...         self._y = y
+...     def __getattr__(self, name):
+...         # Вызывается, когда проиходит получение атрибута (t = obj.name)
+...         # (name — имя запрошенного атрибута) и name не найден в обычных местах
+...         if name == 'x':
+...             return self._x
+...         elif name == 'y':
+...             return self._y
+...         elif name == 'length':
+...             return (self._x ** 2 + self._y ** 2) ** 0.5
+...         else:
+...             raise AttributeError()
+...     def __setattr__(self, name, value):
+...         # Вызывается, когда проиходит присвоение атрибута (obj.key = t)
+...         # (name — имя запрошенного атрибута) и name не найден в обычных местах
+...         if name in ['x', 'y']:
+...             assert isinstance(value, numbers.Number)
+...         super(Vector, self).__setattr__(name, value)
+...
+>>> v = Vector(3, 4); v.x
+3
+>>> v.y = 'test'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in __setattr__
+AssertionError
+>>> v.length
+5.0
+>>>

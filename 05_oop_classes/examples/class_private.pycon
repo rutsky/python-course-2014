@@ -1,0 +1,27 @@
+>>> class User:
+...     # Приватные (скрытые, внутренние) атрибуты и методы принято именовать
+...     # начиная с одного подчеркивания
+...     _greeting = "Hello "
+...     def __init__(self, name, surname):
+...         self._name = name
+...         # Имена внутри классов, начинающиеся с двух подчеркиваний, и
+...         # заканчивающиеся не более, чем одним подчеркиванием, прозрачно
+...         # "переименовываются" (name mangling): к ним добавляется имя класса
+...         self.__surname = surname
+...     def _get_full_name(self): # приватный метод
+...         return self._name + " " + self.__surname
+...     def hello(self): 
+...         return self._greeting + self._get_full_name()
+...
+>>> user_instance = User("Peter", "Smith")
+>>> user_instance.hello()
+'Hello Peter Smith'
+>>> user_instance._name  # обращаться к приватным атрибутам плохо!
+'Peter'
+>>> user_instance.__surname
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'User' object has no attribute '__surname'
+>>> user_instance.__dict__  # doctest: +SKIP
+{'_name': 'Peter', '_User__surname': 'Smith'}
+>>>

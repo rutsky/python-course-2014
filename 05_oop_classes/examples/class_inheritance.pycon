@@ -1,0 +1,30 @@
+>>> class User:
+...     greeting = "Hello "
+...     def __init__(self, name):
+...         self.my_name = name
+...     def hello(self):
+...         return "Hello, my name is {0}!".format(self.my_name)
+...
+>>> # В Python есть множественное наследоваение классов:
+... # class ИмяКласса(ИмяБазовогоКласса1, ИмяБазовогоКласса2, ...):
+... #     выражение1
+... #     выражение2
+... #     ...
+... class UserWithSurname(User): # Наследуем свойства класса User
+...     def __init__(self, name, surname):
+...         # Вызываем конструктор базового класса с необходимыми 
+...         # аргументами (он присвоит в self.my_name=name)
+...         super(UserWithSurname, self).__init__(name) 
+...         self.my_surname = surname
+...     def hello(self): # hello() переопределяется (полиморфизм)
+...         return self.greeting + self.my_name + " " + self.my_surname
+...     def old_hello(self):
+...         # Явно вызываем метод базового класса
+...         return super(UserWithSurname, self).hello()
+... 
+>>> peter = UserWithSurname("Peter", "Ivanov")
+>>> peter.hello()
+'Hello Peter Ivanov'
+>>> peter.old_hello()
+'Hello, my name is Peter!'
+>>> # Замечание: поддерживается «ромбовидное» наследование

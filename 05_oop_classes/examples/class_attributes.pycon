@@ -1,0 +1,25 @@
+>>> class MyClass:
+...     def set_name(self, new_name):
+...         # Объектам можно добавлять/удалять/изменять атрибуты
+...         self.name = new_name  # установка значения атрибута `name'
+...     def greet_user(self):
+...         print("Hello, {0}!".format(self.name))
+... 
+>>> x = MyClass()
+>>> # атрибуты и методы экземпляра доступны через точку
+... x.abc = 'test'  # Добавление (или изменение значения) атрибута `abc'
+>>> x.abc  # получение значения атрибута
+'test'
+>>> x.ttt  # атрибуты должны быть установлены перед использованием
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'MyClass' object has no attribute 'ttt'
+>>> x.set_name("Valery")
+>>> x.greet_user()
+Hello, Valery!
+>>> x.name
+'Valery'
+>>> x.name = 'John'
+>>> x.greet_user()
+Hello, John!
+>>>

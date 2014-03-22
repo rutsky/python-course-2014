@@ -1,0 +1,27 @@
+>>> class MyClass:
+...     def set_name(self, new_name):
+...         # Объектам можно добавлять/удалять/изменять атрибуты
+...         self.name = new_name  # установка значения атрибута `name'
+...     def greet_user(self):
+...         print("Hello, {0}!".format(self.name))
+... 
+>>> x = MyClass()
+>>> y = MyClass()
+>>> # У каждого класса свой набор атрибутов
+>>> x.set_name('X')
+>>> y.set_name('Y')
+>>> x.greet_user()
+Hello, X!
+>>> y.greet_user()
+Hello, Y!
+>>> x.test = 'test'
+>>> y.test
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'MyClass' object has no attribute 'test'
+>>> # Атрибуты классов хранятся в специальном атрибуте-словаре __dict__  # doctest: +SKIP
+... x.__dict__
+{'test': 'test', 'name': 'X'}
+>>> y.__dict__
+{'name': 'Y'}
+>>>

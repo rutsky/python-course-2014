@@ -1,0 +1,27 @@
+>>> class Base:
+...     pass
+...
+>>> class Derived(Base):
+...     pass
+...
+>>> b = Base()
+>>> d = Derived()
+>>> # isinstance() проверяет, является ли объект экземпляром класса
+... isinstance(b, Base)
+True
+>>> isinstance(b, Derived)
+False
+>>> isinstance(d, Base)
+True
+>>> isinstance(d, Derived)
+True
+>>> # issubclass() проверяет, является класс подклассом другого класса
+... issubclass(Derived, Base)
+True
+>>> issubclass(Base, Derived)
+False
+>>> issubclass(Derived, Derived)
+True
+>>> issubclass(Base, Base)
+True
+>>>

@@ -1,0 +1,32 @@
+>>> class OverloadsTest:
+...     # Перегрузок в Python нет, вторая функция f() заменит первую f()
+...     def f(self, a, b, c):
+...         print("F1")
+...     def f(self, a):
+...         print("F2")
+>>> o = OverloadsTest()
+>>> o.f(1)
+F2
+>>> o.f(1, 2, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: f() takes 2 positional arguments but 4 were given
+>>> # Для перегрузок нужно использовать переменное количество аргументов и
+... # проверку типов
+... class MyRange:
+...     def __init__(self, start, stop=None, step=1):
+...         self.numbers = []
+...         if stop is None:
+...             start, stop = 0, start
+...         i = start
+...         while i < stop:
+...             self.numbers.append(i)
+...             i += step
+...
+>>> MyRange(10).numbers
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> MyRange(2, 7).numbers
+[2, 3, 4, 5, 6]
+>>> MyRange(2, 10, 2).numbers
+[2, 4, 6, 8]
+>>>

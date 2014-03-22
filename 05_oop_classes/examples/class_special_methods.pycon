@@ -1,0 +1,25 @@
+>>> class Vector:
+...     def __init__(self, x, y):
+...         self._x = x
+...         self._y = y
+...     def __str__(self):
+...         # Вызывается при конструировании строки (str) от объекта
+...         # (строковой вид объекта произвольного формата)
+...         return "({0}, {1})".format(self._x, self._y)
+...     def __repr__(self):
+...         # Вызывается при выводе объектов на экран в интерпретаторе
+...         # (стрококвой вид объекта произвольного формата, обычно строка
+...         # как этот объект можно создать)
+...         return "Vector({0}, {1})".format(self._x, self._y)
+...     def __call__(self, *args, **kwargs):
+...         # Вызывается при "вызове" объекта (obj=Vector(); obj(...))
+...         print("Called with {0} {1}".format(str(args), str(kwargs)))
+...
+>>> v = Vector(2, 3)
+>>> str(v)
+'(2, 3)'
+>>> v
+Vector(2, 3)
+>>> v(1, 2, test="data")
+Called with (1, 2) {'test': 'data'}
+>>>

@@ -1,0 +1,33 @@
+>>> import numbers # в numbers определены классы чисел
+>>> class Vector:
+...     def __init__(self, x, y):
+...         self._x = x
+...         self._y = y
+...     def __repr__(self):
+...         return "Vector({0}, {1})".format(self._x, self._y)
+...     def __add__(self, v):
+...         # Вызывается при попытке сложить данный объект с чем-то (obj + v)
+...         # Возвращаемой значение из функции — результат (obj + v)
+...         assert isinstance(v, Vector)  # если сложить не с вектором — ошибка
+...         return Vector(self._x + v._x, self._y + v._y)
+...     def __sub__(self, v):  # (obj - v)
+...         assert isinstance(v, Vector)
+...         return Vector(self._x - v._x, self._y - v._y)
+...     def __mul__(self, scalar):  # (obj * scalar)
+...         assert isinstance(scalar, numbers.Number) # умножаем только на числа
+...         return Vector(self._x * scalar, self._y * scalar)
+...     def __rmul__(self, scalar): # (scalar * obj)
+...         assert isinstance(scalar, numbers.Number)
+...         return self * scalar
+...     # Можно определить операции для +, -, *, /, //, %, divmod(), pow(), **, <<, >>, &, ^, |
+...
+>>> v1 = Vector(1, 2)
+>>> v2 = v1 + Vector(3, -1); v2
+Vector(4, 1)
+>>> v2 * -2
+Vector(-8, -2)
+>>> 0.5 * v2
+Vector(2.0, 0.5)
+>>> v2 += Vector(1, 0); v2 # с помощью __iadd__ можно задать +=, здесь — автоматически
+Vector(5, 1)
+>>>
