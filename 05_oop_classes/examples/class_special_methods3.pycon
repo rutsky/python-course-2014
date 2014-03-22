@@ -4,7 +4,7 @@
 ...         self._x = x
 ...         self._y = y
 ...     def __getattr__(self, name):
-...         # Вызывается, когда проиходит получение атрибута (t = obj.name)
+...         # Вызывается, когда происходит получение атрибута (t = obj.name)
 ...         # (name — имя запрошенного атрибута) и name не найден в обычных местах
 ...         if name == 'x':
 ...             return self._x
@@ -15,7 +15,7 @@
 ...         else:
 ...             raise AttributeError()
 ...     def __setattr__(self, name, value):
-...         # Вызывается, когда проиходит присвоение атрибута (obj.key = t)
+...         # Вызывается, когда происходит присвоение атрибута (obj.key = t)
 ...         # (name — имя запрошенного атрибута) и name не найден в обычных местах
 ...         if name in ['x', 'y']:
 ...             assert isinstance(value, numbers.Number)
