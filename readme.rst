@@ -71,6 +71,26 @@
    `PDF.
    <http://rutsky.github.io/python-course-2014/04_bindings_pygame.pdf>`_
 
+   Примеры:
+
+   `pygame01_base_template.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame01_base_template.py>`_
+
+   `pygame02_simple_graphics_demo.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame02_simple_graphics_demo.py>`_
+
+   `pygame03_move_keyboard.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame03_move_keyboard.py>`_
+
+   `pygame04_move_joystick.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame04_move_joystick.py>`_
+
+   `pygame05_move_mouse.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame05_move_mouse.py>`_
+
+   `pygame06_bitmapped_graphics.py
+   <https://github.com/rutsky/python-course-2014/raw/master/04_bindings_pygame/examples/pygame06_bitmapped_graphics.py>`_
+
    Аудиозапись, 0:43:
    `OGG, 15 MB <http://ubuntuone.com/65uN36SKdAs7lJhmojxmAI>`_,
    `MP3, 19 MB <http://ubuntuone.com/64MUfRMA8CSQuLiZJxbI3g>`_.
