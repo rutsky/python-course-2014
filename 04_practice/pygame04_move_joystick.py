@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 #
-# Обработка клавиатуры
+# Обработка джойстика
 #
 # Основано на примерах Simpson College Computer Science <http://cs.simpson.edu>
 
