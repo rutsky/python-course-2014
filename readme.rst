@@ -7,7 +7,7 @@
 
 Читает Владимир Владимирович Руцкий <rutsky.vladimir@gmail.com>.
 
-.. Страница на сайте школы: `<http://school30.spb.ru/cgsg/python/>`_.
+Страница на сайте школы: `<http://school30.spb.ru/cgsg/python/2014/>`_.
 
 Рекомендуемый учебник на русском языке по Python:
 `https://ru.wikibooks.org/wiki/Учебник_Python_3.1
