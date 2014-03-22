@@ -75,6 +75,19 @@
    `OGG, 15 MB <http://ubuntuone.com/65uN36SKdAs7lJhmojxmAI>`_,
    `MP3, 19 MB <http://ubuntuone.com/64MUfRMA8CSQuLiZJxbI3g>`_.
 
+4. Объектно-ориентированное программирование. Классы в Python.
+
+   `Презентация пятой лекции.
+   <http://rutsky.github.io/python-course-2014/05_oop_classes/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/05_oop_classes/>`_
+   `PDF.
+   <http://rutsky.github.io/python-course-2014/05_oop_classes.pdf>`_
+
+   Аудиозапись, 1:20:
+   `OGG, 26 MB <http://ubuntuone.com/6hJuR9Y5mX2I3Ck9vjhdHs>`_,
+   `MP3, 37 MB <http://ubuntuone.com/2UjXfD2jbNBmV9dbDHs1b7>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
