@@ -1,0 +1,15 @@
+>>> a = ['A', 'B', 'C']
+>>> a.__iter__  # doctest: +ELLIPSIS
+<method-wrapper '__iter__' of list object at 0x...>
+>>> it = a.__iter__()
+>>> it.__next__()
+'A'
+>>> it.__next__()
+'B'
+>>> it.__next__()
+'C'
+>>> it.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+>>>

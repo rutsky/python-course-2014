@@ -1,0 +1,19 @@
+>>> def f(arg, dummy_arg=None):
+...     print(type(arg))
+...     for i in arg:
+...         print(i, end=" ")
+...
+>>> # Comprehensions, используемые сами по себе, создают контейнеры
+... f([x ** 2 for x in range(5)], "test") # будет создан список и передан в f()
+<class 'list'>
+0 1 4 9 16 
+>>> # Можно написать генерацию последовательности без скобок контейнера,
+... # тогда будет создан генератор:
+... f(x ** 2 for x in range(5))
+<class 'generator'>
+0 1 4 9 16 
+>>> # Или можно написать круглые скобки:
+... f((x ** 2 for x in range(5)), "test")
+<class 'generator'>
+0 1 4 9 16 
+>>>

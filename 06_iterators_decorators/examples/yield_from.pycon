@@ -1,0 +1,20 @@
+>>> # itertools.chain позволяет объединять последовательности
+... import itertools
+>>> list(itertools.chain(range(5), "ABC", [4, 3, 2, 1, 0]))
+[0, 1, 2, 3, 4, 'A', 'B', 'C', 4, 3, 2, 1, 0]
+>>> def my_chain(*iterables):
+...     for iterable in iterables:
+...         for elem in iterable:
+...             yield elem
+...
+>>> list(my_chain("abc", range(4)))
+['a', 'b', 'c', 0, 1, 2, 3]
+>>> def my_chain2(*iterables):
+...     for iterable in iterables:
+...         # В "yield from" генератор будет возвращать значения напрямую из
+...         # итератора iterable, пока в нём не закончатся элементы.
+...         yield from iterable
+...
+>>> list(my_chain2("abc", range(4)))
+['a', 'b', 'c', 0, 1, 2, 3]
+>>>

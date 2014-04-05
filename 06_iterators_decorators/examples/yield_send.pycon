@@ -1,0 +1,29 @@
+>>> def echo(value=None):
+...     try:
+...         while True:
+...             try:
+...                 # Команда yield возвращает значение, которое может быть
+...                 # передано через iterator.send()
+...                 value = (yield value)
+...             except Exception as e:
+...                 value = e
+...     except GeneratorExit:
+...         print("У итератора вызвали close() — запрос на отмену итерирования")
+...
+>>> it = echo(1)  # Передаём начальный value=1
+>>> print(next(it))
+1
+>>> print(next(it))  # По умолчанию результат yield — None
+None
+>>> # Результат yield можно указать, использовав send() вместо __next__()
+... print(it.send(2))
+2
+>>> # Можно вызвать исключение внутри генератора (в месте yield):
+... it.throw(TypeError, "spam")
+TypeError('spam',)
+>>> # Можно запросить остановку итератора (вызывается при уничтожении объекта, 
+... # который не закончил итерирование):
+... print(it.close())
+У итератора вызвали close() — запрос на отмену итерирования
+None
+>>>

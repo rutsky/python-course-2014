@@ -1,0 +1,24 @@
+>>> r = range(3) # возвращает объект, поддерживающий интерфейс итератора
+>>> it = iter(r)
+>>> next(it)
+0
+>>> next(it)
+1
+>>> next(it)
+2
+>>> next(it)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+>>> it = iter("ABC")
+>>> next(it, "Done!")
+'A'
+>>> next(it, "Done!")
+'B'
+>>> next(it, "Done!")
+'C'
+>>> next(it, "Done!")
+'Done!'
+>>> next(it, "Done!")
+'Done!'
+>>>

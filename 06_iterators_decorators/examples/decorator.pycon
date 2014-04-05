@@ -1,0 +1,27 @@
+>>> import datetime
+>>> import time
+>>> def print_time(func):
+...     def wrapped_func(*args, **kwargs):
+...         # Обёртка засекает время и вызывает оборачиваемую функцию.
+...         start_time = datetime.datetime.now()
+...         try:
+...             return func(*args, **kwargs)
+...         finally:
+...             # По завершению работы функции обёртка выводит время работы
+...             # функции.
+...             end_time = datetime.datetime.now()
+...             num_secs = (end_time - start_time).total_seconds()
+...             print("Took {} seconds".format(num_secs))
+...     # Оборачиваемая функция будет заменена возвращаемой декоратором функцией
+...     return wrapped_func
+...
+>>> @print_time
+... def long_running_func():
+...     for i in range(10000):
+...         pass
+...     return 123
+>>> long_running_func()  # doctest: +SKIP
+Took 0.000243 seconds
+123
+>>>
+

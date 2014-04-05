@@ -1,0 +1,18 @@
+>>> class MyRange:
+...     def __init__(self, stop):
+...         self._stop = stop
+...         self._next = 0
+...     def __iter__(self):
+...         return self
+...     def __next__(self):
+...         if self._next >= self._stop:
+...             raise StopIteration
+...         else:
+...             result, self._next = self._next, self._next + 1
+...             return result
+...
+>>> for i in MyRange(10):
+...     print(i, end=" ")
+...
+0 1 2 3 4 5 6 7 8 9 
+>>>
