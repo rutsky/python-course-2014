@@ -129,6 +129,10 @@
    `PDF.
    <http://rutsky.github.io/python-course-2014/06_iterators_decorators.pdf>`_
 
+   Аудиозапись, 0:52:
+   `OGG, 17 MB <http://ubuntuone.com/6fysan1VqupVFXiiPspPmn>`_,
+   `MP3, 24 MB <http://ubuntuone.com/65WTJyzrFJZoUmtg4JYeAi>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
