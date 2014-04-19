@@ -162,6 +162,11 @@ JavaScript
 
 .. literalinclude:: examples/http_server.py
 
+HTTP клиенты на Python
+======================
+
+* Библиотека https://docs.python.org/3/library/urllib.request.html
+
 http.server
 ===========
 
