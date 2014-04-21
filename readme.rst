@@ -133,6 +133,19 @@
    `OGG, 17 MB <http://ubuntuone.com/6fysan1VqupVFXiiPspPmn>`_,
    `MP3, 24 MB <http://ubuntuone.com/65WTJyzrFJZoUmtg4JYeAi>`_.
 
+7. Разбор домашнего задания №2. Компьютерные сети. Сокеты.
+
+   `Презентация седьмой лекции.
+   <http://rutsky.github.io/python-course-2014/07_network/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/07_network/>`_
+   `PDF.
+   <http://rutsky.github.io/python-course-2014/07_network.pdf>`_
+
+   Аудиозапись, 2:32:
+   `OGG, 52 MB <http://ubuntuone.com/7kyCsSKs7ITX5SuDm62cdH>`_,
+   `MP3, 71 MB <http://ubuntuone.com/4Cvq5N1hVCqRzDTXbkmdpc>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
