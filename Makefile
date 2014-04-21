@@ -1,6 +1,6 @@
 EXPORT_DIR = ../rutsky.github.io/python-course-2014/
 
-DIRS = 01_introduction 02_modules_scopes 03_unicode_io_exceptions 04_bindings_pygame 05_oop_classes
+DIRS = 01_introduction 02_modules_scopes 03_unicode_io_exceptions 04_bindings_pygame 05_oop_classes 06_iterators_decorators 07_network
 
 rebuild:
 	$(foreach DIR,$(DIRS),make -C $(DIR) clean slides;)
