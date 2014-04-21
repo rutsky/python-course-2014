@@ -41,10 +41,6 @@
 
 * Взаимодействие по сети. Сокеты
 
-* Основы WWW: HTML, CSS, JavaScript
-
-* Написание простого веб-сервера
-
 
 Компьютерные сети
 =================
@@ -107,72 +103,3 @@ SocketServer
 
 Чат на Python
 =============
-
-.. rst-class:: smaller
-
-Основы web-программирования
-===========================
-
-* Браузер
-
-  * HTML (https://ru.wikipedia.org/wiki/HTML)
-  
-    Самоучитель HTML4: http://htmlbook.ru/samhtml/vvedenie-v-html
-
-    Самоучитель HTML5: http://htmlbook.ru/samhtml5
-
-  * CSS (https://ru.wikipedia.org/wiki/CSS)
-  
-    Самоучитель: http://htmlbook.ru/samcss
-  
-  * JavaScript (https://ru.wikipedia.org/wiki/Javascript)
-
-HTML
-====
-
-* DOM-модель
-
-* Отображение статического контента
-
-* URL
-
-CSS
-===
-
-* Гибкие возможности по управлению *стилями* отображения
-
-JavaScript
-==========
-
-* Обработка событий и модификация DOM
-
-Веб-сервер
-==========
-
-  * Протокол HTTP (https://ru.wikipedia.org/wiki/HTTP).
-  
-  * Методы GET, POST, HEAD
-
-  * Формы
-
-.. rst-class:: smaller2
-
-Веб-сервер на Python
-====================
-
-.. literalinclude:: examples/http_server.py
-
-HTTP клиенты на Python
-======================
-
-* Библиотека https://docs.python.org/3/library/urllib.request.html
-
-http.server
-===========
-
-* При исполнении модуля "расшаривает" текущую директорию::
-
-    python -m http.server 8080
-
-Веб-интерфейс для чата
-======================
