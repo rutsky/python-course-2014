@@ -120,7 +120,7 @@
    `OGG, 26 MB <http://ubuntuone.com/6hJuR9Y5mX2I3Ck9vjhdHs>`_,
    `MP3, 37 MB <http://ubuntuone.com/2UjXfD2jbNBmV9dbDHs1b7>`_.
 
-6. Итераторы. Генераторы. Декораторы
+6. Итераторы. Генераторы. Декораторы.
 
    `Презентация шестой лекции.
    <http://rutsky.github.io/python-course-2014/06_iterators_decorators/index.html?print=true>`_
