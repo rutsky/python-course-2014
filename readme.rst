@@ -146,6 +146,19 @@
    `OGG, 52 MB <http://ubuntuone.com/7kyCsSKs7ITX5SuDm62cdH>`_,
    `MP3, 71 MB <http://ubuntuone.com/4Cvq5N1hVCqRzDTXbkmdpc>`_.
 
+8. Основы веб-программирования. Virtualenv. Введение в Django.
+
+   `Презентация восьмой лекции.
+   <http://rutsky.github.io/python-course-2014/08_web/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/08_web/>`_
+   `PDF.
+   <http://rutsky.github.io/python-course-2014/08_web.pdf>`_
+
+   Аудиозапись, 3:31:
+   `OGG, 72 MB <http://ubuntuone.com/0mivpz3cAbbSjAdZhX3a9C>`_,
+   `MP3, 99 MB <http://ubuntuone.com/2ftuNuGlnCsnqaqvGvOl8F>`_.
+
 Практика:
 
 1. Работа в интерактивном режиме.
