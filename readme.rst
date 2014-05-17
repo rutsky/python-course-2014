@@ -164,9 +164,9 @@
    `Презентация девятой лекции.
    <http://rutsky.github.io/python-course-2014/09_interoperability/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/08_interoperability/>`_
+   <http://rutsky.github.io/python-course-2014/09_interoperability/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/08_interoperability.pdf>`_
+   <http://rutsky.github.io/python-course-2014/09_interoperability.pdf>`_
 
 Практика:
 
