@@ -59,7 +59,7 @@ Interoperability с Python
 
   * Boost.Python, SWIG
  
-.. rst-class:: smaller
+.. rst-class:: smaller2
 
 Native code
 ===========
