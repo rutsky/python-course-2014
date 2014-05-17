@@ -159,6 +159,15 @@
    `OGG, 72 MB <http://ubuntuone.com/0mivpz3cAbbSjAdZhX3a9C>`_,
    `MP3, 99 MB <http://ubuntuone.com/2ftuNuGlnCsnqaqvGvOl8F>`_.
 
+9. Interoperability. Django (продолжение).
+
+   `Презентация девятой лекции.
+   <http://rutsky.github.io/python-course-2014/09_interoperability/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/08_interoperability/>`_
+   `PDF.
+   <http://rutsky.github.io/python-course-2014/08_interoperability.pdf>`_
+
 Практика:
 
 1. Работа в интерактивном режиме.
