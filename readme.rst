@@ -167,6 +167,10 @@
    <http://rutsky.github.io/python-course-2014/09_interoperability/>`_
    `PDF.
    <http://rutsky.github.io/python-course-2014/09_interoperability.pdf>`_
+   
+   Аудиозапись, 0:39:
+   `OGG, 13 MB <http://ubuntuone.com/4doZg1LHnYHAYPjhAXZxqw>`_,
+   `MP3, 18 MB <http://ubuntuone.com/2x4IyoPAcZ2jPV1VuRd9cT>`_.
 
 Практика:
 
