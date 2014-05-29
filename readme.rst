@@ -174,12 +174,12 @@
 
 10. Математические пакеты. IPython. Sage.
 
-   `Презентация десятой лекции.
-   <http://rutsky.github.io/python-course-2014/10_math/index.html?print=true>`_
-   `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/10_math/>`_
-   `PDF.
-   <http://rutsky.github.io/python-course-2014/10_math.pdf>`_
+    `Презентация десятой лекции.
+    <http://rutsky.github.io/python-course-2014/10_math/index.html?print=true>`_
+    `Версия для демонстрации.
+    <http://rutsky.github.io/python-course-2014/10_math/>`_
+    `PDF.
+    <http://rutsky.github.io/python-course-2014/10_math.pdf>`_
 
 Практика:
 
