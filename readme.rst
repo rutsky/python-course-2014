@@ -172,6 +172,15 @@
    `OGG, 13 MB <http://ubuntuone.com/4doZg1LHnYHAYPjhAXZxqw>`_,
    `MP3, 18 MB <http://ubuntuone.com/2x4IyoPAcZ2jPV1VuRd9cT>`_.
 
+10. Математические пакеты. IPython. Sage.
+
+   `Презентация десятой лекции.
+   <http://rutsky.github.io/python-course-2014/10_math/index.html?print=true>`_
+   `Версия для демонстрации.
+   <http://rutsky.github.io/python-course-2014/10_math/>`_
+   `PDF.
+   <http://rutsky.github.io/python-course-2014/10_math.pdf>`_
+
 Практика:
 
 1. Работа в интерактивном режиме.
