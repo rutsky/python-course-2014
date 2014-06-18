@@ -197,8 +197,8 @@ register(
 
 register(
     'file-gsm-load',
-    'load an GSM (.ora) file',
-    'load an GSM (.ora) file',
+    'load an GSM (.gsm) file',
+    'load an GSM (.gsm) file',
     'Vladimir Rutsky',
     'Vladimir Rutsky',
     '2014',
