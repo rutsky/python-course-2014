@@ -4,10 +4,19 @@
 GIMP (http://www.gimp.org/) — растровый графический редактор с открытым
 исходным кодом.
 
-Документация:
+Ссылки на документацию.
+
+На русском языке:
 
 * Общая информация о скриптовании в GIMP:
   http://docs.gimp.org/ru/gimp-scripting.html
+
+* Туториалы:
+  
+  * http://www.ibm.com/developerworks/ru/library/os-autogimp/
+  * http://digilinux.ru/2006/06/02/gimp-python-intro/
+
+На английском языке:
 
 * Довольно подробная справка о скриптовании на Python:
   http://www.gimp.org/docs/python/pygimp.html
@@ -17,8 +26,9 @@ GIMP (http://www.gimp.org/) — растровый графический ред
 
 * Туториал и документация по разработке плагинов на Си (более полная, чем
   справка о написании плагинов на Python):
-  http://developer.gimp.org/plug-ins.html
-  http://www.gimp.org/docs/plug-in/plug-in.html
+
+  * http://developer.gimp.org/plug-ins.html
+  * http://www.gimp.org/docs/plug-in/plug-in.html
 
 Примеры плагинов на Python, входящих в поставку GIMP 2.8:
 
