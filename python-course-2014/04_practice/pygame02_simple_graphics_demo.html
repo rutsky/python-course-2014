@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #ffffff; }
+body .c { color: #888888 } /* Comment */
+body .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+body .k { color: #008800; font-weight: bold } /* Keyword */
+body .cm { color: #888888 } /* Comment.Multiline */
+body .cp { color: #cc0000; font-weight: bold } /* Comment.Preproc */
+body .c1 { color: #888888 } /* Comment.Single */
+body .cs { color: #cc0000; font-weight: bold; background-color: #fff0f0 } /* Comment.Special */
+body .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #aa0000 } /* Generic.Error */
+body .gh { color: #333333 } /* Generic.Heading */
+body .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #555555 } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #666666 } /* Generic.Subheading */
+body .gt { color: #aa0000 } /* Generic.Traceback */
+body .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008800 } /* Keyword.Pseudo */
+body .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #888888; font-weight: bold } /* Keyword.Type */
+body .m { color: #0000DD; font-weight: bold } /* Literal.Number */
+body .s { color: #dd2200; background-color: #fff0f0 } /* Literal.String */
+body .na { color: #336699 } /* Name.Attribute */
+body .nb { color: #003388 } /* Name.Builtin */
+body .nc { color: #bb0066; font-weight: bold } /* Name.Class */
+body .no { color: #003366; font-weight: bold } /* Name.Constant */
+body .nd { color: #555555 } /* Name.Decorator */
+body .ne { color: #bb0066; font-weight: bold } /* Name.Exception */
+body .nf { color: #0066bb; font-weight: bold } /* Name.Function */
+body .nl { color: #336699; font-style: italic } /* Name.Label */
+body .nn { color: #bb0066; font-weight: bold } /* Name.Namespace */
+body .py { color: #336699; font-weight: bold } /* Name.Property */
+body .nt { color: #bb0066; font-weight: bold } /* Name.Tag */
+body .nv { color: #336699 } /* Name.Variable */
+body .ow { color: #008800 } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mf { color: #0000DD; font-weight: bold } /* Literal.Number.Float */
+body .mh { color: #0000DD; font-weight: bold } /* Literal.Number.Hex */
+body .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+body .mo { color: #0000DD; font-weight: bold } /* Literal.Number.Oct */
+body .sb { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Backtick */
+body .sc { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Char */
+body .sd { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Doc */
+body .s2 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Double */
+body .se { color: #0044dd; background-color: #fff0f0 } /* Literal.String.Escape */
+body .sh { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Heredoc */
+body .si { color: #3333bb; background-color: #fff0f0 } /* Literal.String.Interpol */
+body .sx { color: #22bb22; background-color: #f0fff0 } /* Literal.String.Other */
+body .sr { color: #008800; background-color: #fff0ff } /* Literal.String.Regex */
+body .s1 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Single */
+body .ss { color: #aa6600; background-color: #fff0f0 } /* Literal.String.Symbol */
+body .bp { color: #003388 } /* Name.Builtin.Pseudo */
+body .vc { color: #336699 } /* Name.Variable.Class */
+body .vg { color: #dd7700 } /* Name.Variable.Global */
+body .vi { color: #3333bb } /* Name.Variable.Instance */
+body .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="c"># -*- encoding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Рисование</span>
+<span class="c">#</span>
+<span class="c"># Основано на примерах Simpson College Computer Science &lt;http://cs.simpson.edu&gt;</span>
+
+<span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+
+<span class="c"># Определим константы для цветов (модель RGB)</span>
+<span class="n">black</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">green</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">red</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">blue</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main_impl</span><span class="p">():</span>
+    <span class="c"># Инициализируем экран для рисования</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="c"># Установим заголовок окна</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s">&quot;My Game 2&quot;</span><span class="p">)</span>
+
+    <span class="c"># Флаг: стоит ли завершить игру</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="k">False</span>
+
+    <span class="c"># Создадим таймер для ограничения числа FPS</span>
+    <span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
+
+    <span class="c"># ------- главный цикл приложения</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="c"># Обработаем события (ввод с клавиатуры, мышь и т.п.)</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span> <span class="c"># пользователь нажал кнопку закрытия окна</span>
+                <span class="n">done</span> <span class="o">=</span> <span class="k">True</span> <span class="c"># завершить главный цикл на следующей итерации</span>
+
+        <span class="c"># ------- отрисовка</span>
+        <span class="c"># Закрасим экран белым цветом</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">white</span><span class="p">)</span>
+
+        <span class="c"># Рисуем зелёную линию от (0, 0) до (100, 100) толщиной 5 пикселей</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+        <span class="c"># Рисуем несколько красных линий в цикле</span>
+        <span class="k">for</span> <span class="n">y_offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">y_offset</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">110</span> <span class="o">+</span> <span class="n">y_offset</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+        <span class="c"># Выбираем шрифт для рисования текста: по умолчанию, высотой 25 пикселей</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="k">None</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+        <span class="c"># Создаём изображение с текстом. True — использовать сглаживание</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s">&quot;My text + текст на русском&quot;</span><span class="p">,</span> <span class="k">True</span><span class="p">,</span> <span class="n">black</span><span class="p">)</span>
+
+        <span class="c"># Рисуем изображение с текстом на экран в позиции (250, 250).</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">250</span><span class="p">))</span>
+
+        <span class="c"># Рисуем прямоугольник</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">black</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c"># Рисуем эллипс, заданный описывающим прямоугольником</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">black</span><span class="p">,</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c"># Рисуем дуги.</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">black</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+                     <span class="mi">0</span><span class="p">,</span>     <span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+                <span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>         <span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">blue</span><span class="p">,</span>  <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+                    <span class="n">pi</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span>   <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+            <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>     <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c"># Рисуем полигон (треугольник).</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">polygon</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="n">black</span><span class="p">,</span> <span class="p">[(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)],</span> <span class="mi">5</span><span class="p">)</span>
+
+        <span class="c"># ------- конец отрисовки</span>
+
+        <span class="c"># Ограничиваем частоту обновления экрана 20 кадрами в секунду</span>
+        <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+        <span class="c"># Показываем на экран только что нарисованный кадр</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+    
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c"># Инициализируем библиотеку PyGame.</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">main_impl</span><span class="p">()</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c"># Всегда деинициализируем библиотеку PyGame, даже в случае падения.</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Язык программирования</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/common_custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '17.05.2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <script type="text/javascript" src="_static/common_custom.js"></script>
+    
+    <link rel="top" title="" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="id1">
+<h1>Язык программирования</h1>
+<div class="python-logo figure align-center">
+<img src="_images/python-logo-generic.svg" /></div>
+<p class="center-text">Лекция № 9</p>
+<p class="center-text">Владимир Владимирович Руцкий <a class="reference external" href="mailto:rutsky&#46;vladimir&#37;&#52;&#48;gmail&#46;com">rutsky<span>&#46;</span>vladimir<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<table border="1" class="center-cells docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/cgsg.png"><img alt="_images/cgsg.png" src="_images/cgsg.png" style="width: 200px;" /></a>
+</td>
+<td><img class="first last" src="_images/logo_jetbrains.svg" /></td>
+<td><a class="first last reference internal image-reference" href="_images/pml30.png"><img alt="_images/pml30.png" src="_images/pml30.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="id2">
+<h2>План занятия</h2>
+<ul class="simple">
+<li>Interoperability с Python</li>
+<li>Django (продолжение)</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="smaller slide level-2" id="interoperability-python">
+<h2>Interoperability с Python</h2>
+<ul>
+<li><p class="first">Python простой, но мощный язык, удобный для написания высокоуровневой логики</p>
+<ul class="simple">
+<li>при наличии реализованных низкоуровневых инструментов, библиотек</li>
+</ul>
+</li>
+<li><p class="first"><strong>Interoperability</strong> компонентов/программ — совместная работа компонентов/программ</p>
+</li>
+<li><p class="first">Пример interoperability с Python:</p>
+<p>&quot;Оборачивание&quot; библиотек в Python модули — рассматривали на примере SDL/pygame</p>
+<ul class="simple">
+<li>Boost.Python, SWIG</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="smaller2 slide level-2" id="native-code">
+<h2>Native code</h2>
+<ul class="simple">
+<li><em>native</em> code/binary/executable — код, скомпилированный в машинные коды, исполняемые на определённом процессоре (и специфичные для него)<ul>
+<li>Код на Python парсится в байткод (.pyc), который интерпретируется программой-интерпретатором — Python не &quot;нативный&quot;</li>
+</ul>
+</li>
+<li>Примерами нативного кода являются скомпилированные из C/C++ библиотеки (DLL) и выполняемые файлы (exe)</li>
+<li>Для нативного кода существуют соглашения о вызове функций, передачи аргументов, возвращению значений и т.п. (<em>calling conventions</em>)<ul>
+<li>Например, в каком порядке аргументы функций кладутся на стек в памяти, кто очищает стек, в каком регистре процессора будет результат функции</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="smaller slide level-2" id="python">
+<h2>Вызов нативного кода из Python</h2>
+<ul>
+<li><p class="first">Для вызова нативного кода создана библиотека <cite>libffi</cite> (<em>Foreign Function Interface</em>)</p>
+</li>
+<li><p class="first">Python предоставляет обертку над этой библиотекой — модуль <a class="reference external" href="http://docs.python.org/3/library/ctypes.html#module-ctypes" title="(в Python v3.4)"><tt class="xref py py-mod docutils literal"><span class="pre">ctypes</span></tt></a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://docs.python.org/3/library/ctypes.html#module-ctypes" title="(в Python v3.4)"><tt class="xref py py-mod docutils literal"><span class="pre">ctypes</span></tt></a> позволяет создавать прозрачные обёртки над функциями из нативных библиотек:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Загрузка MyLibrary.DLL для вызова по соглашению stdcall</span>
+<span class="gp">... </span><span class="n">my_library</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">LoadLibrary</span><span class="p">(</span><span class="s">&#39;MyLibrary&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Обращение к атрибутам my_library прозрачно транслируется в создание</span>
+<span class="gp">... </span><span class="c"># обёрток для вызова функций из DLL</span>
+<span class="gp">... </span><span class="n">my_library</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="c"># Вызов функции с именем &quot;test&quot;</span>
+<span class="go">11</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-2" id="ctypes">
+<h2>Возможности ctypes</h2>
+<ul class="simple">
+<li>Загрузка нативных библиотек, выполняемых файлов (<cite>LoadLibrary</cite>)</li>
+<li>Получение Python-обёрток над функциями из нативных модулей</li>
+<li>Вызов и передача примитивных типов, структур, указателей, блоков памяти внутрь функций (а также получение результата)</li>
+<li>Создание <cite>callback</cite> функций на Python и передача их внутрь нативных модулей</li>
+</ul>
+<p>Как и любой нативный код — <strong>очень</strong> хрупкая вещь</p>
+<ul class="simple">
+<li>легко обратиться &quot;мимо&quot; нужной памяти</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-2" id="id3">
+<h2>Соглашения о вызове функций в <cite>ctypes</cite></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.python.org/3/library/ctypes.html#module-ctypes" title="(в Python v3.4)"><tt class="xref py py-mod docutils literal"><span class="pre">ctypes</span></tt></a> предоставляет несколько обёрток для загрузки модулей с разными соглашениями о вызове функций<ul>
+<li><cite>ctypes.cdll</cite> — соглашение <cite>cdecl</cite></li>
+<li><cite>ctypes.windll</cite> — соглашение <cite>stdcall</cite></li>
+<li><cite>ctypes.oledll</cite> — соглашение <cite>stdcall</cite>, плюс функции возвращают <cite>HRESULT</cite></li>
+<li><cite>ctypes.pydll</cite> — соглашение <cite>cdecl</cite>, но используется для библиотек Python</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-2" id="id4">
+<h2>Стандартные модули ОС</h2>
+<ul>
+<li><p class="first">Для стандартных библиотек в разных ОС предоставляются лениво загружаемые модули</p>
+</li>
+<li><p class="first">В Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">set_cursor_pos_func</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">user32</span><span class="o">.</span><span class="n">SetCursorPos</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">+</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">200</span> <span class="o">+</span> <span class="mi">200</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">set_cursor_pos_func</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="slide level-2" id="id5">
+<h2>Передача аргументов</h2>
+<ul>
+<li><p class="first">Большая часть типов Python должна быть обёрнута специальными типами <cite>c_types</cite> для передачи в функции</p>
+<ul class="simple">
+<li><cite>c_bool</cite>, <cite>c_char</cite>, <cite>c_long</cite>, <cite>c_float</cite>, <cite>c_double</cite> и т.п.</li>
+</ul>
+</li>
+<li><p class="first">В GNU/Linux:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">libc</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="s">&#39;libc.so.6&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">libc</span><span class="o">.</span><span class="n">printf</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;Hello, </span><span class="si">%s</span><span class="s">! x = </span><span class="si">%.4f</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">b</span><span class="s">&#39;User&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>$ python linux_printf.py
+Hello, User! x = 3.1416
+24
+$
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-2" id="automation-windows">
+<h2>Automation в Windows</h2>
+<ul class="simple">
+<li>Для interoperability в Windows была разработана система компонентов: <strong>COM</strong>, <em>Component Object Model</em><ul>
+<li>Низкоуровневый, но объектно-ориентированный интерфейс</li>
+<li>Поддерживается в том или ином виде большим количеством продуктов Microsoft</li>
+<li>Позволяет связывать программы на C++, .NET, Visual Basic и др.</li>
+<li>Есть биндинги для COM в разных языках, включая Python</li>
+</ul>
+</li>
+<li>В GNU/Linux в качестве альтернативы COM часто используется <strong>dbus</strong></li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="smaller2 slide level-2" id="com-python">
+<h2>COM в Python</h2>
+<p>Пример замены текста в документе Word используя обёртку над COM <cite>pywin32</cite></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">win32com.client</span>
+
+<span class="k">def</span> <span class="nf">search_replace_all</span><span class="p">(</span><span class="n">word_file</span><span class="p">,</span> <span class="n">find_str</span><span class="p">,</span> <span class="n">replace_str</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Заменить строку find_str на строку replace_str в word_file&#39;&#39;&#39;</span>
+    <span class="n">wdFindContinue</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">wdReplaceAll</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="c"># Создаём COM-объект</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">DispatchEx</span><span class="p">(</span><span class="s">&quot;Word.Application&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">Documents</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">word_file</span><span class="p">)</span>
+
+    <span class="c"># expression.Execute(FindText, MatchCase, MatchWholeWord,</span>
+    <span class="c">#   MatchWildcards, MatchSoundsLike, MatchAllWordForms, Forward, </span>
+    <span class="c">#   Wrap, Format, ReplaceWith, Replace)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">Selection</span><span class="o">.</span><span class="n">Find</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">find_str</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> \
+        <span class="bp">True</span><span class="p">,</span> <span class="n">wdFindContinue</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="n">replace_str</span><span class="p">,</span> <span class="n">wdReplaceAll</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">ActiveDocument</span><span class="o">.</span><span class="n">Close</span><span class="p">(</span><span class="n">SaveChanges</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">Quit</span><span class="p">()</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="s">&#39;c:/path/to/my/word.doc&#39;</span>
+<span class="n">search_replace_all</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s">&#39;string_to_be_replaced&#39;</span><span class="p">,</span> <span class="s">&#39;replacement_str&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="smaller2 slide level-2" id="automation-openoffice">
+<h2>Automation в OpenOffice</h2>
+<ul class="simple">
+<li>В OpenOffice/LibreOffice используется своя технология <cite>UNO</cite> для вызова функций</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">uno</span>
+
+<span class="c"># soffice &quot;-accept=socket,host=localhost,port=2002;urp;&quot;</span>
+
+<span class="c"># Получаем контекст UNO</span>
+<span class="n">localContext</span> <span class="o">=</span> <span class="n">uno</span><span class="o">.</span><span class="n">getComponentContext</span><span class="p">()</span>
+
+<span class="n">resolver</span> <span class="o">=</span> <span class="n">localContext</span><span class="o">.</span><span class="n">ServiceManager</span><span class="o">.</span><span class="n">createInstanceWithContext</span><span class="p">(</span>
+				<span class="s">&quot;com.sun.star.bridge.UnoUrlResolver&quot;</span><span class="p">,</span> <span class="n">localContext</span><span class="p">)</span>
+<span class="c"># Соединяемся с OpenOffice</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="s">&quot;uno:socket,host=localhost,port=2002;urp;StarOffice.ComponentContext&quot;</span><span class="p">)</span>
+<span class="n">smgr</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">ServiceManager</span>
+<span class="c"># Получаем главное окно</span>
+<span class="n">desktop</span> <span class="o">=</span> <span class="n">smgr</span><span class="o">.</span><span class="n">createInstanceWithContext</span><span class="p">(</span><span class="s">&quot;com.sun.star.frame.Desktop&quot;</span><span class="p">,</span> <span class="n">ctx</span><span class="p">)</span>
+<span class="c"># Получаем текущий открытый документ</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">desktop</span><span class="o">.</span><span class="n">getCurrentComponent</span><span class="p">()</span>
+<span class="c"># Получаем текст текущего документа</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Text</span>
+<span class="c"># Создаём курсор</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">createTextCursor</span><span class="p">()</span>
+<span class="c"># Вставляем по курсору текст</span>
+<span class="n">text</span><span class="o">.</span><span class="n">insertString</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="s">&quot;Hello World&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="slide level-2" id="id6">
+<h2>Встраивание Python в приложения</h2>
+<ul class="simple">
+<li>Python — популярный язык для скриптования логики приложения</li>
+<li>Часто встраивается внутрь приложений: GIMP, Blender, Maya, ArcGIS</li>
+<li>Примеры на следующей лекции</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-2" id="django">
+<h2>Django (продолжение)</h2>
+<ul class="simple">
+<li>Перевод документации и туториала на русский язык: <a class="reference external" href="http://djbook.ru/rel1.6/">http://djbook.ru/rel1.6/</a></li>
+<li>Задача: написать гостевую книгу<ul>
+<li>Гостевая книга: веб страница со списком сообщений и возможностью добавлять сообщения</li>
+<li>Каждое сообщение: автор, дата, текст сообщения</li>
+</ul>
+</li>
+<li>Дополнительные задания:<ul>
+<li>Показывать сообщения постранично</li>
+<li>Сортировка сообщений по дате или автору</li>
+<li>Удаление сообщений</li>
+<li>Редактирование сообщений</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">17.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">14</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

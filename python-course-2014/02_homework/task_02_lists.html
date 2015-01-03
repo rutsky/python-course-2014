@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #ffffff; }
+body .c { color: #888888 } /* Comment */
+body .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+body .k { color: #008800; font-weight: bold } /* Keyword */
+body .cm { color: #888888 } /* Comment.Multiline */
+body .cp { color: #cc0000; font-weight: bold } /* Comment.Preproc */
+body .c1 { color: #888888 } /* Comment.Single */
+body .cs { color: #cc0000; font-weight: bold; background-color: #fff0f0 } /* Comment.Special */
+body .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #aa0000 } /* Generic.Error */
+body .gh { color: #333333 } /* Generic.Heading */
+body .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #555555 } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #666666 } /* Generic.Subheading */
+body .gt { color: #aa0000 } /* Generic.Traceback */
+body .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008800 } /* Keyword.Pseudo */
+body .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #888888; font-weight: bold } /* Keyword.Type */
+body .m { color: #0000DD; font-weight: bold } /* Literal.Number */
+body .s { color: #dd2200; background-color: #fff0f0 } /* Literal.String */
+body .na { color: #336699 } /* Name.Attribute */
+body .nb { color: #003388 } /* Name.Builtin */
+body .nc { color: #bb0066; font-weight: bold } /* Name.Class */
+body .no { color: #003366; font-weight: bold } /* Name.Constant */
+body .nd { color: #555555 } /* Name.Decorator */
+body .ne { color: #bb0066; font-weight: bold } /* Name.Exception */
+body .nf { color: #0066bb; font-weight: bold } /* Name.Function */
+body .nl { color: #336699; font-style: italic } /* Name.Label */
+body .nn { color: #bb0066; font-weight: bold } /* Name.Namespace */
+body .py { color: #336699; font-weight: bold } /* Name.Property */
+body .nt { color: #bb0066; font-weight: bold } /* Name.Tag */
+body .nv { color: #336699 } /* Name.Variable */
+body .ow { color: #008800 } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mf { color: #0000DD; font-weight: bold } /* Literal.Number.Float */
+body .mh { color: #0000DD; font-weight: bold } /* Literal.Number.Hex */
+body .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+body .mo { color: #0000DD; font-weight: bold } /* Literal.Number.Oct */
+body .sb { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Backtick */
+body .sc { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Char */
+body .sd { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Doc */
+body .s2 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Double */
+body .se { color: #0044dd; background-color: #fff0f0 } /* Literal.String.Escape */
+body .sh { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Heredoc */
+body .si { color: #3333bb; background-color: #fff0f0 } /* Literal.String.Interpol */
+body .sx { color: #22bb22; background-color: #f0fff0 } /* Literal.String.Other */
+body .sr { color: #008800; background-color: #fff0ff } /* Literal.String.Regex */
+body .s1 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Single */
+body .ss { color: #aa6600; background-color: #fff0f0 } /* Literal.String.Symbol */
+body .bp { color: #003388 } /* Name.Builtin.Pseudo */
+body .vc { color: #336699 } /* Name.Variable.Class */
+body .vg { color: #dd7700 } /* Name.Variable.Global */
+body .vi { color: #3333bb } /* Name.Variable.Instance */
+body .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="c"># По числу можно сконструировать строчку из символов следующим образом:</span>
+<span class="c">#   &gt;&gt;&gt; x = 12345</span>
+<span class="c">#   &gt;&gt;&gt; x</span>
+<span class="c">#   12345</span>
+<span class="c">#   &gt;&gt;&gt; xs = str(x)</span>
+<span class="c">#   &gt;&gt;&gt; xs</span>
+<span class="c">#   &#39;12345&#39;</span>
+<span class="c"># Дальше можно работать с отдельными символами строки:</span>
+<span class="c">#   &gt;&gt;&gt; xs[0]</span>
+<span class="c">#   &#39;1&#39;</span>
+<span class="c">#   &gt;&gt;&gt; xs[1]</span>
+<span class="c">#   &#39;2&#39;</span>
+<span class="c"># Чтобы получить из строк с цифрами числа, можно написать так:</span>
+<span class="c">#   &gt;&gt;&gt; int(xs[0])</span>
+<span class="c">#   1</span>
+<span class="c">#   &gt;&gt;&gt; int(xs[1])</span>
+<span class="c">#   2</span>
+<span class="c"># Тогда получить список из цифр можно следующим образом:</span>
+<span class="c">#   digits = []</span>
+<span class="c">#   for digit_str in str(x):</span>
+<span class="c">#       digits.append(int(digit_str)) # добавить в конец списка цифру</span>
+<span class="c">#</span>
+<span class="c"># Также можно воспользоваться функцией map(функция, последовательность), </span>
+<span class="c"># которая применяет функцию к каждому элементу последовательности и возвращает</span>
+<span class="c"># последовательность из результатов:</span>
+<span class="c">#   list(map(f, [1, 2, 3])) -&gt; [f(1), f(2), f(3)]</span>
+<span class="c">#</span>
+<span class="c"># digits = list(map(int, str(x)))</span>
+<span class="c">#</span>
+<span class="c"># Или же можно воспользоваться list comprehension для генерации списка:</span>
+<span class="c"># [выражение for переменная in последовательность]</span>
+<span class="c"># создаст список из результатов вычисления выражений зависимых от переменной,</span>
+<span class="c"># где переменная принимает значения из последовательности.</span>
+<span class="c"># Например:</span>
+<span class="c">#   [v**2 for v in [1, 2, 3, 4]]</span>
+<span class="c"># создаст список из квадратов чисел из списка [1, 2, 3, 4]:</span>
+<span class="c">#   [1, 4, 9, 16]</span>
+<span class="c">#</span>
+<span class="c"># Тогда цифры можно получить следующим образом:</span>
+<span class="c"># digits = [int(v) for v in str(x)]</span>
+
+<span class="k">def</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Вычисляет сумму цифр числа&quot;&quot;&quot;</span>
+    <span class="c"># Получаем список из цифр:</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+    <span class="c"># можно просуммировать обычным, Си-подобным, способом:</span>
+    <span class="c"># sum = 0</span>
+    <span class="c"># for digit in digits:</span>
+    <span class="c">#     sum += digit</span>
+    <span class="c"># return sum</span>
+    
+    <span class="c"># Но лучше воспользоваться функцией sum(послед.), которая вычисляет сумму </span>
+    <span class="c"># элементов последовательности:</span>
+    <span class="c"># sum([1, 2, 3]) -&gt; 1 + 2 + 3 = 6</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s">&quot;sum_of_digits(1) =&quot;</span><span class="p">,</span> <span class="n">sum_of_digits</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s">&quot;sum_of_digits(23) =&quot;</span><span class="p">,</span> <span class="n">sum_of_digits</span><span class="p">(</span><span class="mi">23</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s">&quot;sum_of_digits(123456789) =&quot;</span><span class="p">,</span> <span class="n">sum_of_digits</span><span class="p">(</span><span class="mi">123456789</span><span class="p">))</span>
+
+<span class="c"># Задания:</span>
+<span class="c">#</span>
+<span class="c"># 1. Напишите функцию is_palindrom(x), проверяющую, является ли число x </span>
+<span class="c"># палиндромом [1]. Число x — палиндром, если его цифры читаются одинаково </span>
+<span class="c"># слева на право и справа налево, например 123321 — это палиндром, а </span>
+<span class="c"># 123456 — нет.</span>
+<span class="c">#</span>
+<span class="c"># 2. Найдите все числа-палиндромы от 1 до 10000.</span>
+<span class="c">#</span>
+<span class="c"># 3. Напишите функцию biggest_number(x), которая возвращает наибольшее число,</span>
+<span class="c"># составленное из тех же цифр.</span>
+<span class="c"># </span>
+<span class="c"># 4. Посчитайте количество 6-значных счастливых билетов [2]: шестизначных чисел</span>
+<span class="c"># с ведущими нулями (от 000000 до 999999), в которых сумма цифр, стоящих на </span>
+<span class="c"># четных позициях, равна сумме цифр на нечётных позициях. Например 342870, </span>
+<span class="c"># сумма цифр, стоящих на четных позициях, 3 + 2 + 7 == 12, равна сумме цифр на </span>
+<span class="c"># нечетных позициях, 4 + 8 + 0 = 12.</span>
+<span class="c"># </span>
+<span class="c"># 5. Выведите последние 10 счастливых билетов.</span>
+<span class="c">#</span>
+<span class="c"># 6. Напишите функцию pascal_triangle(n), которая выводит на экран треугольник </span>
+<span class="c"># Паскаля [3] высоты n:</span>
+<span class="c">#</span>
+<span class="c">#     1</span>
+<span class="c">#    1 1</span>
+<span class="c">#   1 2 1</span>
+<span class="c">#  1 3 3 1</span>
+<span class="c"># 1 4 6 4 1</span>
+<span class="c"># </span>
+<span class="c"># В нём на самое левое и правые числа — единицы, а все остальные </span>
+<span class="c"># представляют собой сумму двух вышестоящих. Ряд треугольника сохраняйте в </span>
+<span class="c"># списке, а следующий ряд вычисляете используя предыдущий. (Числа на экране </span>
+<span class="c"># можно не форматировать так, чтобы они выглядели как треугольник.)</span>
+
+<span class="c"># Ссылки:</span>
+<span class="c"># [1] Палиндром: &lt;https://ru.wikipedia.org/wiki/Палиндром&gt;</span>
+<span class="c"># [2] Счастливый билет: &lt;https://ru.wikipedia.org/wiki/Счастливый_билет&gt;</span>
+<span class="c"># [3] Треугольник Паскаля: &lt;https://ru.wikipedia.org/wiki/Треугольник_Паскаля&gt;</span>
+</pre></div>
+</body>
+</html>

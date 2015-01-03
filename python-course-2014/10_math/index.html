@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Язык программирования</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/common_custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '24.05.2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <script type="text/javascript" src="_static/common_custom.js"></script>
+    
+    <link rel="top" title="" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="id1">
+<h1>Язык программирования</h1>
+<div class="python-logo figure align-center">
+<img src="_images/python-logo-generic.svg" /></div>
+<p class="center-text">Лекция № 10</p>
+<p class="center-text">Владимир Владимирович Руцкий <a class="reference external" href="mailto:rutsky&#46;vladimir&#37;&#52;&#48;gmail&#46;com">rutsky<span>&#46;</span>vladimir<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<table border="1" class="center-cells docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/cgsg.png"><img alt="_images/cgsg.png" src="_images/cgsg.png" style="width: 200px;" /></a>
+</td>
+<td><img class="first last" src="_images/logo_jetbrains.svg" /></td>
+<td><a class="first last reference internal image-reference" href="_images/pml30.png"><img alt="_images/pml30.png" src="_images/pml30.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="id2">
+<h2>План занятия</h2>
+<ul class="simple">
+<li>IPython</li>
+<li>Математические библиотеки</li>
+<li>Sage</li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="slide level-2" id="ipython">
+<h2>IPython</h2>
+<ul class="simple">
+<li><strong>IPython</strong> (<a class="reference external" href="http://ipython.org/">http://ipython.org/</a>) — изначально, продвинутая командная строка для интерактивного выполнения Python<ul>
+<li>автодополнение (интроспекция), вызов системных команд, встроенная справка, удобный вывод контейнеров</li>
+</ul>
+</li>
+<li>Выросла до клиент-серверной системы, не привязанной к Python<ul>
+<li>имеет веб-интерфейс, средства для параллельной обработки данных (включая работу на кластерах), интеграцию с графическими тулкитами</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="slide level-2" id="id3">
+<h2>Пример интерактивной сессии</h2>
+<ul>
+<li><p class="first">Установка:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install ipython
+</pre></div>
+</div>
+<p>Для различных фич потребуются различные пакеты (<cite>PyQt</cite>, <cite>matplotlib</cite>)</p>
+<p>Можно поставить готовую сборку (рекомендую)</p>
+</li>
+<li><p class="first">Документация: <a class="reference external" href="http://ipython.org/ipython-doc/stable/interactive/index.html">http://ipython.org/ipython-doc/stable/interactive/index.html</a></p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="slide level-2" id="matplotlib">
+<h2>matplotlib</h2>
+<ul class="simple">
+<li><strong>matplotlib</strong> (<a class="reference external" href="http://matplotlib.org/">http://matplotlib.org/</a>) — популярная библиотека для визуализации данных<ul>
+<li>Визуализация данных, графики, диаграммы</li>
+<li>Многое в синтаксисе взято из средств визуализации графиков в MATLAB</li>
+</ul>
+</li>
+<li>Примеры: <a class="reference external" href="http://matplotlib.org/examples/index.html">http://matplotlib.org/examples/index.html</a></li>
+<li>Галерея примеров: <a class="reference external" href="http://matplotlib.org/gallery.html">http://matplotlib.org/gallery.html</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-2" id="numpy-scipy">
+<h2>numpy, scipy</h2>
+<ul class="simple">
+<li><strong>numpy</strong> (<a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>) — библиотека для работы с многомерными массивами данных<ul>
+<li>вектора, матрицы, пиксели изображений</li>
+<li>данные обрабатываются <strong>векторно</strong>, используя специальные инструкции процессора — скорость работы сопоставима со скоростью работы программ на Си</li>
+</ul>
+</li>
+<li><strong>scipy</strong> (<a class="reference external" href="http://www.scipy.org/">http://www.scipy.org/</a>) — фреймворк, интегрирующий в себя ipython, matplotlib, numpy и др., плюс дополнительные алгоритмы обработки данных</li>
+<li>Туториал: <a class="reference external" href="http://wiki.scipy.org/Tentative_NumPy_Tutorial">http://wiki.scipy.org/Tentative_NumPy_Tutorial</a></li>
+<li>Примеры: <a class="reference external" href="http://wiki.scipy.org/Numpy_Example_List">http://wiki.scipy.org/Numpy_Example_List</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-2" id="sympy">
+<h2>sympy</h2>
+<ul class="simple">
+<li><strong>sympy</strong> (<a class="reference external" href="http://sympy.org">http://sympy.org</a>) — библиотека для <em>символьных</em> вычислений</li>
+<li><strong>Символьные вычисления</strong> — преобразования и работа с математическими равенствами и формулами как с последовательностью символов</li>
+<li>Туториал: <a class="reference external" href="http://docs.sympy.org/latest/tutorial/index.html">http://docs.sympy.org/latest/tutorial/index.html</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-2" id="ipython-notebook">
+<h2>IPython notebook</h2>
+<ul class="simple">
+<li>А что если сделать текстовый редактор, куда можно писать не только текст, но и код, который будет выполняться (вычислять, рисовать графики и т.п.)?<ul>
+<li>IPython Notebook</li>
+<li>Цель: удобное создание воспроизводимых научных работ</li>
+</ul>
+</li>
+<li>Документация: <a class="reference external" href="http://ipython.org/ipython-doc/stable/notebook/index.html">http://ipython.org/ipython-doc/stable/notebook/index.html</a></li>
+<li>Примеры: <a class="reference external" href="http://nbviewer.ipython.org/github/ipython/ipython/tree/1.x/examples/notebooks/">http://nbviewer.ipython.org/github/ipython/ipython/tree/1.x/examples/notebooks/</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="slide level-2" id="sage">
+<h2>Sage</h2>
+<ul class="simple">
+<li>Sage (<a class="reference external" href="http://sagemath.org/index.html">http://sagemath.org/index.html</a>) — математический пакет, включающий в себя NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R и многие другие библиотеки</li>
+<li>Имеет веб-интерфейс, как и IPython notebook: Sage Notebook (<a class="reference external" href="http://www.sagenb.org/">http://www.sagenb.org/</a>)</li>
+<li>Если IPython — это стандартный Python, с удобным интерфейсом к математическим библиотекам, то Sage&nbsp;— это <em>модицифированный</em> Python, ориентированный на математические операции</li>
+<li>Документация: <a class="reference external" href="http://sagemath.org/tour.html">http://sagemath.org/tour.html</a></li>
+<li>Примеры: <a class="reference external" href="http://wiki.sagemath.org/pics">http://wiki.sagemath.org/pics</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-2" id="sagemathcloud">
+<h2>SageMathCloud</h2>
+<ul class="simple">
+<li><strong>SageMathCloud</strong> (<a class="reference external" href="https://cloud.sagemath.com/">https://cloud.sagemath.com/</a>) — продвинутая версия Sage Notebook (пока в стадии открытой беты)<ul>
+<li>улучшенный веб-интерфейс</li>
+<li>поддержка IPython notebook, редактирования LaTeX, распределённых вычислений на кластерах</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">24.05.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">10</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

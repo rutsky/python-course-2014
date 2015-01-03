@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Язык программирования</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/common_custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.03.2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <script type="text/javascript" src="_static/common_custom.js"></script>
+    
+    <link rel="top" title="" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="id1">
+<h1>Язык программирования</h1>
+<div class="python-logo figure align-center">
+<img src="_images/python-logo-generic.svg" /></div>
+<p class="center-text">Лекция № 3</p>
+<p class="center-text">Владимир Владимирович Руцкий <a class="reference external" href="mailto:rutsky&#46;vladimir&#37;&#52;&#48;gmail&#46;com">rutsky<span>&#46;</span>vladimir<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<table border="1" class="center-cells docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/cgsg.png"><img alt="_images/cgsg.png" src="_images/cgsg.png" style="width: 200px;" /></a>
+</td>
+<td><img class="first last" src="_images/logo_jetbrains.svg" /></td>
+<td><a class="first last reference internal image-reference" href="_images/pml30.png"><img alt="_images/pml30.png" src="_images/pml30.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="id2">
+<h2>План занятия</h2>
+<ul class="simple">
+<li>Строки, ввод/вывод, механизм исключений</li>
+<li>Практика</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id3">
+<h2>Строки. Повторение (1/2)</h2>
+<ul class="simple">
+<li>Строки — последовательности:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;Test!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">ch</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+<span class="go">[&#39;T&#39;, &#39;e&#39;, &#39;s&#39;, &#39;t&#39;, &#39;!&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="s">&quot;0123456789&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">&#39;23&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;9876543210&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;02468&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Строки — неизменяемые:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;test&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;/usr/lib/python3.3/doctest.py&quot;</span>, line <span class="m">1287</span>, in <span class="n">__run</span>
+    <span class="n">compileflags</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">test</span><span class="o">.</span><span class="n">globs</span><span class="p">)</span>
+  File <span class="nb">&quot;&lt;doctest str_immutable.pycon[1]&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;a&#39;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;str&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id4">
+<h2>Строки. Повторение (2/2)</h2>
+<ul class="simple">
+<li>Различные способы задания:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;doesn</span><span class="se">\&#39;</span><span class="s">t&#39;</span>
+<span class="go">&quot;doesn&#39;t&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;doesn&#39;t&quot;</span>
+<span class="go">&quot;doesn&#39;t&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="go">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">Yes,</span><span class="se">\&quot;</span><span class="s"> he said.&quot;</span>
+<span class="go">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s">t,&quot; she said.&#39;</span>
+<span class="go">&#39;&quot;Isn\&#39;t,&quot; she said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;first word </span><span class="se">\</span>
+<span class="gp">... </span><span class="s">second word&quot;</span>
+<span class="go">&#39;first word second word&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&quot;first line</span><span class="se">\n</span><span class="s"> secondline&quot;</span><span class="p">)</span>
+<span class="go">first line</span>
+<span class="go"> secondline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">r&quot;line with \n in middle&quot;</span>
+<span class="go">&#39;line with \\n in middle&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="sd">&quot;&quot;&quot;Multiline with &#39; or &quot;</span>
+<span class="gp">... </span><span class="sd">Yes.</span>
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="go">&#39;Multiline with \&#39; or &quot;\nYes.\n&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="smaller3 slide level-2" id="id5">
+<h2>Символы и кодировки</h2>
+<ul class="simple">
+<li>На экране монитора, бумаге, табличках изображаются <strong>символы</strong><ul>
+<li>символ: «маленькая кириллическая буква А»</li>
+<li>изображение: «а»,</li>
+</ul>
+</li>
+<li>Для хранения символа в памяти компьютера, ему необходимо сопоставить численное представление&nbsp;— <strong>закодировать символ</strong></li>
+<li>Для кодирования используются различные <strong>кодировки</strong></li>
+<li>Ранее были распространены однобайтовые кодировки: один символ&nbsp;— один байт<ul>
+<li>Для кириллицы часто использовались <tt class="docutils literal"><span class="pre">cp1251</span></tt>, <tt class="docutils literal"><span class="pre">koi8-r</span></tt>, <tt class="docutils literal"><span class="pre">MacCyrillic</span></tt></li>
+<li>Символ: «маленькая кириллическая буква А»: <tt class="docutils literal"><span class="pre">cp1251</span></tt>&nbsp;— 0xE0, <tt class="docutils literal"><span class="pre">koi8-r</span></tt>&nbsp;— 0xC1, <tt class="docutils literal"><span class="pre">MacCyrillic</span></tt>&nbsp;— 0xE0.</li>
+</ul>
+</li>
+<li>Однобайтные кодировки&nbsp;— ужасны<ul>
+<li>не могут хранить все символы, необходимо переключаться между кодировками для разных языков</li>
+<li>для файла нужно знать его кодировку, иначе&nbsp;— «кракозябры» (кодировок очень много)</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="smaller3 slide level-2" id="unicode">
+<h2>Unicode</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://ru.wikipedia.org/wiki/Unicode">Unicode</a> — стандарт описывающий все символы всех языков (+ иконки, модификаторы и&nbsp;т.п.)</li>
+<li>Каждому символу ставится в соответствие <strong>кодовая позиция Unicode</strong><ul>
+<li>«маленькая кириллическая буква А» — <tt class="docutils literal"><span class="pre">U+0430</span></tt></li>
+</ul>
+</li>
+<li>Для хранения кодовых позиций Unicode в памяти компьютера позиции <strong>кодируются</strong></li>
+<li>Есть ряд <strong>кодировок</strong> хранения кодовых позиций Unicode в памяти (Unicode Transformation Format):<ul>
+<li>UTF-8&nbsp;— каждый символ кодируется последовательностью от 1 до 6 байт</li>
+<li>UTF-16&nbsp;— каждый символ кодируется последовательностью 2 или 4 байта</li>
+<li>UTF-32&nbsp;— каждый символ кодируется 4 байтами, числом&nbsp;— кодовой позицией</li>
+</ul>
+</li>
+<li>код символа «маленькая кириллическая буква А» (<tt class="docutils literal"><span class="pre">U+0430</span></tt>)<ul>
+<li>в UTF-8: 0xd0&nbsp;0xb0,</li>
+<li>в UTF-16 0x30&nbsp;0x04,</li>
+<li>в UTF-32 0x30&nbsp;0x04&nbsp;0x00&nbsp;0x00</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="smaller3 slide level-2" id="unicode-python">
+<h2>Unicode в Python</h2>
+<ul>
+<li><p class="first">Строки в Python — это Unicode строки</p>
+<ul class="simple">
+<li>конкретный формат представления в памяти зависит от платформы и настроек компиляции Python</li>
+</ul>
+</li>
+<li><p class="first">По умолчанию исходный код файлов считается в UTF-8</p>
+<ul>
+<li><p class="first">Это можно изменить, добавив первой строкой комментарий с кодировкой, например:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># coding: cp1251</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># В строках можно задавать кодовые позиции Unicode</span>
+<span class="gp">... </span><span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\u0430</span><span class="s"> </span><span class="se">\U00000431</span><span class="s"> </span><span class="se">\N{GREEK CAPITAL LETTER DELTA}</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="go">а б Δ</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Получить позицию Unicode:</span>
+<span class="gp">... </span><span class="nb">ord</span><span class="p">(</span><span class="s">&quot;г&quot;</span><span class="p">)</span>
+<span class="go">1075</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Сконструировать Unicode символ по позиции:</span>
+<span class="gp">... </span><span class="nb">chr</span><span class="p">(</span><span class="mi">1075</span><span class="p">)</span>
+<span class="go">&#39;г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># В строках можно задавать однобайтовые ASCII-коды</span>
+<span class="gp">... </span><span class="s">&quot;</span><span class="se">\x30\x31\x32</span><span class="s">&quot;</span>
+<span class="go">&#39;012&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id7">
+<h2>Байтовые последовательности</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Для хранения последовательностей байт используется тип bytes</span>
+<span class="gp">... </span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="s">&#39;some bytes </span><span class="se">\xff</span><span class="s">&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">&lt;class &#39;bytes&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Задаются также, как строки, но с префиксом &#39;b&#39;.  Можно задать</span>
+<span class="gp">... </span><span class="c"># произвольные байты через &#39;\x..&#39;, ASCII символы можно задавать как есть</span>
+<span class="gp">... </span><span class="n">b</span><span class="s">&#39;&#39;&#39;</span><span class="se">\x00\x01</span><span class="s"> ABC</span>
+<span class="gp">... </span><span class="s">def&#39;&#39;&#39;</span>
+<span class="go">b&#39;\x00\x01 ABC\ndef&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Элементами bytes являются значения байтов (0--255)</span>
+<span class="gp">... </span><span class="c"># Индексация такая же, как в других последовательностях (строках, списках)</span>
+<span class="gp">... </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">115</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">255</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Строки можно кодировать в набор байт:</span>
+<span class="gp">... </span><span class="s">&quot;abc абв&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="go">b&#39;abc \xd0\xb0\xd0\xb1\xd0\xb2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;abc абв&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;cp1251&#39;</span><span class="p">)</span>
+<span class="go">b&#39;abc \xe0\xe1\xe2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># и обратно</span>
+<span class="gp">... </span><span class="n">b</span><span class="s">&#39;abc </span><span class="se">\xe0\xe1\xe2</span><span class="s">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;cp1251&#39;</span><span class="p">)</span>
+<span class="go">&#39;abc абв&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="s">&#39;abc </span><span class="se">\xe0\xe1\xe2</span><span class="s">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">UnicodeDecodeError</span>: <span class="n">&#39;utf-8&#39; codec can&#39;t decode byte 0xe0 in position 4: invalid continuation byte</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># bytes неизменяемый</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id8">
+<h2>Работа со строками (1/2)</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;теСТОвая СТРОка&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">();</span> <span class="n">s</span>  <span class="c"># Сделать первую букву заглавной, остальные маленькими</span>
+<span class="go">&#39;Тестовая строка&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#39;ст&#39;</span><span class="p">)</span>  <span class="c"># число неперекрывающихся вхождений подстроки</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;ока&#39;</span><span class="p">)</span> <span class="c"># проверить, кончается ли строка на другую строку (см. startswith())</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;01</span><span class="se">\t</span><span class="s">012</span><span class="se">\t</span><span class="s">0123</span><span class="se">\t</span><span class="s">01234&#39;</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">&#39;01  012 0123    01234&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;строка&#39;</span><span class="p">)</span>  <span class="c"># найти первое вхождение подстроки (-1, если не найдена)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;о&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="c"># найти первое вхождение, начиная с 9 позиции по 15</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">&#39;ОКА&#39;</span><span class="p">)</span> <span class="c"># то же, что find, но бросает исключение, если не найдена</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">substring not found</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Также есть rfind() и rindex().</span>
+<span class="gp">... </span> <span class="c"># Есть методы isalnum(), isalpha(), isdecimal(), isdigit(), islower(), isnumeric()</span>
+<span class="gp">... </span><span class="c"># isspace(), isupper() для проверки типа символов</span>
+<span class="gp">... </span><span class="s">&#39;123&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;12d4&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;а&#39;</span><span class="p">)</span> <span class="c"># разбивает строку на список строк разделителем</span>
+<span class="go">[&#39;Тестов&#39;, &#39;я строк&#39;, &#39;&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>    <span class="c"># по умолчанию разделитель — пробельные символы</span>
+<span class="go">[&#39;Тестовая&#39;, &#39;строка&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&lt;-&gt;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span> <span class="c"># склеивает строки последовательности разделителем</span>
+<span class="go">&#39;0&lt;-&gt;1&lt;-&gt;2&lt;-&gt;3&lt;-&gt;4&lt;-&gt;5&lt;-&gt;6&lt;-&gt;7&lt;-&gt;8&lt;-&gt;9&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id9">
+<h2>Работа со строками (2/2)</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s">&#39;Тестовая строка&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c"># привести к нижнему/верхнему регистру</span>
+<span class="go">(&#39;тестовая строка&#39;, &#39;ТЕСТОВАЯ СТРОКА&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s">&#39;ая&#39;</span><span class="p">)</span> <span class="c"># разделить на три части: до разделителя, разделитель, после разд.</span>
+<span class="go">(&#39;Тестов&#39;, &#39;ая&#39;, &#39; строка&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;т&#39;</span><span class="p">,</span> <span class="s">&#39;(т)&#39;</span><span class="p">)</span> <span class="c"># заменить подстроку</span>
+<span class="go">&#39;Тес(т)овая с(т)рока&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>   <span class="c"># выровнить символом по центру (заполнитель по умолчанию: пробел)</span>
+<span class="go">&#39;                                Тестовая строка                                 &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="s">&#39;.&#39;</span><span class="p">)</span> <span class="c"># выровнить по правому краю, ljust() — по левому</span>
+<span class="go">&#39;.................................................................Тестовая строка&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;  test &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c"># удалить пробельные символы</span>
+<span class="go">&#39;test&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Подробнее: http://docs.python.org/3/library/stdtypes.html#textseq</span>
+<span class="gp">... </span><span class="k">pass</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="smaller2 slide level-2" id="python">
+<h2>Ввод/вывод в Python</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">io</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># open() открывает файл и возвращает &quot;файл-подобный&quot; объект</span>
+<span class="gp">... </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s">&quot;w&quot;</span><span class="p">)</span>  <span class="c"># &quot;w&quot; - создать файл для записи</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Те&quot;</span><span class="p">)</span>              <span class="c"># записать в file-подобный объект</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;ст!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>  
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># print() имеет аргумент, позволяющий указать файл-подобный объект для записи:</span>
+<span class="gp">... </span><span class="k">print</span><span class="p">(</span><span class="s">&quot;1 2 3&quot;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                  <span class="c"># закрыть файл</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">)</span>       <span class="c"># &quot;r&quot; - открыть для чтения, по умолчанию &quot;r&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>                  <span class="c"># прочитать 3 символа из файла</span>
+<span class="go">&#39;Тес&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>               <span class="c"># прочитать одну строку из файла</span>
+<span class="go">&#39;т!\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>                   <span class="c"># текущая позиция в файле</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">io</span><span class="o">.</span><span class="n">SEEK_SET</span><span class="p">)</span>     <span class="c"># переместиться в позицию в файле</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">&#39;ест!\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                   <span class="c"># прочитать до конца файла</span>
+<span class="go">&#39;1 2 3\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">)</span> <span class="c"># &quot;b&quot; — открыть в двоичном режиме (&quot;t&quot; для текстового)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">b&#39;\xd0\xa2\xd0\xb5\xd1\x81\xd1\x82!\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Можно указать кодировку при чтении/записи в текстовом режиме</span>
+<span class="gp">... </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&quot;cp1251&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">&#39;РўРµСЃС‚!\n1 2 3\n&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id10">
+<h2>Стандартные потоки ввода/вывода</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># В Python по умолчанию есть два файловых потока для ввода с консоли и</span>
+<span class="gp">... </span><span class="c"># для вывода в консоль</span>
+<span class="gp">... </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Это вывод</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="go">Это вывод</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  
+<span class="go">Это ввод</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span>  
+<span class="go">&#39;Это &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  
+<span class="go">&#39;ввод&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id11">
+<h2>Типы ошибок</h2>
+<ul>
+<li><p class="first">Синтаксические ошибки — возникают при загрузке модуля
+(разборе очередной строки в интерактивном режиме)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="bp">True</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">)</span>  
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="k">while</span> <span class="bp">True</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">)</span>
+                   <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Фатальные ошибки внутри интерпретатора Python или библиотек</p>
+<p>Crash. «Программа совершила недопустимую операцию и будет закрыта»</p>
+</li>
+<li><p class="first">Ошибки времени выполнения — <strong>исключительные ситуации</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">div</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">div</span>
+<span class="gr">ZeroDivisionError</span>: <span class="n">division by zero</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-2" id="id12">
+<h2>Исключительные ситуации</h2>
+<ul>
+<li><p class="first">Популярный механизм обработки ошибок</p>
+</li>
+<li><p class="first">Деление на ноль, закончилась память, не удалось открыть файл и др.&nbsp;—
+<strong>исключительные ситуации</strong></p>
+</li>
+<li><p class="first">Все исключения имеют:</p>
+<ul class="simple">
+<li><strong>тип</strong> — класс исключения,</li>
+<li><strong>объект-исключение</strong> — может хранить дополнительную информацию</li>
+</ul>
+</li>
+<li><p class="first">Для обработки исключений используется конструкция:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="c"># БЛОК-КОДА</span>
+    <span class="o">...</span>
+<span class="k">except</span> <span class="o">...</span><span class="p">:</span> <span class="c"># ОПИСАНИЕ ТИПА ИСКЛЮЧЕНИЯ</span>
+    <span class="c"># БЛОК-ОБРАБОТЧИКА-ИСКЛЮЧЕНИЯ</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">14</div>
+
+</article>
+<article class="smaller3 slide level-2" id="id13">
+<h2>Обработка исключительных ситуаций</h2>
+<div class="highlight-py3"><div class="highlight"><pre><span class="c"># блок кода 1</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок кода 2</span>
+<span class="k">except</span> <span class="n">ExceptionType1</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок обработки исключения ExceptionType1</span>
+<span class="k">except</span> <span class="n">ExceptionType2</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок обработки исключения ExceptionType2</span>
+<span class="c"># Продолжение блока кода 1</span>
+</pre></div>
+</div>
+<p>Если в <em>блоке кода 2</em> происходит необработанная исключительная ситуация, то:</p>
+<ul class="simple">
+<li>создаётся объект-исключение (класс + данные), назовём его <tt class="docutils literal"><span class="pre">exc</span></tt></li>
+<li><em>блок кода 2</em> прерывается в месте, где произошло исключение</li>
+<li>среди конструкций <tt class="docutils literal"><span class="pre">except</span></tt> последовательно ищется блок с подходящим типом
+исключения (по типу исключения)<ul>
+<li>если обработчик найден, то выполняется его блок, затем упраление передаётся
+в продолжение блока кода 1</li>
+<li>если обоработчик не найдён, то исключение не обработано и произойдёт
+переход к внешнему <tt class="docutils literal"><span class="pre">try-except</span></tt> обработчику исключений
+(если его нет, то программа завершится с ошибкой)</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">15</div>
+
+</article>
+<article class="slide level-2" id="id14">
+<h2>Пример</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s">&#39;123&#39;</span><span class="p">)</span>
+<span class="go">123</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s">&#39;trash&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">invalid literal for int() with base 10: &#39;trash&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Please enter a number: &quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c"># остановить цикл</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Can&#39;t parse &#39;{0}&#39; as number.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Try again&quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;You entered:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">16</div>
+
+</article>
+<article class="smaller2 slide level-2" id="try-except">
+<h2>Конструкция <tt class="docutils literal"><span class="pre">try-except</span></tt></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c"># &lt;Блок кода&gt;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;myfile.txt&#39;</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">v</span><span class="o">**</span><span class="n">v</span>
+    
+<span class="c"># &lt;ТипИсключения&gt; as &lt;Объект-Исключение&gt;</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>  
+    <span class="n">errno</span><span class="p">,</span> <span class="n">strerror</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">args</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I/O error({0}): {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">errno</span><span class="p">,</span> <span class="n">strerror</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Could not convert data to an numer type.&quot;</span><span class="p">)</span>
+<span class="c"># Обработчик для нескольких исключений</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="ne">OverflowError</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Floating point operation exception.&quot;</span><span class="p">)</span>
+<span class="c"># Обработчик для всех типов исключений</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c"># В sys можно найти всю информацию об исключении, включая</span>
+    <span class="c"># стек вызовов.</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Unexpected error:&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">raise</span>   <span class="c"># Оставляем текущее исключение необработанным --- произойдёт поиск </span>
+            <span class="c"># обработчика в следующем вложенном try: ... except: ... </span>
+<span class="c"># Блок, который выполняется если не произошло никакого (непойманного в </span>
+<span class="c"># &lt;блоке кода&gt;) исключения.</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;No exceptions!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">17</div>
+
+</article>
+<article class="smaller3 slide level-2" id="id15">
+<h2>Иерархия исключений</h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><ul class="first last">
+<li><p class="first">исключения образуют иерархию по типам</p>
+</li>
+<li><p class="first">Обработчик с типом <tt class="docutils literal"><span class="pre">T</span></tt> подходит
+для исключения с типом  <tt class="docutils literal"><span class="pre">type(exc)</span></tt>, если</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">type(exc)</span> <span class="pre">==</span> <span class="pre">T</span></tt>, или</li>
+<li><tt class="docutils literal"><span class="pre">type(exc)</span></tt> <em>наследуется</em> от <tt class="docutils literal"><span class="pre">T</span></tt></li>
+</ul>
+<p>Или просто:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>BaseException
+ +-- SystemExit
+ +-- KeyboardInterrupt
+ +-- GeneratorExit
+ +-- Exception
+      +-- StopIteration
+      +-- ArithmeticError
+      |    +-- FloatingPointError
+      |    +-- OverflowError
+      |    +-- ZeroDivisionError
+      +-- AssertionError
+      +-- AttributeError
+      +-- BufferError
+      +-- EOFError
+      +-- ImportError
+      +-- LookupError
+      |    +-- IndexError
+      |    +-- KeyError
+      +-- MemoryError
+      +-- NameError
+      |    +-- UnboundLocalError
+      +-- OSError
+      ...
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">18</div>
+
+</article>
+<article class="smaller3 slide level-2" id="id16">
+<h2>Порождение исключений</h2>
+<p><em>Вызвать</em> (<em>породить</em>, <em>бросить</em>) исключение можно явно:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">raise</span> <span class="n">some_object</span>
+</pre></div>
+</div>
+<p>Пример:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="c"># Бросаем исключение стандартного типа (можно любого своего).</span>
+<span class="gp">... </span>   <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;spam&#39;</span><span class="p">,</span> <span class="s">&#39;eggs&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">inst</span><span class="p">))</span>    <span class="c"># объект-исключение</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="n">inst</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>     <span class="c"># Класс Exception для удобства сохраняет свои </span>
+<span class="gp">... </span>                        <span class="c"># аргументы в .args</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="n">inst</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">&lt;class &#39;Exception&#39;&gt;</span>
+<span class="go">(&#39;spam&#39;, &#39;eggs&#39;)</span>
+<span class="go">(&#39;spam&#39;, &#39;eggs&#39;)</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">19</div>
+
+</article>
+<article class="smaller3 slide level-2" id="try-finally">
+<h2>Конструкция <tt class="docutils literal"><span class="pre">try-finally</span></tt></h2>
+<p>Есть синтаксис для гарантированного выполнения кода:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок кода 1</span>
+<span class="k">except</span> <span class="n">SomeExcType</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок кода except</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="o">...</span> <span class="c"># блок кода finally</span>
+<span class="o">...</span> <span class="c"># продолжение блока кода</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">Если</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>блок кода 1</em> не бросил исключения</li>
+<li><em>блок кода 1</em> бросил исключение, но оно было обработано в <tt class="docutils literal"><span class="pre">except</span></tt></li>
+</ul>
+</div></blockquote>
+<p>то перед выполнением <em>продолжения блока кода</em> выполнится <em>блок кода finally</em></p>
+</li>
+<li><p class="first">Если</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>блок кода 1</em> бросил исключение и оно не было поймано в <tt class="docutils literal"><span class="pre">except</span></tt></li>
+<li><em>блок кода 1</em> бросил исключение, оно было поймано <tt class="docutils literal"><span class="pre">except</span></tt>, но внутри <em>блока кода except</em> произошло непойманное исключение</li>
+</ul>
+</div></blockquote>
+<p>то перед переходу к внешнему обработчику исключений выполнится <em>блок кода finally</em></p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">20</div>
+
+</article>
+<article class="slide level-2" id="finally">
+<h2>Пример <tt class="docutils literal"><span class="pre">finally</span></tt></h2>
+<div class="highlight-py3"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+   <span class="o">...</span>       <span class="c"># обработка содержимого файла</span>
+<span class="k">finally</span><span class="p">:</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c"># выполнится всегда после завершения блока try</span>
+</pre></div>
+</div>
+<div class="highlight-py3"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Good bye!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">21</div>
+
+</article>
+<article class="slide level-2" id="id17">
+<h2>Практика</h2>
+
+<div class="slide-footer"><div class="left">08.03.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">22</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Язык программирования</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/common_custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '22.02.2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <script type="text/javascript" src="_static/common_custom.js"></script>
+    
+    <link rel="top" title="" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="id1">
+<h1>Язык программирования</h1>
+<div class="python-logo figure align-center">
+<img src="_images/python-logo-generic.svg" /></div>
+<p class="center-text">Лекция №1. Введение в Python</p>
+<p class="center-text">Владимир Владимирович Руцкий <a class="reference external" href="mailto:rutsky&#46;vladimir&#37;&#52;&#48;gmail&#46;com">rutsky<span>&#46;</span>vladimir<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<table border="1" class="center-cells docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/cgsg.png"><img alt="_images/cgsg.png" src="_images/cgsg.png" style="width: 200px;" /></a>
+</td>
+<td><img class="first last" src="_images/logo_jetbrains.svg" /></td>
+<td><a class="first last reference internal image-reference" href="_images/pml30.png"><img alt="_images/pml30.png" src="_images/pml30.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="id2">
+<h2>План лекции</h2>
+<ul class="simple">
+<li>Часть I<ul>
+<li>Что такое Python?</li>
+<li>Зачем нужен Python и где его используют?</li>
+</ul>
+</li>
+<li>Часть II<ul>
+<li>Установка Python</li>
+<li>Введение в Python</li>
+<li>Практика</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="smaller slide level-2" id="python">
+<h2>Что такое Python?</h2>
+<ul>
+<li><p class="first">Python ([ˈpʌɪθ(ə)n] — <em>пайтон</em>) — язык программирования (далее ЯП)</p>
+</li>
+<li><p class="first">Разрабатывался с 1990 года (для сравнения: C — с 1969, C++ — с 1983)</p>
+</li>
+<li><p class="first">Оригинальный автор: Гвидо ван Россум (Guido van Rossum)</p>
+</li>
+<li><p class="first"><a class="reference external" href="http://python.org">http://python.org</a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><tt class="docutils literal"><span class="pre">factorial.py</span></tt></p>
+<div class="last highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Factorial of 5 is&quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</td>
+<td><p class="first"><tt class="docutils literal"><span class="pre">python.exe&nbsp;factorial.py</span></tt></p>
+<div class="last highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>Factorial of 5 is 120
+</pre></div>
+</td></tr></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="slide level-2" id="id3">
+<h2>Python — высокоуровневый ЯП</h2>
+<ul class="simple">
+<li>Может оперировать с абстрактными объектами и структурами данных, вроде<ul>
+<li>файла,</li>
+<li>дерева,</li>
+<li>базы данных и т.п.</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id4">
+<h2>Python — ориентирован на разработчика</h2>
+<ul class="simple">
+<li>Программы на Python в 5–10 раз короче программ
+решающих те же задачи, но написанных на C++, и в 3–5
+раз короче программ на Java</li>
+<li>Программы на Python легко читаются</li>
+<li>Программы на Python лаконичны<ul>
+<li>&quot;синтаксический сахар&quot;</li>
+<li>большая стандартная библиотека<ul>
+<li>работа с сетью, web, работа с файлами баз данных, архивами,
+мультипоточность, мультипроцессорность, высокоуровневые
+структуры данных (комплексные числа, списки, словари, множества)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Подходит для быстрой разработки программ, прототипирования</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-2" id="id5">
+<h2>Python — масштабируемый</h2>
+<ul class="simple">
+<li>Масштабируемость кода:<ul>
+<li>наборы команд объединяются в <strong>функции</strong></li>
+<li>функции объектов объединяются в <strong>классы</strong></li>
+<li>наборы функций и классов объединяются в
+<strong>модули</strong> (отдельные файлы)</li>
+<li>модули группируются в <strong>пакеты</strong> (директории с
+файлами модулей)</li>
+</ul>
+</li>
+<li>Масштабируемость по производительности:<ul>
+<li>Узкие места программ можно переписать на C
+или C++</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-2" id="id6">
+<h2>Python — интерпретируемый</h2>
+<ul class="simple">
+<li>Программа — набор строк кода, лежащий в
+одном или нескольких файлах, выполняется
+«на лету», без предварительной компиляции</li>
+<li>Позволяет вносить изменения и быстро
+перезапускать программу</li>
+<li>Минус: меньшая скорость работы, по
+сравнению с компилируемыми языками</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-2" id="id7">
+<h2>Интроспекция</h2>
+<ul class="simple">
+<li>Программе на Python доступна вся
+информация о себе: список переменных,
+функций, классов, информация о методах
+классов и т.п.</li>
+<li>Информацию о себе по большей части
+можно модифицировать<ul>
+<li>В процессе работы программы, программа
+может создавать новые классы и функции и
+изменять уже существующие</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="slide level-2" id="id8">
+<h2>Динамическая типизация</h2>
+<ul>
+<li><p class="first">Нет предварительного объявления типов —
+тип переменной выводится в процессе
+выполнения</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Функция может вернуть объект любого типа</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Строгая типизация</p>
+<p>Недопустимо: <tt class="code python docutils literal"><span class="literal number integer"><span class="pre">5</span></span> <span class="operator"><span class="pre">+</span></span> <span class="literal string"><span class="pre">&quot;3&quot;</span></span></tt></p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-2" id="id9">
+<h2>Python — мультипарадигменный</h2>
+<ul class="simple">
+<li>Поддержка ООП<ul>
+<li>Классы, наследование, полиморфизм, условная
+инкапсуляция</li>
+</ul>
+</li>
+<li>Поддержка функционального программирования<ul>
+<li>Лямбда-выражения, list comprehension</li>
+</ul>
+</li>
+<li>Python вобрал в себя наиболее удобные
+возможности популярных языков
+программирования (ABC, Modula-3, Lisp, Tcl,
+Smalltalk, C, Java, Icon)</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="slide level-2" id="id10">
+<h2>Дополнительные характеристики Python</h2>
+<ul class="simple">
+<li>Полностью автоматическое управление памятью<ul>
+<li>Сборщик мусора</li>
+</ul>
+</li>
+<li>Поддержка механизма исключений</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="slide level-2" id="id11">
+<h2>Интерпретаторы Python</h2>
+<ul class="simple">
+<li>Интерпретаторы Python:<ul>
+<li><strong>CPython</strong> (написан на C) — основная реализация</li>
+<li>PyPy (написан на Python)</li>
+<li>Jython (написан на Java)</li>
+<li>IronPython (написан на C#)</li>
+<li>и другие</li>
+</ul>
+</li>
+<li>Разные интерпретаторы ориентированы на разные
+платформы (.Net, Java)</li>
+<li>Большинство интерпретаторов - под либеральной
+свободной лицензией</li>
+<li>CPython выступает в качестве стандарта</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id12">
+<h2>Версии Python</h2>
+<ul class="simple">
+<li>Две основные ветки<ul>
+<li>Вторая: 2.5, 2.6, 2.7<ul>
+<li>больше сторонних библиотек</li>
+<li>более популярна в production окружении (на 2013 год)</li>
+</ul>
+</li>
+<li>Третья: 3.2, 3.3, вот-вот выйдет 3.4<ul>
+<li>лучше синтаксис</li>
+<li>больше стандартная библиотека (+ улучшены существующие)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Каждая следующая версия расширяет и улучшает язык</li>
+<li>Внутри ветки версии обратно совместимы</li>
+<li>Третья версия обратно не совместима со второй</li>
+<li>Мы будем изучать Python 3.3, в реализации CPython</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-2" id="id13">
+<h2>Библиотеки Python</h2>
+<ul class="simple">
+<li>Мощная встроенная библиотека<ul>
+<li>Работа с Web, регулярные выражения, архивы,
+многозадачность, UI</li>
+</ul>
+</li>
+<li>Большое количество Python-интерфейсов для
+популярных библиотек<ul>
+<li>2D и 3D графика, OpenGL, DirectX</li>
+<li>работа с базами данных, MySQL, PostgreSQL</li>
+<li>работа с мультимедиа: звук, видео, изображения</li>
+<li>разработка пользовательских интерфейсов, Qt, Gtk, WxWidgets</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">14</div>
+
+</article>
+<article class="slide level-2" id="python-1-2">
+<h2>Применение Python (1/2)</h2>
+<ul class="simple">
+<li>Интерактивная консоль — мощный «калькулятор»<ul>
+<li>работа с числами, матрицами, файлами,
+изображениями, статистического анализа и др.</li>
+</ul>
+</li>
+<li>ЯП для небольших скриптов<ul>
+<li>обработка изображений, создание резервных копий</li>
+</ul>
+</li>
+<li>ЯП для прототипирования<ul>
+<li>быстрое создание шаблона программы с UI</li>
+<li>быстрая проверка работы алгоритма</li>
+</ul>
+</li>
+<li>ЯП для полноценных программ<ul>
+<li>Gajim, BitTorrent, Dropbox, EVE Online</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">15</div>
+
+</article>
+<article class="slide level-2" id="python-2-2">
+<h2>Применение Python (2/2)</h2>
+<ul class="simple">
+<li>ЯП для web-приложений<ul>
+<li>много фреймворков, активно используют крупные
+компании, вроде Google и Яндекс</li>
+</ul>
+</li>
+<li>Встраиваемый в приложения ЯП<ul>
+<li>Встроенная Python-консоль в которой можно
+оперировать с объектами приложений на языке
+Python<ul>
+<li>3D моделирование: Blender, Maya</li>
+<li>Обработка изображений: GIMP</li>
+<li>Работа с ГИС данными: ESRI ArcGIS</li>
+<li>Математические пакеты: Sage, IPython Notebook</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">16</div>
+
+</article>
+<article class="slide level-2" id="id14">
+<h2>Примеры Python-интерфейсов к библиотекам</h2>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">17</div>
+
+</article>
+<article class="slide level-2" id="id15">
+<h2>Установка Python</h2>
+<ol class="arabic simple">
+<li>Скачиваем дистрибутив Python 3.3 с официального сайта <a class="reference external" href="http://python.org">http://python.org</a><ul>
+<li>Последняя версия на данный момент 3.3.4:
+<a class="reference external" href="http://python.org/download/releases/3.3.4/">http://python.org/download/releases/3.3.4/</a></li>
+<li>Для Windows ищите на странице ссылку
+&quot;<tt class="docutils literal"><span class="pre">Windows</span> <span class="pre">X86</span> <span class="pre">MSI</span> <span class="pre">Installer</span> <span class="pre">(3.3.4)</span></tt>&quot; (или &quot;<tt class="docutils literal"><span class="pre">X86-64</span></tt>&quot;)</li>
+</ul>
+</li>
+<li>Устанавливаем в директорию по умолчанию (<tt class="docutils literal"><span class="pre">C:\Python33</span></tt>)</li>
+</ol>
+<p>Интерпретатор: &quot;<tt class="docutils literal"><span class="pre">C:\Python33\python.exe</span></tt>&quot;</p>
+<p>Установка дополнительных библиотек будет рассмотрена на следующих лекциях</p>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">18</div>
+
+</article>
+<article class="slide level-2" id="pycharm">
+<h2>Установка PyCharm</h2>
+<p>В раздаточном материале</p>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">19</div>
+
+</article>
+<article class="slide level-2" id="id16">
+<h2>Введение в Python</h2>
+<ul>
+<li><p class="first">Официальная документация (англ.):
+<a class="reference external" href="http://docs.python.org/">http://docs.python.org/</a></p>
+</li>
+<li><p class="first">Перевод учебного пособия из офиц. документации для Python 3.1:</p>
+<p><a class="reference external" href="https://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1">https://ru.wikibooks.org/wiki/Учебник_Python_3.1</a></p>
+<p>(по нему построено введение в Python в этой лекции)</p>
+</li>
+<li><p class="first">Книги на русском языке... мало, если будете смотреть обязательно обратите
+внимание на используемую версию Python</p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">20</div>
+
+</article>
+<article class="smaller slide level-2" id="id17">
+<h2>Выполнение программ на Python</h2>
+<p>Способы выполнения программ:</p>
+<ul>
+<li><p class="first">интерактивное выполнение:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\&gt;C:\Python33\python.exe
+Python 3.3.4 (v3.3.4:7ff62415e426, Feb 10 2014, 18:12:08) [MSC v.1600 32 bit (Intel)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; print(&quot;Hello, world!&quot;)
+Hello, world!
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">выполнение файла со скриптом</p>
+<p>Файл <tt class="docutils literal"><span class="pre">hello.py</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Запуск:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\&gt;C:\Python33\python.exe hello.py
+Hello, world!
+C:\&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">21</div>
+
+</article>
+<article class="smaller slide level-2" id="id18">
+<h2>Интерактивная консоль Python</h2>
+<p>Запустите <tt class="docutils literal"><span class="pre">python.exe</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\&gt; C:\Python33\python.exe
+Python 3.3.4 (v3.3.4:7ff62415e426, Feb 10 2014, 18:12:08) [MSC v.1600 32 bit (Intel)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<p>&quot;&gt;&gt;&gt; &quot; — приветствие, интерпретатор ожидает ввода команды</p>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">22</div>
+
+</article>
+<article class="slide level-2" id="hello-world">
+<h2>Hello, world!</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span class="go">Hello, world!</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">23</div>
+
+</article>
+<article class="smaller slide level-2" id="id19">
+<h2>Вычисление выражений</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Это комментарий</span>
+<span class="gp">... </span><span class="mi">6</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>  <span class="c"># а вот комментарий на одной строке с кодом</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">45</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>  <span class="c"># деление возвращает число с плавающей точкой</span>
+<span class="go">3.75</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">45</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span> <span class="c"># целочисленное деление (с округлением)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Целочисленное деление возвращает округленное к минимальному значение:</span>
+<span class="gp">... </span><span class="mi">7</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">//</span> <span class="o">-</span><span class="mi">3</span>
+<span class="go">-3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Результат последнего вычисления хранится в переменной `_&#39;</span>
+<span class="gp">... </span><span class="n">_</span>
+<span class="go">-3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># В интерактивной консоли результат вычисления выражения пишется на экран</span>
+<span class="gp">... </span><span class="c"># Чтобы вывести на экран в скрипте можно использовать функцию `print()&#39;</span>
+<span class="gp">... </span><span class="k">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">30</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">24</div>
+
+</article>
+<article class="smaller slide level-2" id="id20">
+<h2>Переменные</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Присваивание делается знаком `=&#39;</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="go">10.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Значение может быть присвоено нескольким переменным одновременно</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Перед использованием переменной в выражении она должна быть определена</span>
+<span class="gp">... </span><span class="n">d</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;d&#39; is not defined</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">25</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id21">
+<h2>Числовые типы</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Есть поддержка чисел с плавающей точкой, длинных, с фиксированной</span>
+<span class="gp">... </span><span class="c"># точностью, рациональных, комплексных...</span>
+<span class="gp">... </span><span class="mi">3</span> <span class="o">*</span> <span class="mf">3.75</span> <span class="o">/</span> <span class="mf">1.5</span>
+<span class="go">7.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1j</span> <span class="c"># мнимая единица</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span>
+<span class="go">1j</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="c"># возведение в степень</span>
+<span class="go">(-1+0j)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">real</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">imag</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2j</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1j</span><span class="p">)</span>
+<span class="go">(1.5+0.5j)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">200</span>
+<span class="go">1606938044258990275541962092341162602522202993782792835301376</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Логический тип:</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span>  <span class="c"># операторы сравнения: &gt;, &lt;, &gt;=, &lt;=, ==, !=</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span>  <span class="c"># логические операторы: and, or, not</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">26</div>
+
+</article>
+<article class="smaller slide level-2" id="id22">
+<h2>Строки</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Строки можно задавать следующим образом:</span>
+<span class="gp">... </span><span class="s">&#39;spam eggs&#39;</span>
+<span class="go">&#39;spam eggs&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;doesn</span><span class="se">\&#39;</span><span class="s">t&#39;</span>
+<span class="go">&quot;doesn&#39;t&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;doesn&#39;t&quot;</span>
+<span class="go">&quot;doesn&#39;t&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="go">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">Yes,</span><span class="se">\&quot;</span><span class="s"> he said.&quot;</span>
+<span class="go">&#39;&quot;Yes,&quot; he said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s">t,&quot; she said.&#39;</span>
+<span class="go">&#39;&quot;Isn\&#39;t,&quot; she said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&quot;first word </span><span class="se">\</span>
+<span class="gp">... </span><span class="s">second word&quot;</span>
+<span class="go">&#39;first word second word&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&quot;first line</span><span class="se">\n</span><span class="s"> secondline&quot;</span><span class="p">)</span>
+<span class="go">first line</span>
+<span class="go"> secondline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">r&quot;line with \n in middle&quot;</span>
+<span class="go">&#39;line with \\n in middle&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="sd">&quot;&quot;&quot;Multiline with &#39; or &quot;</span>
+<span class="gp">... </span><span class="sd">Yes.</span>
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="go">&#39;Multiline with \&#39; or &quot;\nYes.\n&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">27</div>
+
+</article>
+<article class="slide level-2" id="id23">
+<h2>Конкатенация строк</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Конкатенация строк</span>
+<span class="gp">... </span><span class="n">word</span> <span class="o">=</span> <span class="s">&#39;Help&#39;</span> <span class="o">+</span> <span class="s">&#39;A&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span>
+<span class="go">&#39;HelpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;&lt;&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="s">&#39;&gt;&#39;</span>
+<span class="go">&#39;&lt;HelpAHelpAHelpAHelpAHelpA&gt;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;first&#39;</span> <span class="s">&#39;second&#39;</span>
+<span class="go">&#39;firstsecond&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s">&#39;first&#39;</span><span class="p">)</span> <span class="s">&#39;second&#39;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="p">(</span><span class="s">&#39;first&#39;</span><span class="p">)</span> <span class="s">&#39;second&#39;</span>
+                     <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Строки — неизменяемые</span>
+<span class="gp">... </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;x&#39;</span> <span class="c"># word[0] — обращение к первому символу строки</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;str&#39; object does not support item assignment</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">28</div>
+
+</article>
+<article class="smaller slide level-2" id="id24">
+<h2>Индексация последовательностей (1/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Индексация в последовательностях (например строках):</span>
+<span class="gp">... </span><span class="c"># +---+---+---+---+---+</span>
+<span class="gp">... </span><span class="c"># | H | e | l | p | A |</span>
+<span class="gp">... </span><span class="c"># +---+---+---+---+---+</span>
+<span class="gp">... </span><span class="c">#   0   1   2   3   4   5</span>
+<span class="gp">... </span><span class="c">#  -5  -4  -3  -2  -1</span>
+<span class="gp">... </span><span class="c">#  v[i] - i-й элемент</span>
+<span class="gp">... </span><span class="c">#  v[i:j] - подпоследовательность начиная с i-го включительно,</span>
+<span class="gp">... </span><span class="c">#           и до j (не включительно) — полуинтервал [i, j)</span>
+<span class="gp">... </span><span class="n">word</span> <span class="o">=</span> <span class="s">&#39;HelpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">&#39;A&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;He&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">&#39;lp&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>    <span class="c"># Первые два символа</span>
+<span class="go">&#39;He&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>    <span class="c"># Всё, исключая первые два символа</span>
+<span class="go">&#39;lpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
+<span class="go">&#39;elpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">10</span><span class="p">:]</span>
+<span class="go">&#39;&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">29</div>
+
+</article>
+<article class="smaller slide level-2" id="id25">
+<h2>Индексация последовательностей (2/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Индексация в последовательностях (например строках):</span>
+<span class="gp">... </span><span class="c"># +---+---+---+---+---+</span>
+<span class="gp">... </span><span class="c"># | H | e | l | p | A |</span>
+<span class="gp">... </span><span class="c"># +---+---+---+---+---+</span>
+<span class="gp">... </span><span class="c">#   0   1   2   3   4   5</span>
+<span class="gp">... </span><span class="c">#  -5  -4  -3  -2  -1</span>
+<span class="gp">... </span><span class="c">#  v[i] - i-й элемент</span>
+<span class="gp">... </span><span class="c">#  v[i:j] - подпоследовательность начиная с i-го включительно,</span>
+<span class="gp">... </span><span class="c">#           и до j (не включительно) — полуинтервал [i, j)</span>
+<span class="gp">... </span><span class="n">word</span> <span class="o">=</span> <span class="s">&#39;HelpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>     <span class="c"># Последний символ</span>
+<span class="go">&#39;A&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>     <span class="c"># Предпоследний символ</span>
+<span class="go">&#39;p&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>    <span class="c"># Последние два символа</span>
+<span class="go">&#39;pA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>    <span class="c"># Всё, кроме последних двух символов</span>
+<span class="go">&#39;Hel&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]</span>
+<span class="go">&#39;HelpA&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>    <span class="c"># ошибка</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">IndexError</span>: <span class="n">string index out of range</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">30</div>
+
+</article>
+<article class="slide level-2" id="id26">
+<h2>Списки</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Список — встроенный в язык тип данных</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;spam&#39;</span><span class="p">,</span> <span class="s">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Список — это упорядоченная последовательность элементов.</span>
+<span class="gp">... </span><span class="c"># Для списков действуют такие же правила индексации как для строк</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;spam&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[&#39;eggs&#39;, 1234]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Но списки, в отличие от строк, изменяемые</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3030</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;spam&#39;, 3030, 1234, 30]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">[&#39;spam&#39;, 3030, 30, 30]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="go">[1, 2, 3, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="go">[1, 2, 1, 2, 1, 2, 1, 2]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">31</div>
+
+</article>
+<article class="smaller slide level-2" id="range">
+<h2>Функция <tt class="xref py py-func docutils literal"><span class="pre">range()</span></tt></h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Функция range([start,] stop[, step]) создаёт &quot;виртуальную&quot; последовательность</span>
+<span class="gp">... </span><span class="c"># (iterable) из натуральных чисел</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">range(0, 5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Функции, классы и модули в Python имеют способы встроенного документирования</span>
+<span class="gp">... </span><span class="n">help</span><span class="p">(</span><span class="nb">range</span><span class="p">)</span>  
+<span class="go">Help on class range in module builtins:</span>
+
+<span class="go">class range(object)</span>
+<span class="go"> |  range(stop) -&gt; range object</span>
+<span class="go"> |  range(start, stop[, step]) -&gt; range object</span>
+<span class="go"> |</span>
+<span class="go"> |  Returns a virtual sequence of numbers from start to stop by step.</span>
+<span class="go"> |</span>
+<span class="go"> |  Methods defined here:</span>
+<span class="go"> |</span>
+<span class="gp">...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Функция list (конструктор класса) позволяет создать список по</span>
+<span class="gp">... </span><span class="c"># последовательности</span>
+<span class="gp">... </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">[3, 5, 7, 9]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">32</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id27">
+<h2>Модификация списков (1/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Заменим некоторые элементы:</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 20, 30, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Удалим:</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Вставим:</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;bletch&#39;</span><span class="p">,</span> <span class="s">&#39;xyzzy&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, &#39;bletch&#39;, &#39;xyzzy&#39;, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Вставим (копию) самого себя в начало</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[:</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, &#39;bletch&#39;, &#39;xyzzy&#39;, 3, 4, 5, 6, 7, 8, 9, 0, &#39;bletch&#39;, &#39;xyzzy&#39;, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Очистка списка: замена всех значений пустым списком</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Также, переменную можно удалить командой `del&#39;</span>
+<span class="gp">... </span><span class="k">del</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;a&#39; is not defined</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">33</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id28">
+<h2>Модификация списков (2/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Возвращает длину последовательности</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s">&#39;some string&#39;</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Списки, как и почти все контейнеры Python, могут хранить любые объекты</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;another&#39;</span><span class="p">,</span> <span class="s">&#39;list&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, [&#39;another&#39;, &#39;list&#39;], 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;another&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[0, 1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Некоторые операции со списками:</span>
+<span class="gp">... </span><span class="c"># добавить в конец</span>
+<span class="gp">... </span><span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[0, 1, 2, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># добавить в конец списка элементы из другой последовательности</span>
+<span class="gp">... </span><span class="n">b</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[0, 1, 2, 10, 3, 7, 12, 1, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>  <span class="c"># развернуть список</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[5, 1, 12, 7, 3, 10, 2, 1, 0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>     <span class="c"># отсортировать список</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[0, 1, 1, 2, 3, 5, 7, 10, 12]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">34</div>
+
+</article>
+<article class="smaller slide level-2" id="while">
+<h2>Конструкция <tt class="docutils literal"><span class="pre">while</span></tt></h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Ряд Фибоначчи:</span>
+<span class="gp">... </span><span class="c"># сумма двух элементов определяет следующий элемент</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>  <span class="c"># множественное присваивание: a = 0, b = 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="gp">...</span>
+<span class="go">1</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">5</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># while УСЛОВИЕ:</span>
+<span class="gp">... </span><span class="c">#     команды</span>
+<span class="gp">... </span><span class="c"># Блоки в Python определяются отступом!</span>
+<span class="gp">... </span><span class="k">pass</span> <span class="c"># команда &quot;ничего не делать&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span> <span class="c"># бесконечный цикл, можно прервать по Ctrl+C </span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="go">^CTraceback (most recent call last):</span>
+<span class="go">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="nc">KeyboardInterrupt</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">35</div>
+
+</article>
+<article class="smaller slide level-2" id="if">
+<h2>Конструкция <tt class="docutils literal"><span class="pre">if</span></tt></h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># input() можно использовать для чтения ввода с клавиатуры</span>
+<span class="gp">... </span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Введите, пожалуйста, целое число: &quot;</span><span class="p">)</span>
+<span class="go">Введите, пожалуйста, целое число: 42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>
+<span class="go">&#39;42&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># s — строка, переведём её к целочисленному типу</span>
+<span class="gp">... </span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Условная конструкция</span>
+<span class="gp">... </span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Отрицательное значение&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Ноль&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Больше нуля&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Такого быть не может!&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Больше нуля</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">36</div>
+
+</article>
+<article class="slide level-2" id="for">
+<h2>Конструкция <tt class="docutils literal"><span class="pre">for</span></tt></h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Конструкция for используется для выполнения какого-то действия</span>
+<span class="gp">... </span><span class="c"># для всех элементов последовательности.</span>
+<span class="gp">... </span><span class="c"># for ПЕРЕМЕННЫЕ in ИТЕРИРУЕМОЕ-ВЫРАЖЕНИЕ:</span>
+<span class="gp">... </span><span class="c">#     команды</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;cat&#39;</span><span class="p">,</span> <span class="s">&#39;window&#39;</span><span class="p">,</span> <span class="s">&#39;defenestrate&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">cat 3</span>
+<span class="go">window 6</span>
+<span class="go">defenestrate 12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Изменять содержимое контейнера по которому итерируется цикл</span>
+<span class="gp">... </span><span class="c"># часто небезопасно</span>
+<span class="gp">... </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">[:]:</span> <span class="c"># создадим копию списка</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;defenestrate&#39;, &#39;cat&#39;, &#39;window&#39;, &#39;defenestrate&#39;]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">37</div>
+
+</article>
+<article class="slide level-2" id="break-continue">
+<h2>Команды <tt class="docutils literal"><span class="pre">break</span></tt>, <tt class="docutils literal"><span class="pre">continue</span></tt></h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># В циклах можно использовать команды break и continue,</span>
+<span class="gp">... </span><span class="c"># а также конструкцию else</span>
+<span class="gp">... </span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">&#39;равно&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">,</span> <span class="n">n</span> <span class="o">//</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="c"># циклу не удалось найти множитель</span>
+<span class="gp">... </span>        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">&#39;— простое число&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">2 - простое число</span>
+<span class="go">3 - простое число</span>
+<span class="go">4 равно 2 * 2</span>
+<span class="go">5 - простое число</span>
+<span class="go">6 равно 2 * 3</span>
+<span class="go">7 - простое число</span>
+<span class="go">8 равно 2 * 4</span>
+<span class="go">9 равно 3 * 3</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">38</div>
+
+</article>
+<article class="smaller slide level-2" id="id29">
+<h2>Словари</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Словарь — контейнер, хранящий пары (ключ, значение), и позволяющий</span>
+<span class="gp">... </span><span class="c"># быстро находить по ключу соответствующее значение</span>
+<span class="gp">... </span><span class="n">tel</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;jack&#39;</span><span class="p">:</span> <span class="mi">4098</span><span class="p">,</span> <span class="s">&#39;sape&#39;</span><span class="p">:</span> <span class="mi">4139</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span><span class="p">[</span><span class="s">&#39;jack&#39;</span><span class="p">]</span>
+<span class="go">4098</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span><span class="p">[</span><span class="s">&#39;guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4127</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span>
+<span class="go">{&#39;guido&#39;: 4127, &#39;jack&#39;: 4098, &#39;sape&#39;: 4139}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">tel</span><span class="p">[</span><span class="s">&#39;sape&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span>
+<span class="go">{&#39;guido&#39;: 4127, &#39;jack&#39;: 4098}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tel</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;jack&#39;, &#39;guido&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tel</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">[4098, 4127]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tel</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">[(&#39;jack&#39;, 4098), (&#39;guido&#39;, 4127)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">tel</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&#39;has phone number&#39;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">guido has phone number 4127</span>
+<span class="go">jack has phone number 4098</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;guido&#39;</span> <span class="ow">in</span> <span class="n">tel</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;sam&#39;</span> <span class="ow">in</span> <span class="n">tel</span>
+<span class="go">False</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">39</div>
+
+</article>
+<article class="slide level-2" id="id30">
+<h2>Функции</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Определение функции</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c"># вывести числа Фибоначчи меньшие (вплоть до) n</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Выводит ряд Фибоначчи, ограниченный n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Теперь вызовем определенную нами функцию:</span>
+<span class="gp">... </span><span class="n">fib</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>  
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span>  
+<span class="go">Help on function fib in module __main__:</span>
+
+<span class="go">fib(n)</span>
+<span class="go">    Выводит ряд Фибоначчи, ограниченный n.</span>
+
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">40</div>
+
+</article>
+<article class="smaller slide level-2" id="id31">
+<h2>Функции с аргументами по умолчанию (1/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]):</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">f() missing 1 required positional argument: &#39;b&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">1 2 5 [1, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">)</span>
+<span class="go">1 2 c [1, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s">&#39;D&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s">&#39;C&#39;</span><span class="p">)</span>
+<span class="go">1 2 C D</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  
+<span class="go">1 2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>  
+<span class="go">1 2 3 4 5 6</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">41</div>
+
+</article>
+<article class="smaller slide level-2" id="id32">
+<h2>Функции с аргументами по умолчанию (2/2)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Значения по умолчанию вычисляются только один раз!</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="p">[]):</span>
+<span class="gp">... </span>    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">L</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">[1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">[1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">L</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">L</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">[1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">[2]</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">42</div>
+
+</article>
+<article class="smaller slide level-2" id="id33">
+<h2>Неименованные аргументы</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Есть возможность для получения произвольного количества аргументов</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">k1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">k2</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">k3</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">(&#39;a&#39;, &#39;b&#39;, 3)</span>
+<span class="go">{&#39;k3&#39;: 3, &#39;k2&#39;: 2, &#39;k1&#39;: 1}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Кортеж — контейнер аналогичный списку, но не изменяемый</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">(1, 2, 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">(1, 2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;tuple&#39; object does not support item assignment</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Кортеж содержит список объектов, и этот список изменить нельзя</span>
+<span class="gp">... </span><span class="c"># Но можно менять сами объекты</span>
+<span class="gp">... </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">(1, [30, 40])</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">43</div>
+
+</article>
+<article class="smaller slide level-2" id="python-1-3">
+<h2>Объекты Python (1/3)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># В Python все хранимые в памяти вещи являются объектами</span>
+<span class="gp">... </span><span class="c"># Тип объекта можно получить с помощью функции `type&#39;</span>
+<span class="gp">... </span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">)</span>
+<span class="go">&lt;class &#39;complex&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Каждый объекты имеет идентификатор, который можно получить </span>
+<span class="gp">... </span><span class="c"># с помощью функции `id&#39;</span>
+<span class="gp">... </span><span class="nb">id</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  
+<span class="go">17528760</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">)</span>  
+<span class="go">17674480</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  
+<span class="go">17528760</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="go">&lt;class &#39;function&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  
+<span class="go">18917688</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">44</div>
+
+</article>
+<article class="smaller2 slide level-2" id="python-2-3">
+<h2>Объекты Python (2/3)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># Конструкция присваивания `=&#39; на самом деле связывает имя и определённый объект</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c"># связываем имя `a&#39; с объектом списком </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># ID-объекта, на который ссылается имя `a&#39;  </span>
+<span class="go">18908584</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="c"># связываем имя `b&#39; с объектом, на который ссылается `a&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># ID-объекта, на который ссылается `b&#39;, такое же как и у `a&#39;!  </span>
+<span class="go">18908584</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span> <span class="c"># проверяет, являются ли два объекта одним и тем же</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Так как `a&#39; и `b&#39; ссылаются на один объект, то при изменении его через</span>
+<span class="gp">... </span><span class="c"># одно имя, он окажется изменённым и по другому имени</span>
+<span class="gp">... </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;steel&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[&#39;steel&#39;, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[&#39;steel&#39;, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Числа, строки и некоторые другие объекты являются неизменяемыми, </span>
+<span class="gp">... </span><span class="c"># при попытке их изменения создаётся новый объект.</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  
+<span class="go">17528760</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  
+<span class="go">17528736</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">45</div>
+
+</article>
+<article class="smaller slide level-2" id="python-3-3">
+<h2>Объекты Python (3/3)</h2>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Аргументы в функцию передаются по ссылке</span>
+<span class="gp">... </span><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[30]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c"># перезапишет на что ссылается локальный `b&#39;</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Имя функции — такая же ссылка на объект, как и имя переменной</span>
+<span class="gp">... </span><span class="n">F</span> <span class="o">=</span> <span class="n">g</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">F</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">F</span> <span class="ow">is</span> <span class="n">g</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-footer"><div class="left">22.02.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">46</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

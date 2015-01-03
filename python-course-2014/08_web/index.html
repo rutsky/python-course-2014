@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Язык программирования</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/common_custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '26.04.2014',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <script type="text/javascript" src="_static/common_custom.js"></script>
+    
+    <link rel="top" title="" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="id1">
+<h1>Язык программирования</h1>
+<div class="python-logo figure align-center">
+<img src="_images/python-logo-generic.svg" /></div>
+<p class="center-text">Лекция № 8</p>
+<p class="center-text">Владимир Владимирович Руцкий <a class="reference external" href="mailto:rutsky&#46;vladimir&#37;&#52;&#48;gmail&#46;com">rutsky<span>&#46;</span>vladimir<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<table border="1" class="center-cells docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/cgsg.png"><img alt="_images/cgsg.png" src="_images/cgsg.png" style="width: 200px;" /></a>
+</td>
+<td><img class="first last" src="_images/logo_jetbrains.svg" /></td>
+<td><a class="first last reference internal image-reference" href="_images/pml30.png"><img alt="_images/pml30.png" src="_images/pml30.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="id2">
+<h2>План занятия</h2>
+<ul class="simple">
+<li>Чат на Python (работа с сокетами)</li>
+<li>Основы WWW: HTML, CSS, JavaScript</li>
+<li>Написание простого веб-сервера</li>
+<li>Установка библиотек в Python</li>
+<li>Введение в Django</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="slide level-2" id="python">
+<h2>Чат на Python</h2>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="smaller slide level-2" id="web">
+<h2>Основы web-программирования</h2>
+<ul>
+<li><p class="first">Браузер</p>
+<ul>
+<li><p class="first">HTML (<a class="reference external" href="https://ru.wikipedia.org/wiki/HTML">https://ru.wikipedia.org/wiki/HTML</a>)</p>
+<p>Самоучитель HTML4: <a class="reference external" href="http://htmlbook.ru/samhtml/vvedenie-v-html">http://htmlbook.ru/samhtml/vvedenie-v-html</a></p>
+<p>Самоучитель HTML5: <a class="reference external" href="http://htmlbook.ru/samhtml5">http://htmlbook.ru/samhtml5</a></p>
+</li>
+<li><p class="first">CSS (<a class="reference external" href="https://ru.wikipedia.org/wiki/CSS">https://ru.wikipedia.org/wiki/CSS</a>)</p>
+<p>Самоучитель: <a class="reference external" href="http://htmlbook.ru/samcss">http://htmlbook.ru/samcss</a></p>
+</li>
+<li><p class="first">JavaScript (<a class="reference external" href="https://ru.wikipedia.org/wiki/Javascript">https://ru.wikipedia.org/wiki/Javascript</a>)</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="slide level-2" id="html">
+<h2>HTML</h2>
+<ul class="simple">
+<li>DOM-модель</li>
+<li>Отображение статического контента</li>
+<li>URL</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-2" id="css">
+<h2>CSS</h2>
+<ul class="simple">
+<li>Гибкие возможности по управлению <em>стилями</em> отображения</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-2" id="javascript">
+<h2>JavaScript</h2>
+<ul class="simple">
+<li>Обработка событий и модификация DOM</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-2" id="http">
+<h2>HTTP</h2>
+<blockquote>
+<div><ul class="simple">
+<li>Протокол HTTP (<a class="reference external" href="https://ru.wikipedia.org/wiki/HTTP">https://ru.wikipedia.org/wiki/HTTP</a>).</li>
+<li>Методы GET, POST, HEAD</li>
+<li>Формы</li>
+<li>Cookie</li>
+</ul>
+</div></blockquote>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id3">
+<h2>Веб-сервер на Python</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">http.server</span>
+<span class="kn">import</span> <span class="nn">socketserver</span>
+
+<span class="k">class</span> <span class="nc">MyHandler</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">do_HEAD</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s">&quot;text/html&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s">&quot;text/html&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s">            &lt;!DOCTYPE html&gt;</span>
+<span class="s">            &lt;html&gt;</span>
+<span class="s">            &lt;head&gt;</span>
+<span class="s">              &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</span>
+<span class="s">              &lt;title&gt;Заголовок окна&lt;/title&gt;</span>
+<span class="s">            &lt;/head&gt;</span>
+<span class="s">            &lt;body&gt;</span>
+<span class="s">              &lt;h1&gt;Заголовок страницы&lt;/h1&gt;</span>
+<span class="s">              &lt;p&gt;Параграф с &lt;b&gt;жирным&lt;/b&gt; и &lt;i&gt;наклонным&lt;/i&gt; текстом.&lt;/p&gt;</span>
+<span class="s">            &lt;/body&gt;</span>
+<span class="s">            &lt;/html&gt;</span>
+<span class="s">            &quot;&quot;&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">HTTPServer</span><span class="p">((</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">),</span> <span class="n">MyHandler</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Started http server&#39;</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-2" id="wsgi">
+<h2>WSGI</h2>
+<ul class="simple">
+<li>В примере веб-сервер — это обёртка над сокетами, реализующая протокол HTTP</li>
+<li>Интерфейс HTTP достаточно простой (&quot;запрос — ответ&quot;), но его реализация содержит много непростых деталей<ul>
+<li><tt class="docutils literal"><span class="pre">http.server.HTTPServer</span></tt> — упрощённая реализация, реализует не все возможности HTTP</li>
+</ul>
+</li>
+<li>Чтобы связать существующие веб-сервера (Apache, Nginx, IIS) с различными веб-фреймворками на Python (Django, TurboGears) разработали протокол <strong>WSGI</strong></li>
+<li><strong>WSGI</strong> — Web Server Gateway Interface</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="smaller slide level-2" id="id4">
+<h2>Пример клиента WSGI</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Точка входа в web-приложение на Python — Python модуль</span>
+<span class="c"># Модуль должен создать глобальный объект `application&#39;,</span>
+<span class="c"># который будет вызываться при поступлении запроса</span>
+
+<span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+    <span class="c"># В качестве объекта используем просто функцию</span>
+
+    <span class="c"># Вызываемый объект принимает словарь с специально сформированными</span>
+    <span class="c"># переменными окружения (содержит запрашиваемый путь, переданные параметры</span>
+    <span class="c"># в GET и POST и т.п.)</span>
+
+    <span class="c"># В соответствии с тем, какой ресурс или действие были запрошены,</span>
+    <span class="c"># подготавливаем ответ.</span>
+
+    <span class="c"># Выводим заголовки ответа</span>
+    <span class="n">start_response</span><span class="p">(</span><span class="s">&#39;200 OK&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s">&#39;text/plain&#39;</span><span class="p">)])</span>
+
+    <span class="c"># Выводим ответ</span>
+    <span class="k">yield</span> <span class="n">b</span><span class="s">&#39;Hello World!</span><span class="se">\n</span><span class="s">&#39;</span>
+
+    <span class="c"># Выводим доступные переменные</span>
+    <span class="kn">import</span> <span class="nn">pprint</span>
+    <span class="k">yield</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="n">environ</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="smaller slide level-2" id="id5">
+<h2>Пример сервера WSGI</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># В Python есть реализация WSGI-совместимого сервера</span>
+<span class="c"># Также можно использовать модули Apache/Nginx/IIS для запуска WSGI клиентов</span>
+<span class="kn">from</span> <span class="nn">wsgiref.validate</span> <span class="kn">import</span> <span class="n">validator</span>
+<span class="kn">from</span> <span class="nn">wsgiref.simple_server</span> <span class="kn">import</span> <span class="n">make_server</span>
+
+<span class="c"># &quot;Запускаем&quot; клиента</span>
+<span class="kn">import</span> <span class="nn">wsgi_client</span>
+
+<span class="c"># Получаем из клиента объект application и оборачиваем его в валидатор</span>
+<span class="n">validator_app</span> <span class="o">=</span> <span class="n">validator</span><span class="p">(</span><span class="n">wsgi_client</span><span class="o">.</span><span class="n">application</span><span class="p">)</span>
+
+<span class="c"># Создаём и запускаем сервер</span>
+<span class="n">httpd</span> <span class="o">=</span> <span class="n">make_server</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="mi">8010</span><span class="p">,</span> <span class="n">validator_app</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Listening on port 8010...&quot;</span><span class="p">)</span>
+<span class="n">httpd</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</pre></div>
+</div>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="slide level-2" id="http-python">
+<h2>HTTP клиенты на Python</h2>
+<ul class="simple">
+<li>Библиотека <a class="reference external" href="https://docs.python.org/3/library/urllib.request.html">https://docs.python.org/3/library/urllib.request.html</a></li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-2" id="http-server">
+<h2>http.server</h2>
+<ul>
+<li><p class="first">При исполнении модуля &quot;расшаривает&quot; текущую директорию:</p>
+<div class="highlight-python"><div class="highlight"><pre>python -m http.server 8080
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">14</div>
+
+</article>
+<article class="slide level-2" id="id6">
+<h2>Назначение директорий Python</h2>
+<ul>
+<li><p class="first">Установленный дистрибутив Python в Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\Python33\
+    python.exe         - интерпретатор (main)
+    pythonw.exe        - интерпретатор без консоли (WinMain)
+    Tools\
+        Scripts\       - Python скрипты (часто добавляется в %PATH%)
+            2to3.py
+            ...
+    Lib\               - стандартная библиотека
+        site-packages\ - сторонние библиотеки
+            pygame\
+            pygame-1.9.2a0-py3.3.egg-info
+            ...
+    ...
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">15</div>
+
+</article>
+<article class="smaller slide level-2" id="id7">
+<h2>Установка библиотек в Python</h2>
+<ul>
+<li><p class="first">Установка через инсталлятор (Windows):</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\&gt;pygame-1.9.2a0-py3.3.msi
+</pre></div>
+</div>
+</li>
+<li><p class="first">Установка через пакетный менеджер (GNU/Linux):</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-pygame
+</pre></div>
+</div>
+</li>
+<li><p class="first">Установка из исходных кодов (Setuptools, Distribute — низкоуровневый Python-way):</p>
+<div class="highlight-python"><div class="highlight"><pre># 1. скачать и распаковать исходные коды
+# 2. запустить из директории с исходными кодами:
+python.exe setup.py install
+# А можно собрать msi из исходных кодов (или другие &quot;пакеты&quot;)
+# python.exe setup.py bdist_msi
+# python.exe setup.py bdist_rpm
+</pre></div>
+</div>
+</li>
+<li><p class="first">Использовать пакетный менеджер Python (сначала нужно его поставить):</p>
+<div class="highlight-python"><div class="highlight"><pre># pip:
+C:\Python33\Tools\Scripts\pip install pygame
+
+# setuptools:
+C:\Python33\Tools\Scripts\easy_install install pygame
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">16</div>
+
+</article>
+<article class="slide level-2" id="id8">
+<h2>Конфликты версий библиотек</h2>
+<ul class="simple">
+<li>Установка библиотек &quot;в систему&quot; может привести к конфликту версий<ul>
+<li>Программа A зависит от библиотеки C-Lib v.1.0</li>
+<li>Программа B зависит от библиотеки C-Lib v.2.0</li>
+<li>Программы A и B нельзя поставить одновременно</li>
+</ul>
+</li>
+<li>В Windows такая проблема с динамически подгружаемыми библиотеками была названа <em>DLL Hell</em></li>
+<li>Выход: ставить библиотеки не &quot;в систему&quot;, а для каждого приложения отдельно</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">17</div>
+
+</article>
+<article class="smaller2 slide level-2" id="virtualenv">
+<h2>Virtualenv</h2>
+<ul>
+<li><p class="first">В Python существует проблема с конфликтами версий библиотек при установке &quot;в систему&quot;</p>
+</li>
+<li><p class="first">В качестве решения можно использовать <strong>virtualenv</strong> — виртуальная установка Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\scripts&gt; C:\Python33\python.exe C:\Python33\Tools\Scripts\pyvenv.py env
+
+или
+
+C:\scripts&gt; C:\Python33\python.exe -m venv env
+</pre></div>
+</div>
+</li>
+<li><p class="first">Директория <tt class="docutils literal"><span class="pre">env</span></tt> будет содержать виртуальную установку Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\scripts\env
+    Include\
+    Lib\
+        site-packages\
+            ...
+        ...
+    Scripts\
+        python.exe
+        activate.bat
+        ...
+    pyenv.cfg
+</pre></div>
+</div>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">18</div>
+
+</article>
+<article class="smaller slide level-2" id="id9">
+<h2>Установка библиотек в Virtualenv</h2>
+<ul>
+<li><p class="first">В сессии shell можно &quot;активировать&quot; виртуальный Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\scripts&gt; env\Scripts\activate.bat
+(env) C:\scripts&gt; python.exe # - будет использовать &quot;виртуальный&quot; python.exe
+(env) C:\scripts&gt; pip install Django # сначала нужно поставить pip, в Python 3.4 он уже есть
+</pre></div>
+</div>
+</li>
+<li><p class="first">Или можно запускать скрипты, используя <tt class="docutils literal"><span class="pre">C:\scripts\env\Scripts\python.exe</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\pygame-src&gt; C:\scripts\env\Scripts\python.exe setup.py install
+</pre></div>
+</div>
+</li>
+<li><p class="first">Обычно для каждого проекта делается отдельный virtualenv с зависимостями только этого проекта</p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">19</div>
+
+</article>
+<article class="slide level-2" id="virtualenv-pycharm">
+<h2>Virtualenv в PyCharm</h2>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">File</span></tt> -&gt; <tt class="docutils literal"><span class="pre">Settings</span></tt> -&gt; <tt class="docutils literal"><span class="pre">Python</span> <span class="pre">Interpreter</span></tt> -&gt; <tt class="docutils literal"><span class="pre">Python</span> <span class="pre">Interpreters</span></tt> -&gt; кнопка <tt class="docutils literal"><span class="pre">Create</span> <span class="pre">virtual</span> <span class="pre">environment</span></tt></li>
+<li>Выберите директорию для <tt class="docutils literal"><span class="pre">env</span></tt></li>
+</ul>
+<p>В PyCharm можно ставить библиотеки через кнопку <tt class="docutils literal"><span class="pre">Install</span></tt> в том же меню</p>
+<ul class="simple">
+<li>Нажмите <tt class="docutils literal"><span class="pre">Install</span></tt> -&gt; наберите в поиске <tt class="docutils literal"><span class="pre">Django</span></tt> -&gt; <tt class="docutils literal"><span class="pre">Install</span> <span class="pre">package</span></tt></li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">20</div>
+
+</article>
+<article class="slide level-2" id="id10">
+<h2>Назначение веб-приложений</h2>
+<ul class="simple">
+<li>Суть — передача информации</li>
+<li>Предоставление общей информации (сайт-визитка) — <strong>статический контент</strong><ul>
+<li>Всем клиентом отдаётся <em>одна и та же</em> информация</li>
+</ul>
+</li>
+<li>Предоставление персонализированной информации (веб-интерфейс к почте) — <strong>динамический контент</strong><ul>
+<li>Для каждого клиента <em>генерируется</em> своя информация</li>
+</ul>
+</li>
+<li>Обработка запросов клиентов (добавить фотографию, пост, и т.п.)<ul>
+<li>Обрабатывается запрос <em>с данными от клиента</em></li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">21</div>
+
+</article>
+<article class="slide level-2" id="id11">
+<h2>Серверов должно быть много</h2>
+<ul>
+<li><p class="first">Клиентов много. <em>Очень много</em></p>
+</li>
+<li><p class="first">Один сервер может обрабатывать десятки тысяч &quot;холостых&quot; запросов в секунду</p>
+<p>Реальных запросов — на порядки меньше</p>
+</li>
+<li><p class="first">Один сервер имеет ограниченный сетевой канал</p>
+</li>
+<li><p class="first">Отклик сервера (или задержка, latency) зависит от взаимного географического положения сервера и клиента</p>
+</li>
+<li><p class="first">Один сервер может сломаться — сложно реализовать отказоустойчивость</p>
+</li>
+<li><p class="first">Вывод: одного сервера недостаточно</p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">22</div>
+
+</article>
+<article class="slide level-2" id="id12">
+<h2>Масштабирование</h2>
+<ul class="simple">
+<li>Масштабируемость (<strong>scalability</strong>) — способность системы, сети или процесса справляться с увеличением рабочей нагрузки при добавлении ресурсов</li>
+<li><strong>Горизонтальное</strong> — увеличение мощности процессоров, увеличение памяти</li>
+<li><strong>Вертикальное</strong> — увеличение количества обработчиков (CPU, компьютеров)</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">23</div>
+
+</article>
+<article class="slide level-2" id="id13">
+<h2>Статический контент</h2>
+<ul class="simple">
+<li>Статический контент можно раскопировать на множество серверов по всему миру<ul>
+<li>при запросе клиент будет соединяться с географически ближайшим (позволяет DNS)</li>
+</ul>
+</li>
+<li>Такие системы называются <strong>Content Delivery Network</strong> (<strong>CDN</strong>)</li>
+<li>Обычно статические картинки, CSS-файлы, JavaScript-файлы распространяются через CDN</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">24</div>
+
+</article>
+<article class="slide level-2" id="id14">
+<h2>Динамический контент</h2>
+<ul class="simple">
+<li>Информация получается от пользователя, обрабатывается и отдаётся пользователю/лям (часто в модифицированном виде)</li>
+<li>Серверов для приёма запросов должно быть много, но хранилище информации должно быть одним</li>
+<li>В качестве хранилищ используют различные <strong>базы данных</strong> (БД)</li>
+<li>На серверах используются фреймворки <strong>без состояния</strong> (<strong>stateless</strong>), которые запрашивают информацию (состояние) из БД</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">25</div>
+
+</article>
+<article class="slide level-2" id="id15">
+<h2>Базы данных</h2>
+<ul class="simple">
+<li>В промышленности сейчас используются <strong>реляционные БД</strong><ul>
+<li>Хорошо изученная и проработанная область</li>
+<li>Плохо масштабируются</li>
+<li>&quot;Табличные&quot; данные. Сложно представлять графы и деревья с нефиксированной структурой</li>
+</ul>
+</li>
+<li>В интернет-проектах всё чаще используются <strong>распределённые</strong> (<strong>distributed</strong>) хранилища (&quot;облачные&quot;)<ul>
+<li>Не реляционные. Чаще всего с интерфейсом словаря (получение значения по ключу)</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">26</div>
+
+</article>
+<article class="slide level-2" id="id16">
+<h2>Кеширование</h2>
+<ul class="simple">
+<li>Сгенерированный динамический контент чаще всего <strong>кешируется</strong> (сохраняется) на промежуточном сервере<ul>
+<li>При повторном запросе в ограниченный промежуток времени используется &quot;закешированная&quot; копия</li>
+</ul>
+</li>
+<li>Между клиентов и сервером также обычно ставится <strong>балансировщик нагрузки</strong> (<strong>load balancer</strong>)<ul>
+<li>Перенаправляет запросы от клиенту к одному из множества серверов-обработчиков запросов</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">27</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id17">
+<h2>Реляционные БД</h2>
+<ul class="simple">
+<li>Грубо:<ul>
+<li>Данные хранятся в наборе таблиц</li>
+<li>У каждой таблицы фиксированное количество столбцов и тип значений в каждом столбце</li>
+<li>Строка в таблице представляет собой запись</li>
+</ul>
+</li>
+</ul>
+<p>Таблица классов:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ID класса</th>
+<th class="head">Название</th>
+<th class="head">Специализация</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>&quot;11-1&quot;</td>
+<td>&quot;физико-математический&quot;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&quot;11-2&quot;</td>
+<td>&quot;математико-физический&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>Таблица учеников:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ID ученика</th>
+<th class="head">Имя</th>
+<th class="head">Фамилия</th>
+<th class="head">ID класса</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>&quot;Вася&quot;</td>
+<td>&quot;Петров&quot;</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&quot;Маша&quot;</td>
+<td>&quot;Иванова&quot;</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>&quot;Коля&quot;</td>
+<td>&quot;Сидоров&quot;</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Для работы с данными в реляционных БД используется язык <strong>SQL</strong></li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">28</div>
+
+</article>
+<article class="slide level-2" id="django">
+<h2>Введение в Django</h2>
+<ul class="simple">
+<li>Django (<a class="reference external" href="https://www.djangoproject.com/">https://www.djangoproject.com/</a>) — фреймворк для разработки веб-приложений на Python</li>
+<li>лицензия BSD</li>
+<li>Используется: Instagram, Disqus, Mozilla, The Washington Times, Pinterest и др.</li>
+<li>Изначально разрабатывался программистами газеты Lawrence Journal-World<ul>
+<li>требовалась быстрая и лёгкая публикация контента, быстрое добавление новой функциональности</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">29</div>
+
+</article>
+<article class="smaller2 slide level-2" id="id18">
+<h2>Туториал Django</h2>
+<p>На основе туториала <a class="reference external" href="https://docs.djangoproject.com/en/1.6/">https://docs.djangoproject.com/en/1.6/</a></p>
+<ul>
+<li><p class="first">Создайте новый проект в PyCharm</p>
+</li>
+<li><p class="first">Создайте virtualenv для этого проекта</p>
+</li>
+<li><p class="first">Установите Django в virtualenv</p>
+</li>
+<li><p class="first">Создайте проект Django в командной строке:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\scripts&gt; env\Scripts\activate.bat
+(env) C:\scripts&gt; env\Scripts\django-admin.py startproject mysite
+</pre></div>
+</div>
+</li>
+<li><p class="first">Запускаем сервер разработчика:</p>
+<div class="highlight-python"><div class="highlight"><pre>(env) C:\scripts&gt; cd mysite
+(env) C:\scripts\mysite&gt; python.exe manage.py runserver
+Validating models...
+
+0 errors found
+April 26, 2014 - 08:31:31
+Django version 1.6.3, using settings &#39;mysite.settings&#39;
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</pre></div>
+</div>
+</li>
+<li><p class="first">Сервер доступен по адресу <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">30</div>
+
+</article>
+<article class="slide level-2" id="id19">
+<h2>Структура проекта на Django</h2>
+<ul class="simple">
+<li>Приложение на Django состоит из <strong>проекта</strong> (<strong>project</strong>) и <strong>приложений</strong> (<strong>applications</strong>)<ul>
+<li>В одном проекте (&quot;моя домашняя страница&quot;) может быть несколько приложений (&quot;гостевая книга&quot;, &quot;каталог ссылок&quot;)</li>
+<li>Приложение может распространяться независимо от проекта и использоваться в нескольких проектах</li>
+</ul>
+</li>
+<li><tt class="docutils literal"><span class="pre">python</span> <span class="pre">django-admin.py</span> <span class="pre">startproject</span> <span class="pre">mysite</span></tt> создаёт проект</li>
+<li><tt class="docutils literal"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">startapp</span> <span class="pre">polls</span></tt> создаёт приложение внутри проекта</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">31</div>
+
+</article>
+<article class="slide level-2" id="mvc">
+<h2>Паттерн MVC</h2>
+<ul>
+<li><p class="first">В интерактивных приложениях часто используют паттерн <strong>Model-View-Controller</strong> (<strong>Модель-Представление-Контроллер</strong>, MVC) или его производные</p>
+<p>Приложение структурно и логически делится на:</p>
+<ul class="simple">
+<li>Модель — структурированные данные приложения (например, список с объектами &quot;пользователь&quot;)</li>
+<li>Представление — графический интерфейс, отображающий данные из Модели (виджет со списком и кнопками)</li>
+<li>Контроллер — обработчик ввода пользователя, по событиям изменяющий Модель</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">32</div>
+
+</article>
+<article class="slide level-2" id="mvc-django">
+<h2>MVC в Django</h2>
+<ul class="simple">
+<li>В Django:<ul>
+<li>Model — <strong>Object-relational mapper</strong> (ORM), связывает данные в БД и объекты классов в Python</li>
+<li>View — система шаблонов HTML (и не только) документов</li>
+<li>Контроллер — вызов методов в зависимости от запрaшиваемых URL</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-footer"><div class="left">26.04.2014</div><div class="center"><a href="http://school30.spb.ru/">ФМЛ № 30</a>. Владимир Владимирович Руцкий</div></div>
+
+<div class="slide-no">33</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
