@@ -23,11 +23,11 @@
    Базовые конструкции языка: if, while, for. Функции. Объектная модель Python.
 
    `Презентация первой лекции.
-   <http://rutsky.github.io/python-course-2014/01_introduction/index.html?print=true>`_
+   <https://python2014.rutsky.org/01_introduction/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/01_introduction/>`_
+   <https://python2014.rutsky.org/01_introduction/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/01_introduction.pdf>`_
+   <https://python2014.rutsky.org/01_introduction.pdf>`_
 
    Аудиозапись, 2:32:
    `OGG, 44 MB <http://ubuntuone.com/6PQL4VcNxY5khZwPWoKz8L>`_,
@@ -38,11 +38,11 @@
    ``map()``, ``filter()``. List comprehension.
 
    `Презентация второй лекции.
-   <http://rutsky.github.io/python-course-2014/02_modules_scopes/index.html?print=true>`_
+   <https://python2014.rutsky.org/02_modules_scopes/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/02_modules_scopes/>`_
+   <https://python2014.rutsky.org/02_modules_scopes/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/02_modules_scopes.pdf>`_
+   <https://python2014.rutsky.org/02_modules_scopes.pdf>`_
 
    Аудиозапись, 1:15:
    `OGG, 24 MB <http://ubuntuone.com/6XXu6Jd7eGnR8eKrPJkVcQ>`_,
@@ -52,11 +52,11 @@
 3. Unicode и байтовые строки. Ввод/вывод в файлы. Механизм исключений.
 
    `Презентация третьей лекции.
-   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/index.html?print=true>`_
+   <https://python2014.rutsky.org/03_unicode_io_exceptions/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions/>`_
+   <https://python2014.rutsky.org/03_unicode_io_exceptions/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/03_unicode_io_exceptions.pdf>`_
+   <https://python2014.rutsky.org/03_unicode_io_exceptions.pdf>`_
 
    Аудиозапись, 1:47:
    `OGG, 35 MB <http://ubuntuone.com/3nhRs7r8YnQfCxWrrwTgdj>`_,
@@ -65,43 +65,43 @@
 4. Python обёртки для библиотек. SDL. Pygame.
 
    `Презентация четвёртой лекции.
-   <http://rutsky.github.io/python-course-2014/04_bindings_pygame/index.html?print=true>`_
+   <https://python2014.rutsky.org/04_bindings_pygame/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/04_bindings_pygame/>`_
+   <https://python2014.rutsky.org/04_bindings_pygame/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/04_bindings_pygame.pdf>`_
+   <https://python2014.rutsky.org/04_bindings_pygame.pdf>`_
 
    Примеры:
 
    `pygame01_base_template.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame01_base_template.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame01_base_template.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame01_base_template.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame01_base_template.py>`_)
 
    `pygame02_simple_graphics_demo.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame02_simple_graphics_demo.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame02_simple_graphics_demo.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame02_simple_graphics_demo.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame02_simple_graphics_demo.py>`_)
 
    `pygame03_move_keyboard.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame03_move_keyboard.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame03_move_keyboard.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame03_move_keyboard.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame03_move_keyboard.py>`_)
 
    `pygame04_move_joystick.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame04_move_joystick.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame04_move_joystick.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame04_move_joystick.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame04_move_joystick.py>`_)
 
    `pygame05_move_mouse.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame05_move_mouse.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame05_move_mouse.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame05_move_mouse.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame05_move_mouse.py>`_)
 
    `pygame06_bitmapped_graphics.py
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame06_bitmapped_graphics.html>`_
+   <https://python2014.rutsky.org/04_practice/pygame06_bitmapped_graphics.html>`_
    (`Python версия
-   <http://rutsky.github.io/python-course-2014/04_practice/pygame06_bitmapped_graphics.py>`_)
+   <https://python2014.rutsky.org/04_practice/pygame06_bitmapped_graphics.py>`_)
 
    Аудиозапись, 0:43:
    `OGG, 15 MB <http://ubuntuone.com/65uN36SKdAs7lJhmojxmAI>`_,
@@ -110,11 +110,11 @@
 5. Объектно-ориентированное программирование. Классы в Python.
 
    `Презентация пятой лекции.
-   <http://rutsky.github.io/python-course-2014/05_oop_classes/index.html?print=true>`_
+   <https://python2014.rutsky.org/05_oop_classes/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/05_oop_classes/>`_
+   <https://python2014.rutsky.org/05_oop_classes/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/05_oop_classes.pdf>`_
+   <https://python2014.rutsky.org/05_oop_classes.pdf>`_
 
    Аудиозапись, 1:20:
    `OGG, 26 MB <http://ubuntuone.com/6hJuR9Y5mX2I3Ck9vjhdHs>`_,
@@ -123,11 +123,11 @@
 6. Итераторы. Генераторы. Декораторы.
 
    `Презентация шестой лекции.
-   <http://rutsky.github.io/python-course-2014/06_iterators_decorators/index.html?print=true>`_
+   <https://python2014.rutsky.org/06_iterators_decorators/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/06_iterators_decorators/>`_
+   <https://python2014.rutsky.org/06_iterators_decorators/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/06_iterators_decorators.pdf>`_
+   <https://python2014.rutsky.org/06_iterators_decorators.pdf>`_
 
    Аудиозапись, 0:52:
    `OGG, 17 MB <http://ubuntuone.com/6fysan1VqupVFXiiPspPmn>`_,
@@ -136,11 +136,11 @@
 7. Разбор домашнего задания №2. Компьютерные сети. Сокеты.
 
    `Презентация седьмой лекции.
-   <http://rutsky.github.io/python-course-2014/07_network/index.html?print=true>`_
+   <https://python2014.rutsky.org/07_network/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/07_network/>`_
+   <https://python2014.rutsky.org/07_network/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/07_network.pdf>`_
+   <https://python2014.rutsky.org/07_network.pdf>`_
 
    Аудиозапись, 2:32:
    `OGG, 52 MB <http://ubuntuone.com/7kyCsSKs7ITX5SuDm62cdH>`_,
@@ -149,11 +149,11 @@
 8. Основы веб-программирования. Virtualenv. Введение в Django.
 
    `Презентация восьмой лекции.
-   <http://rutsky.github.io/python-course-2014/08_web/index.html?print=true>`_
+   <https://python2014.rutsky.org/08_web/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/08_web/>`_
+   <https://python2014.rutsky.org/08_web/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/08_web.pdf>`_
+   <https://python2014.rutsky.org/08_web.pdf>`_
 
    Аудиозапись, 3:31:
    `OGG, 72 MB <http://ubuntuone.com/0mivpz3cAbbSjAdZhX3a9C>`_,
@@ -162,11 +162,11 @@
 9. Interoperability. Django (продолжение).
 
    `Презентация девятой лекции.
-   <http://rutsky.github.io/python-course-2014/09_interoperability/index.html?print=true>`_
+   <https://python2014.rutsky.org/09_interoperability/index.html?print=true>`_
    `Версия для демонстрации.
-   <http://rutsky.github.io/python-course-2014/09_interoperability/>`_
+   <https://python2014.rutsky.org/09_interoperability/>`_
    `PDF.
-   <http://rutsky.github.io/python-course-2014/09_interoperability.pdf>`_
+   <https://python2014.rutsky.org/09_interoperability.pdf>`_
    
    Аудиозапись, 0:39:
    `OGG, 13 MB <http://ubuntuone.com/4doZg1LHnYHAYPjhAXZxqw>`_,
@@ -175,40 +175,40 @@
 10. Математические пакеты. IPython. Sage.
 
     `Презентация десятой лекции.
-    <http://rutsky.github.io/python-course-2014/10_math/index.html?print=true>`_
+    <https://python2014.rutsky.org/10_math/index.html?print=true>`_
     `Версия для демонстрации.
-    <http://rutsky.github.io/python-course-2014/10_math/>`_
+    <https://python2014.rutsky.org/10_math/>`_
     `PDF.
-    <http://rutsky.github.io/python-course-2014/10_math.pdf>`_
+    <https://python2014.rutsky.org/10_math.pdf>`_
 
 Практика:
 
 1. Работа в интерактивном режиме.
    `Задание.
-   <http://rutsky.github.io/python-course-2014/02_practice/practice01.html>`_
+   <https://python2014.rutsky.org/02_practice/practice01.html>`_
    `Решение первой части.
-   <http://rutsky.github.io/python-course-2014/02_practice/practice01_1_answer.html>`_
+   <https://python2014.rutsky.org/02_practice/practice01_1_answer.html>`_
    `Решение второй части.
-   <http://rutsky.github.io/python-course-2014/02_practice/practice01_2_answer.html>`_
+   <https://python2014.rutsky.org/02_practice/practice01_2_answer.html>`_
 
 2. Ввод/вывод.
    `Задание.
-   <http://rutsky.github.io/python-course-2014/03_practice/practice02.html>`_
+   <https://python2014.rutsky.org/03_practice/practice02.html>`_
 
 3. Pygame.
    `Задание.
-   <http://rutsky.github.io/python-course-2014/04_practice/practice03.html>`_
+   <https://python2014.rutsky.org/04_practice/practice03.html>`_
 
 Домашние задания:
 
 1. Вычисление функций
    (`Python
-   <http://rutsky.github.io/python-course-2014/02_homework/task_01_calculation.py>`_,
+   <https://python2014.rutsky.org/02_homework/task_01_calculation.py>`_,
    `HTML
-   <http://rutsky.github.io/python-course-2014/02_homework/task_01_calculation.html>`_).
+   <https://python2014.rutsky.org/02_homework/task_01_calculation.html>`_).
 
 2. Работа со списками
    (`Python
-   <http://rutsky.github.io/python-course-2014/02_homework/task_02_lists.py>`_,
+   <https://python2014.rutsky.org/02_homework/task_02_lists.py>`_,
    `HTML
-   <http://rutsky.github.io/python-course-2014/02_homework/task_02_lists.html>`_).
+   <https://python2014.rutsky.org/02_homework/task_02_lists.html>`_).
