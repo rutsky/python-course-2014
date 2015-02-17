@@ -10,3 +10,6 @@ copy-presentations:
 
 zip-presentations:
 	$(foreach DIR,$(DIRS),cd $(EXPORT_DIR); zip -r $(DIR).zip $(DIR);)
+
+index:
+	rst2html -s --source-url=https://github.com/rutsky/python-course-2014/blob/master/readme.rst readme.rst > $(EXPORT_DIR)/index.html
