@@ -2,7 +2,7 @@
 Спецкурс «Язык программирования Python»
 =======================================
 
-Спецкурс «Язык программирования Python» проводится в Физико-Математическом 
+Спецкурс «Язык программирования Python» проводится в Физико-Математическом
 лицее №30 Санкт-Петербурга по субботам в 16:00.
 
 Читает Владимир Владимирович Руцкий <rutsky.vladimir@gmail.com>.
@@ -167,7 +167,7 @@
    <https://python2014.rutsky.org/09_interoperability/>`_
    `PDF.
    <https://python2014.rutsky.org/09_interoperability.pdf>`_
-   
+
    Аудиозапись, 0:39:
    `OGG, 13 MB <http://ubuntuone.com/4doZg1LHnYHAYPjhAXZxqw>`_,
    `MP3, 18 MB <http://ubuntuone.com/2x4IyoPAcZ2jPV1VuRd9cT>`_.
