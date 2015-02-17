@@ -1,4 +1,4 @@
-EXPORT_DIR = ../rutsky.github.io/python-course-2014/
+EXPORT_DIR = ../gh-pages
 
 DIRS = 01_introduction 02_modules_scopes 03_unicode_io_exceptions 04_bindings_pygame 05_oop_classes 06_iterators_decorators 07_network 08_web 09_interoperability 10_math
 
